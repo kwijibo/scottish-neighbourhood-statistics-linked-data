@@ -1,0 +1,8 @@
+#Aim
+
+Some scripts that generate Linked Data in DataCube vocabulary from http://www.sns.gov.uk statistics.
+
+#Usage
+
+php observations.php {filename}
+ 
