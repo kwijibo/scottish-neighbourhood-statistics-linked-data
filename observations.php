@@ -4,6 +4,7 @@
 
 define('MORIARTY_ARC_DIR', 'arc/');
 require 'moriarty/simplegraph.class.php';
+require 'SNSConversionUtilities.php';
 define('BASE_URI', 'http://linkedscotland.org/id/');
 define('SNS', 'http://linkedscotland.org/def/');
 define('SDMX_DIM', 'http://purl.org/linked-data/sdmx/2009/dimension#');
@@ -16,11 +17,17 @@ function isfloat($f) { return ($f == (string)(float)$f); }
 $geographyCodeMappings = array(
   'IG' => 'intermediate-geography',
   'DZ' => 'datazone',
+  'ZN' => 'datazone',
   'CHP' => 'community-health-partnership',
   'CPP' => 'community-planning-partnership',
   'LA' => 'local-authority',
   'HB' => 'health-board',
-  'SP' => 'scottish-parliamentary-constituencies',
+  'SP' => 'scottish-parliamentary-constituency',
+  'W2' => 'ward',
+  'RC' => 'community-regeneration-community-planning-partnership',
+  'RL' => 'community-regeneration-local',
+  'MW' => 'multi-member-board',
+  'CH' => 'community-health-partnership',
 );
 
 $doc_location = $_SERVER['argv'][1];
@@ -63,7 +70,7 @@ foreach($xpath->query('//indicator') as $indicator){
   #
   foreach($indicator->getElementsByTagName('data') as $data){
     $date = $data->getAttribute('date');
-    $dateURI = 'http://reference.data.gov.uk/id/year/'.$date;
+    $dateURI = SNSConversionUtilities::dateToURI($date);
     foreach($data->childNodes as $child){
       if(isset($child->tagName) && $child->tagName=='area'){
           $area = $child;
