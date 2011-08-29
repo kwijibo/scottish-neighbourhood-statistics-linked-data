@@ -1,0 +1,33 @@
+* DONE  Link up cube Dataset and void Datasets  between observations.php and indicators.php
+* in observations.php, get dateType from indicators
+* do we have all the date types we need from reference.data.gov.uk ?
+*  create link from observation/dataset to 'total indicator' (by code)
+
+
+Incorporate:
+
+sns:TotalIndicator ?
+Allows data loaders to load the components and the system will calculate the total.  E.g. someone might want to load males and females in two separate indicators and for the system to create a third indicator for the total.  Not widely used, since rounding, disclosure control etc. can cause problems.
+
+sns:UpdateMode ? (0,1,true, false)
+Let's the system know whether this data load is to revise existing figures or add new data.
+
+sns:Factor ? 0 , 10, 100, 1000, 100000
+A factor that the indicator is multiplied by.  Usually used in rates per 100,000 population or for percentages.  The results the user sees are results of the calculation: (numerator/denominator)*factor.
+
+       <sns:DenominatorIndicator>
+       <sns:DenominatorIndicator>HS-n16</sns:DenominatorIndicator>
+       <sns:DenominatorIndicator>HS-n17</sns:DenominatorIndicator>
+       <sns:DenominatorIndicator>HS-n1</sns:DenominatorIndicator>
+       <sns:DenominatorIndicator>HS-n2</sns:DenominatorIndicator>
+       <sns:DenominatorIndicator>HS-n3</sns:DenominatorIndicator>
+       <sns:DenominatorIndicator>HS-n4</sns:DenominatorIndicator>
+       <sns:DenominatorIndicator>HS-n5</sns:DenominatorIndicator>
+       <sns:DenominatorIndicator>HS-n6</sns:DenominatorIndicator>
+       <sns:DenominatorIndicator>HS-n7</sns:DenominatorIndicator>
+       <sns:DenominatorIndicator>HS-n8</sns:DenominatorIndicator>
+       <sns:DenominatorIndicator>HS-n9</sns:DenominatorIndicator>
+
+what do these codes mean?
+The list of indicators that are listed out here appear to be denominators used for the health indicators.  They're probably not selectable via the main website, so there's a good chance that they've been given dummy names since the data loader won't have expected them to be viewable.
+

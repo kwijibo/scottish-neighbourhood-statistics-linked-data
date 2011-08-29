@@ -6,7 +6,7 @@ define('MORIARTY_ARC_DIR', 'arc/');
 require 'moriarty/simplegraph.class.php';
 require 'SNSConversionUtilities.php';
 define('BASE_URI', 'http://linkedscotland.org/id/');
-define('SNS', 'http://linkedscotland.org/def/');
+//define('SNS', 'http://linkedscotland.org/def/');
 define('SDMX_DIM', 'http://purl.org/linked-data/sdmx/2009/dimension#');
 define('DCT', 'http://purl.org/dc/terms/');
 define('QB', 'http://purl.org/linked-data/cube#');
@@ -28,6 +28,7 @@ $geographyCodeMappings = array(
   'RL' => 'community-regeneration-local',
   'MW' => 'multi-member-board',
   'CH' => 'community-health-partnership',
+  'SC' => 'scotland',
 );
 
 $doc_location = $_SERVER['argv'][1];
@@ -47,10 +48,9 @@ foreach($xpath->query('//indicator') as $indicator){
   #generate a qb:Dataset
   #
   $code = $indicator->getElementsByTagName('code')->item(0)->textContent;
-  $shortTitle = $indicator->getElementsByTagName('shortTitle')->item(0)->textContent;
-  $title = $indicator->getElementsByTagName('title')->item(0)->textContent;
-  $valueDimensionSlug = trim(strtolower(preg_replace('@[^a-zA-Z0-9]@','_', $title)), '_');
-  $valueDimensionURI = SNS.$valueDimensionSlug;
+  $shortTitle = preg_replace('/(\s)+/','$1',$indicator->getElementsByTagName('shortTitle')->item(0)->textContent);
+  $title = preg_replace('/(\s)+/','$1', $indicator->getElementsByTagName('title')->item(0)->textContent);
+  $valueDimensionURI = SNSConversionUtilities::indicatorTitleToURI($title);
 
   $StatsGraph->add_resource_triple($valueDimensionURI, RDF_TYPE, QB.'MeasureProperty');
   $StatsGraph->add_literal_triple($valueDimensionURI, RDFS_LABEL, $shortTitle, 'en-gb');
@@ -58,7 +58,7 @@ foreach($xpath->query('//indicator') as $indicator){
 
 
 
-  $datasetURI = BASE_URI.'dataset/'.$code;
+  $datasetURI = SNSConversionUtilities::indicatorIdentifierToDatasetURI($code);
 
   $StatsGraph->add_resource_triple($datasetURI, RDF_TYPE, QB.'Dataset');
   $StatsGraph->add_literal_triple($datasetURI, RDFS_LABEL, $title, 'en-gb');
