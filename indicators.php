@@ -61,9 +61,13 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
   $format = getText('Format', snsXML, $MDEl);
   $dateAcquired = getText('Acquired', gmsXML, $MDEl);
   $dateAvailable = getText('Available', gmsXML, $MDEl);
+  $TotalIndicator = getText('TotalIndicator', snsXML, $MDEl);
+  $UnitOfMeasurement = getText('UnitOfMeasurement', snsXML, $MDEl);
+  $Factor = getText('Factor', snsXML, $MDEl);
   $SubjectURI = SNSConversionUtilities::subjectTextToURI($Subject);
   $IndicatorURI = SNSConversionUtilities::indicatorTitleToURI($title);
   $DatasetURI = SNSConversionUtilities::indicatorIdentifierToDatasetURI($systemID);
+  $TotalDatasetURI = SNSConversionUtilities::indicatorIdentifierToDatasetURI($TotalIndicator);
   $SourceURI = $DatasetURI.'/source';
   $CanSpatiallyAggregate = strtolower(getText('CanSpatiallyAggregate',snsXML, $MDEl));
     //'http://linkedscotland.org/def/'.$systemID;
@@ -72,6 +76,8 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
   $graph->add_literal_triple($IndicatorURI, RDFS_LABEL, $shortTitle, 'en-gb');
   $graph->add_literal_triple($IndicatorURI, RDFS_COMMENT, $title, 'en-gb');
   $graph->add_literal_triple($IndicatorURI, DCT.'identifier', $systemID);
+  $graph->add_literal_triple($IndicatorURI, SNS.'unitOfMeasurement', $UnitOfMeasurement, 'en-gb');
+  $graph->add_literal_triple($IndicatorURI, SNS.'factor', $Factor, 0, XSDT.'integer');
   if(!empty($description)){
     $graph->add_literal_triple($IndicatorURI, DCT.'description', $description, 'en-gb'); 
   }
@@ -94,6 +100,10 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
   $graph->add_resource_triple($DatasetURI,RDF_TYPE, VOID.'Dataset');
   $graph->add_resource_triple($DatasetURI, DCT.'isPartOf',SNS_DATASET_URI);
   $graph->add_resource_triple(SNS_DATASET_URI,  VOID.'subset', $DatasetURI);
+  if(!empty($TotalIndicator) AND $TotalIndicator!=$systemID){ 
+    $graph->add_resource_triple($DatasetURI, SNS.'partOfTotal', $TotalDatasetURI);
+    $graph->add_resource_triple($TotalDatasetURI, SNS.'totalledFrom',$DatasetURI);
+  }
   $graph->add_literal_triple($DatasetURI, DCT.'description',  'Data using the "'.$title.'" indicator.', 'en-gb');
   $graph->add_literal_triple($DatasetURI, RDFS_LABEL,  'Dataset of: "'.$title.'" indicator.', 'en-gb');
   if(preg_match('/.+@.+/',$upLoaderEmail)){
@@ -119,6 +129,7 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
   $PublisherURI = SNSConversionUtilities::publisherToUri($Publisher);
 
   $graph->add_resource_triple($SourceURI, DCT.'publisher', $PublisherURI);
+  $graph->add_resource_triple($PublisherURI, RDF_TYPE, SNS.'DataPublisher');
   $graph->add_literal_triple($PublisherURI, RDFS_LABEL, array_shift(explode('.',$Publisher)), 'en-gb');
   if(strpos($Publisher, '.')) $graph->add_literal_triple($PublisherURI, RDFS_COMMENT, $Publisher, 'en-gb');
 
