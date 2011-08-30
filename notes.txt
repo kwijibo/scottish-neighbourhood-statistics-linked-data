@@ -1,0 +1,41 @@
+Data Supplier Code: CA ?
+DateType:  A ?
+gms:Publisher ever not null ?
+gms:Rights ? what does this mean? How can 'SE HD H1 survey' be a rights holder?
+gms:Subject values need to be canonicalised
+sns:CanSpatiallyAggregate ? 
+sns:DateType A or Q (annual or quarterly)
+sns:TotalIndicator ?
+sns:UpdateMode ? (0,1,true, false)
+sns:ValueType count mean rank ratio
+sns:Factor ? 0 , 10, 100, 1000, 100000
+
+        <sns:DenominatorIndicator>
+        <sns:DenominatorIndicator>HS-n16</sns:DenominatorIndicator>
+        <sns:DenominatorIndicator>HS-n17</sns:DenominatorIndicator>
+        <sns:DenominatorIndicator>HS-n1</sns:DenominatorIndicator>
+        <sns:DenominatorIndicator>HS-n2</sns:DenominatorIndicator>
+        <sns:DenominatorIndicator>HS-n3</sns:DenominatorIndicator>
+        <sns:DenominatorIndicator>HS-n4</sns:DenominatorIndicator>
+        <sns:DenominatorIndicator>HS-n5</sns:DenominatorIndicator>
+        <sns:DenominatorIndicator>HS-n6</sns:DenominatorIndicator>
+        <sns:DenominatorIndicator>HS-n7</sns:DenominatorIndicator>
+        <sns:DenominatorIndicator>HS-n8</sns:DenominatorIndicator>
+        <sns:DenominatorIndicator>HS-n9</sns:DenominatorIndicator>
+
+  <sns:UnitOfMeasurement>
+        <sns:UnitOfMeasurement>Average</sns:UnitOfMeasurement>
+        <sns:UnitOfMeasurement>Number</sns:UnitOfMeasurement>
+        <sns:UnitOfMeasurement>Percent</sns:UnitOfMeasurement>
+        <sns:UnitOfMeasurement>Percentage (over 2
+        <sns:UnitOfMeasurement>Percentage</sns:UnitOfMeasurement>
+        <sns:UnitOfMeasurement>Rate per
+        <sns:UnitOfMeasurement>number</sns:UnitOfMeasurement>
+        <sns:UnitOfMeasurement>percentage</sns:UnitOfMeasurement>
+        <sns:UnitOfMeasurement>rate per 100
+        <sns:UnitOfMeasurement>rate per 1000
+
+
+
+Format - csv or frm ? what is frm?
+
