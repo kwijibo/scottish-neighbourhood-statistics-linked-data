@@ -29,6 +29,7 @@ $geographyCodeMappings = array(
   'MW' => 'multi-member-board',
   'CH' => 'community-health-partnership',
   'SC' => 'scotland',
+  'COA' => '2001-census-output-areas',
 );
 
 $doc_location = $_SERVER['argv'][1];

@@ -76,7 +76,7 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
   $graph->add_literal_triple($IndicatorURI, RDFS_LABEL, $shortTitle, 'en-gb');
   $graph->add_literal_triple($IndicatorURI, RDFS_COMMENT, $title, 'en-gb');
   $graph->add_literal_triple($IndicatorURI, DCT.'identifier', $systemID);
-  $graph->add_literal_triple($IndicatorURI, SNS.'unitOfMeasurement', $UnitOfMeasurement, 'en-gb');
+  $graph->add_literal_triple($IndicatorURI, SNS.'unitOfMeasurement', strtolower($UnitOfMeasurement), 'en-gb');
   $graph->add_literal_triple($IndicatorURI, SNS.'factor', $Factor, 0, XSDT.'integer');
   if(!empty($description)){
     $graph->add_literal_triple($IndicatorURI, DCT.'description', $description, 'en-gb'); 
