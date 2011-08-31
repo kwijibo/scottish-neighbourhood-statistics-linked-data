@@ -4,6 +4,8 @@ define('SNS', 'http://linkedscotland.org/def/');
 define('SNS_Concepts', 'http://linkedscotland.org/concepts/sns/');
 define('BASE_URI', 'http://linkedscotland.org/id/');
 define('SNS_DATASET_URI',  'http://linkedscotland.org/id/dataset/sns');
+define('FOAF', 'http://xmlns.com/foaf/0.1/');
+
 class SNSConversionUtilities {
 
   const SNS = 'http://linkedscotland.org/def/';
@@ -74,7 +76,11 @@ class SNSConversionUtilities {
   function publisherToUri($Publisher){
     $publisherStringStart = array_shift(explode('.', $Publisher));
     $slug = self::getSlugFromText($publisherStringStart);
-    return 'http://linkedscotland.org/id/sns-source-publisher/'.$slug;
+    return BASE_URI.'sns-source-publisher/'.$slug;
+  }
+
+  function emailToURI($email){
+    return BASE_URI.'agent/'.sha1($email);
   }
 
 }

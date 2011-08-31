@@ -95,6 +95,7 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
     $graph->add_resource_triple($SubjectURI, RDF_TYPE, SKOS.'Concept');
     $graph->add_literal_triple($SubjectURI, RDFS_LABEL, $Subject, 'en-gb');
     $graph->add_resource_triple($SubjectURI, SKOS.'inScheme', SNS_Concepts);  
+    $graph->add_resource_triple(SNS_Concepts, SKOS.'hasTopConcept', $SubjectURI);
   }
 
   $graph->add_resource_triple($DatasetURI,RDF_TYPE, VOID.'Dataset');
@@ -106,11 +107,15 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
   }
   $graph->add_literal_triple($DatasetURI, DCT.'description',  'Data using the "'.$title.'" indicator.', 'en-gb');
   $graph->add_literal_triple($DatasetURI, RDFS_LABEL,  'Dataset of: "'.$title.'" indicator.', 'en-gb');
-  if(preg_match('/.+@.+/',$upLoaderEmail)){
-    $graph->add_resource_triple($DatasetURI, SNS.'uploaderEmail', 'mailto:'.$upLoaderEmail); 
-  }
-  if(preg_match('/.+@.+/',$HelpEmail)){
-    $graph->add_resource_triple($DatasetURI, SNS.'helpEmail', 'mailto:'.$upLoaderEmail); 
+  foreach(array('uploader'=>$upLoaderEmail, 'helpContact'=> $HelpEmail) as $role => $agentEmail){
+    if(preg_match('/.+@.+/',$agentEmail)){
+      $agentUri = SNSConversionUtilities::emailToURI($agentEmail);
+      $graph->add_resource_triple($DatasetURI, SNS.$role, $agentUri);
+      $graph->add_resource_triple($agentUri, FOAF.'mbox',  'mailto:'.$agentEmail);
+      $graph->add_resource_triple($agentUri, SNS.'isContactFor', $DatasetURI);
+      $name = ucwords(str_replace('.',' ', array_shift(explode('@', $agentEmail))));
+      $graph->add_literal_triple($agentUri, RDFS_LABEL, $name);
+    }
   }
  
   $graph->add_resource_triple($DatasetURI, SNS.'indicator', $IndicatorURI);
@@ -125,14 +130,13 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
   $graph->add_literal_triple($SourceURI, SNS.'dateAcquired', date('c', strtotime($dateAcquired)), false, XSDT.'dateTime');
   $graph->add_literal_triple($SourceURI, SNS.'dateAvailable', date('c', strtotime($dateAvailable)), false, XSDT.'dateTime');
 
-
+if(!empty($Publisher)){
   $PublisherURI = SNSConversionUtilities::publisherToUri($Publisher);
-
   $graph->add_resource_triple($SourceURI, DCT.'publisher', $PublisherURI);
   $graph->add_resource_triple($PublisherURI, RDF_TYPE, SNS.'DataPublisher');
   $graph->add_literal_triple($PublisherURI, RDFS_LABEL, array_shift(explode('.',$Publisher)), 'en-gb');
   if(strpos($Publisher, '.')) $graph->add_literal_triple($PublisherURI, RDFS_COMMENT, $Publisher, 'en-gb');
-
+}
   # <http://linkedscotland.org/def/H1_Clients_per_1000_population> 
   #   a qb:MeasureProperty ;
   #   rdfs:label  "shortTitle"@en-gb ;
