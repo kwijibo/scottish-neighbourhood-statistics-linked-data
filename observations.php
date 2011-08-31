@@ -7,11 +7,6 @@ require 'moriarty/simplegraph.class.php';
 require 'SNSConversionUtilities.php';
 //define('BASE_URI', 'http://linkedscotland.org/id/');
 //define('SNS', 'http://linkedscotland.org/def/');
-define('SDMX_DIM', 'http://purl.org/linked-data/sdmx/2009/dimension#');
-define('DCT', 'http://purl.org/dc/terms/');
-define('QB', 'http://purl.org/linked-data/cube#');
-define('XSDT', 'http://www.w3.org/2001/XMLSchema#');
-
 function isfloat($f) { return ($f == (string)(float)$f); } 
 
 $geographyCodeMappings = array(

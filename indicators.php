@@ -4,15 +4,8 @@ define('MORIARTY_ARC_DIR', 'arc/');
 require 'moriarty/simplegraph.class.php';
 require 'SNSConversionUtilities.php';
 //define('SNS', 'http://linkedscotland.org/def/');
-define('SDMX_DIM', 'http://purl.org/linked-data/sdmx/2009/dimension#');
-define('DCT', 'http://purl.org/dc/terms/');
-define('DC', 'http://purl.org/dc/elements/1.1/');
-define('QB', 'http://purl.org/linked-data/cube#');
-define('XSDT', 'http://www.w3.org/2001/XMLSchema#');
 define('snsXML', 'urn:sns-scotexec-gov-uk/schemas/indicators/0.1');
 define('gmsXML', 'http://www.govtalk.gov.uk/CM/gms');
-define('SKOS', 'http://www.w3.org/2004/02/skos/core#');
-define('VOID', 'http://rdfs.org/ns/void#');
 
 function getText($localName, $ns, &$el){
   if(!is_object($el->getElementsByTagNameNS($ns,$localName )->item(0))){
@@ -76,7 +69,11 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
   $graph->add_literal_triple($IndicatorURI, RDFS_LABEL, $shortTitle, 'en-gb');
   $graph->add_literal_triple($IndicatorURI, RDFS_COMMENT, $title, 'en-gb');
   $graph->add_literal_triple($IndicatorURI, DCT.'identifier', $systemID);
-  $graph->add_literal_triple($IndicatorURI, SNS.'unitOfMeasurement', strtolower($UnitOfMeasurement), 'en-gb');
+  $UnitOfMeasurementUri = SNSConversionUtilities::unitOfMeaurementToURI($UnitOfMeasurement);
+  $graph->add_resource_triple($DatasetURI, SDMX_DIM.'unitMeasure', $UnitOfMeasurementUri);
+  $graph->add_resource_triple($IndicatorURI, SDMX_DIM.'unitMeasure', $UnitOfMeasurementUri);
+  $graph->add_literal_triple($UnitOfMeasurementUri, RDFS_LABEL, ucwords($UnitOfMeasurement), 'en-gb');
+  $graph->add_resource_triple($UnitOfMeasurementUri, RDF_TYPE, SNS.'UnitOfMeasurement');
   $graph->add_literal_triple($IndicatorURI, SNS.'factor', $Factor, 0, XSDT.'integer');
   if(!empty($description)){
     $graph->add_literal_triple($IndicatorURI, DCT.'description', $description, 'en-gb'); 
@@ -91,11 +88,12 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
     $graph->add_literal_triple(SNS.'SpatialAggregation', RDFS_LABEL, 'Spatial Aggregation', 'en-gb');
   }
   if(!empty($Subject)){
-    $graph->add_resource_triple($IndicatorURI, DCT.'subject', $SubjectURI);
+    $graph->add_resource_triple($DatasetURI, DCT.'subject', $SubjectURI);
     $graph->add_resource_triple($SubjectURI, RDF_TYPE, SKOS.'Concept');
-    $graph->add_literal_triple($SubjectURI, RDFS_LABEL, $Subject, 'en-gb');
+    $graph->add_literal_triple($SubjectURI, RDFS_LABEL, ucwords($Subject), 'en-gb');
     $graph->add_resource_triple($SubjectURI, SKOS.'inScheme', SNS_Concepts);  
     $graph->add_resource_triple(SNS_Concepts, SKOS.'hasTopConcept', $SubjectURI);
+    $graph->add_resource_triple($SubjectURI, SNS.'isTopicOf', $DatasetURI);
   }
 
   $graph->add_resource_triple($DatasetURI,RDF_TYPE, VOID.'Dataset');
@@ -113,6 +111,7 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
       $graph->add_resource_triple($DatasetURI, SNS.$role, $agentUri);
       $graph->add_resource_triple($agentUri, FOAF.'mbox',  'mailto:'.$agentEmail);
       $graph->add_resource_triple($agentUri, SNS.'isContactFor', $DatasetURI);
+      $graph->add_resource_triple($agentUri, RDF_TYPE, FOAF.'Agent');
       $name = ucwords(str_replace('.',' ', array_shift(explode('@', $agentEmail))));
       $graph->add_literal_triple($agentUri, RDFS_LABEL, $name);
     }

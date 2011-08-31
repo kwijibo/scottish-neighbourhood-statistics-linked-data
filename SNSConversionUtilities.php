@@ -5,6 +5,13 @@ define('SNS_Concepts', 'http://linkedscotland.org/concepts/sns/');
 define('BASE_URI', 'http://linkedscotland.org/id/');
 define('SNS_DATASET_URI',  'http://linkedscotland.org/id/dataset/sns');
 define('FOAF', 'http://xmlns.com/foaf/0.1/');
+define('SDMX_DIM', 'http://purl.org/linked-data/sdmx/2009/dimension#');
+define('DCT', 'http://purl.org/dc/terms/');
+define('QB', 'http://purl.org/linked-data/cube#');
+define('XSDT', 'http://www.w3.org/2001/XMLSchema#');
+define('SKOS', 'http://www.w3.org/2004/02/skos/core#');
+define('VOID', 'http://rdfs.org/ns/void#');
+
 
 class SNSConversionUtilities {
 
@@ -27,8 +34,8 @@ class SNSConversionUtilities {
     } else if(preg_match($calendarYearWithSpaces,$date, $m)){
       return self::base.'id/year/'.trim($m[0]);
     } else if(preg_match($multiYearSpan, $date, $m)){
-        
-    
+      $difference = $m[2] - $m[1];
+      return self::base.'id/gregorian-interval/'.$m[1].'-01-01T00:00:00/P'.$difference.'Y';
     } else if(preg_match($yearWithMonth, $date, $m)){
       return self::base.'id/month/'.$m[1].'-'.$m[2];
     } else if(preg_match($yearWithQuarter, $date, $m)){
@@ -82,7 +89,9 @@ class SNSConversionUtilities {
   function emailToURI($email){
     return BASE_URI.'agent/'.sha1($email);
   }
-
+  function unitOfMeaurementToURI($unit){
+    return BASE_URI.'unit-of-measurement/'.trim(strtolower(self::getSlugFromText($unit)));
+  }
 }
 
 
