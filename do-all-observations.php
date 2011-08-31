@@ -1,5 +1,7 @@
 <?php
-foreach(glob('data/*.xml') as $filename){
+$files = glob('data/*.xml') ;
+$files = array_reverse($files);
+foreach($files as $filename){
   if(!strpos( $filename, 'Metadata') AND !strpos( $filename, 'Copyright')){
 
   echo $filename."\n";

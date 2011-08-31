@@ -5,7 +5,7 @@
 define('MORIARTY_ARC_DIR', 'arc/');
 require 'moriarty/simplegraph.class.php';
 require 'SNSConversionUtilities.php';
-define('BASE_URI', 'http://linkedscotland.org/id/');
+//define('BASE_URI', 'http://linkedscotland.org/id/');
 //define('SNS', 'http://linkedscotland.org/def/');
 define('SDMX_DIM', 'http://purl.org/linked-data/sdmx/2009/dimension#');
 define('DCT', 'http://purl.org/dc/terms/');
@@ -35,85 +35,100 @@ $geographyCodeMappings = array(
 $doc_location = $_SERVER['argv'][1];
 //$doc_location = 'sample.xml';
 
-$xml = file_get_contents($doc_location);
+//$xml = file_get_contents($doc_location);
 
-$document = new DomDocument();
-$document->loadXML($xml);
+//$document = new DomDocument();
+//$document->loadXML($xml);
 
-$StatsGraph = new SimpleGraph();
+// Parsing a large document with XMLReader with Expand - DOM/DOMXpath 
+$reader = new XMLReader();
 
-$xpath = new DomXPath($document);
+$reader->open($doc_location);
 
-foreach($xpath->query('//indicator') as $indicator){
+while ($reader->read()) {
+    switch ($reader->nodeType) {
+        case (XMLREADER::ELEMENT):
+        if ($reader->localName == "indicator") {
+            $node = $reader->expand();
+            $dom = new DomDocument();
+            $n = $dom->importNode($node,true);
+            $dom->appendChild($n);
+            $StatsGraph = new SimpleGraph();
 
-  #generate a qb:Dataset
-  #
-  $code = $indicator->getElementsByTagName('code')->item(0)->textContent;
-  $shortTitle = preg_replace('/(\s)+/','$1',$indicator->getElementsByTagName('shortTitle')->item(0)->textContent);
-  $title = preg_replace('/(\s)+/','$1', $indicator->getElementsByTagName('title')->item(0)->textContent);
-  $valueDimensionURI = SNSConversionUtilities::indicatorTitleToURI($title);
+            $xpath = new DomXPath($dom);
 
-  $StatsGraph->add_resource_triple($valueDimensionURI, RDF_TYPE, QB.'MeasureProperty');
-  $StatsGraph->add_literal_triple($valueDimensionURI, RDFS_LABEL, $shortTitle, 'en-gb');
-  $StatsGraph->add_literal_triple($valueDimensionURI, RDFS_COMMENT, $title, 'en-gb');
+            foreach($xpath->query('//indicator') as $indicator){
 
+              #generate a qb:Dataset
+              #
+              $code = $indicator->getElementsByTagName('code')->item(0)->textContent;
+              $shortTitle = preg_replace('/(\s)+/','$1',$indicator->getElementsByTagName('shortTitle')->item(0)->textContent);
+              $title = preg_replace('/(\s)+/','$1', $indicator->getElementsByTagName('title')->item(0)->textContent);
+              $valueDimensionURI = SNSConversionUtilities::indicatorTitleToURI($title);
 
-
-  $datasetURI = SNSConversionUtilities::indicatorIdentifierToDatasetURI($code);
-
-  $StatsGraph->add_resource_triple($datasetURI, RDF_TYPE, QB.'Dataset');
-  $StatsGraph->add_literal_triple($datasetURI, RDFS_LABEL, $title, 'en-gb');
-  $StatsGraph->add_literal_triple($datasetURI, SNS.'identifier', $code);
-  $StatsGraph->add_literal_triple($datasetURI, SNS.'shortTitle', $shortTitle, 'en-gb');
+              $StatsGraph->add_resource_triple($valueDimensionURI, RDF_TYPE, QB.'MeasureProperty');
+              $StatsGraph->add_literal_triple($valueDimensionURI, RDFS_LABEL, $shortTitle, 'en-gb');
+              $StatsGraph->add_literal_triple($valueDimensionURI, RDFS_COMMENT, $title, 'en-gb');
 
 
-  # do Observations
-  #
-  foreach($indicator->getElementsByTagName('data') as $data){
-    $date = $data->getAttribute('date');
-    $dateURI = SNSConversionUtilities::dateToURI($date);
-    foreach($data->childNodes as $child){
-      if(isset($child->tagName) && $child->tagName=='area'){
-          $area = $child;
 
-          $geographyTypeCode = $child->getAttribute('type'); 
-          foreach ($area->getElementsByTagName('area') as $dataArea) {
+              $datasetURI = SNSConversionUtilities::indicatorIdentifierToDatasetURI($code);
 
-            #
-            # <id/dataset/ED-SQAsMaleS4Roll2/date/2008/area/S0200000001> 
-            #   a qb:Observation ;
-            #   sns:number_of_pupils_on_the_S4_roll 34 ;
-            #
-              $areaCode = $dataArea->getAttribute('code');
-              $dataValue = trim($dataArea->textContent);
-              $valueDT = false;
-              if(is_numeric($dataValue)){
-                if(  preg_match('/^\d+$/', $dataValue) ){
-                  $valueDT = XSDT.'integer';
-                } else if(isFloat($dataValue)){
-                  $valueDT = XSDT.'float';
+              $StatsGraph->add_resource_triple($datasetURI, RDF_TYPE, QB.'Dataset');
+              $StatsGraph->add_literal_triple($datasetURI, RDFS_LABEL, $title, 'en-gb');
+              $StatsGraph->add_literal_triple($datasetURI, SNS.'identifier', $code);
+              $StatsGraph->add_literal_triple($datasetURI, SNS.'shortTitle', $shortTitle, 'en-gb');
+
+
+    # do Observations
+    #
+    foreach($indicator->getElementsByTagName('data') as $data){
+      $date = $data->getAttribute('date');
+      $dateURI = SNSConversionUtilities::dateToURI($date);
+      foreach($data->childNodes as $child){
+        if(isset($child->tagName) && $child->tagName=='area'){
+            $area = $child;
+
+            $geographyTypeCode = $child->getAttribute('type'); 
+            foreach ($area->getElementsByTagName('area') as $dataArea) {
+
+              #
+              # <id/dataset/ED-SQAsMaleS4Roll2/date/2008/area/S0200000001> 
+              #   a qb:Observation ;
+              #   sns:number_of_pupils_on_the_S4_roll 34 ;
+              #
+                $areaCode = $dataArea->getAttribute('code');
+                $dataValue = trim($dataArea->textContent);
+                $valueDT = false;
+                if(is_numeric($dataValue)){
+                  if(  preg_match('/^\d+$/', $dataValue) ){
+                    $valueDT = XSDT.'integer';
+                  } else if(isFloat($dataValue)){
+                    $valueDT = XSDT.'float';
+                  }
                 }
-              }
-              $geographyURI = BASE_URI.'geography/'.$geographyCodeMappings[$geographyTypeCode].'/'.$areaCode;
+                $geographyURI = BASE_URI.'geography/'.$geographyCodeMappings[$geographyTypeCode].'/'.$areaCode;
 
-              $observationUri = str_replace('/id/dataset/','/id/observation/',$datasetURI).'/date/'.$date.'/area/'.$areaCode;
-              $StatsGraph->add_resource_triple($observationUri, SDMX_DIM.'refPeriod', $dateURI);
-              $StatsGraph->add_resource_triple($observationUri, SDMX_DIM.'refArea', $geographyURI);
-              $StatsGraph->add_literal_triple($observationUri, $valueDimensionURI, $dataValue, false, $valueDT);
-              $StatsGraph->add_resource_triple($observationUri, QB.'dataset', $datasetURI);
-              $StatsGraph->add_resource_triple($observationUri, RDF_TYPE, QB.'Observation');
+                $observationUri = str_replace('/id/dataset/','/id/observation/',$datasetURI).'/date/'.$date.'/area/'.$areaCode;
+                $StatsGraph->add_resource_triple($observationUri, SDMX_DIM.'refPeriod', $dateURI);
+                $StatsGraph->add_resource_triple($observationUri, SDMX_DIM.'refArea', $geographyURI);
+                $StatsGraph->add_literal_triple($observationUri, $valueDimensionURI, $dataValue, false, $valueDT);
+                $StatsGraph->add_resource_triple($observationUri, QB.'dataset', $datasetURI);
+                $StatsGraph->add_resource_triple($observationUri, RDF_TYPE, QB.'Observation');
 
-          }
+            }
+        }
       }
+
+                  }
+              }
+
+            echo $StatsGraph->to_ntriples();
+
+        }
     }
-
-
-  }
-
-
-
 }
 
-echo $StatsGraph->to_turtle();
+
 
 ?>
