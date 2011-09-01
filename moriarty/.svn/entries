@@ -1,15 +1,15 @@
 10
 
 dir
-294
+320
 https://moriarty.googlecode.com/svn/trunk
 https://moriarty.googlecode.com/svn
 
 
 
-2011-02-23T14:55:57.385719Z
-294
-jhigman
+2011-08-09T08:22:12.294040Z
+320
+k.j.w.alexander@gmail.com
 has-props
 
 
@@ -32,11 +32,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-df5bac52fc50ac6b99cd876a59ab3473
-2010-12-15T23:39:30.758817Z
-284
-me@iandavis.com
+2011-08-31T22:57:41.000000Z
+cce0f06b1d8cecba9f151442d9c57e80
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -58,7 +58,7 @@ me@iandavis.com
 
 
 
-7142
+7140
 
 oaiservice.class.php
 file
@@ -66,11 +66,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-9aaa771a1ace0a182b5fd82b3c1e722b
-2011-01-19T13:41:40.595854Z
-287
-jhigman
+2011-08-31T22:57:41.000000Z
+38aabaa28a83055b69b6a3399b1497d0
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -92,7 +92,7 @@ jhigman
 
 
 
-3889
+3887
 
 rollback.class.php
 file
@@ -100,11 +100,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-7c81e482aad0d5c749e463efac4d794b
-2008-07-25T20:02:25.965682Z
-2
-me@iandavis.com
+2011-08-31T22:57:41.000000Z
+f9eaa06e1983747405c68232a14a54ca
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -126,7 +126,7 @@ me@iandavis.com
 
 
 
-2584
+2583
 
 privategraph.class.php
 file
@@ -134,11 +134,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-8573f01ab8e8691bd0de2b4b0644ab94
-2008-12-09T10:03:19.204186Z
-45
-me@iandavis.com
+2011-08-31T22:57:41.000000Z
+f9d55f5ee7158c90f508f639334265dc
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -160,7 +160,7 @@ me@iandavis.com
 
 
 
-232
+230
 
 store.class.php
 file
@@ -168,11 +168,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-861f4e66e0fbd80074dd3a2a552f9421
-2010-04-12T14:42:03.084378Z
-268
-K.J.W.Alexander
+2011-08-31T22:57:41.000000Z
+967c57a49e4897f4273ce6b863f2148d
+2011-08-09T08:22:12.294040Z
+320
+k.j.w.alexander@gmail.com
 
 
 
@@ -194,7 +194,7 @@ K.J.W.Alexander
 
 
 
-6302
+9880
 
 credentials.class.php
 file
@@ -202,11 +202,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-a7900bad3ec2c40b42ddb53d8c56c126
-2008-12-08T00:54:53.917535Z
-43
-me@iandavis.com
+2011-08-31T22:57:41.000000Z
+45df1ec8296e8c6e6912c5685776613d
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -228,7 +228,7 @@ me@iandavis.com
 
 
 
-944
+942
 
 docs
 dir
@@ -239,11 +239,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-2d0f8f9386e274f21201201f8816d5da
-2009-03-23T22:37:51.531358Z
-60
-me@iandavis.com
+2011-08-31T22:57:41.000000Z
+aa50ce11a56e4a890176379983b7f553
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -265,7 +265,7 @@ me@iandavis.com
 
 
 
-1452
+1451
 
 changeset.class.php
 file
@@ -273,11 +273,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-ee297ae3a15e7006cd7252225ab87dd5
-2010-02-22T00:33:32.408391Z
-255
-innovateer
+2011-08-31T22:57:41.000000Z
+44f3ef4627f428861382f1ab1796b133
+2011-08-02T08:29:25.374371Z
+314
+jhigman@gmail.com
 
 
 
@@ -299,7 +299,7 @@ innovateer
 
 
 
-9799
+9823
 
 fieldpredicatemap.class.php
 file
@@ -307,11 +307,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-c5d7426e8b62ca8a53933794edfc4f26
-2010-01-12T21:27:05.673942Z
-227
-innovateer
+2011-08-31T22:57:41.000000Z
+b3b5f82e9ff879c9618487133bdd69d8
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -333,41 +333,7 @@ innovateer
 
 
 
-4207
-
-changesetbatch.class.php
-file
-
-
-
-
-2011-02-24T14:38:56.000000Z
-e09d5fea1d50a502e1904892efa5fd98
-2009-05-08T16:28:25.491939Z
-75
-K.J.W.Alexander
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4714
+4205
 
 build.xml
 file
@@ -375,11 +341,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
+2011-08-31T22:57:41.000000Z
 62a8e3bfb0e69548b6e1d071f61848a4
-2011-02-23T14:09:01.577352Z
-291
-jhigman
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -443,11 +409,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-6cc8cf2a6da05fd7636ecc6be2b53be7
-2008-12-09T10:03:19.204186Z
-45
-me@iandavis.com
+2011-08-31T22:57:41.000000Z
+1fe92a9ebb57ee534d0ba16c2f99d7a4
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -469,9 +435,12 @@ me@iandavis.com
 
 
 
-2574
+2573
 
 tools
+dir
+
+tests
 dir
 
 storecollection.class.php
@@ -480,11 +449,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-86aaed460878b5fbbb6d9c45b64f6b12
-2009-03-23T22:37:51.531358Z
-60
-me@iandavis.com
+2011-08-31T22:57:41.000000Z
+a2649171c3d76bfbc0154f876a621076
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -506,10 +475,7 @@ me@iandavis.com
 
 
 
-2589
-
-tests
-dir
+2588
 
 moriarty.inc.php
 file
@@ -517,11 +483,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-b6be82d24027b89d19080a363e2ca902
-2010-04-19T13:35:22.180378Z
-269
-innovateer
+2011-08-31T22:57:41.000000Z
+c6e4dd938d591cdabaa2a30408ac975a
+2011-08-03T08:11:46.937001Z
+317
+K.J.W.Alexander@gmail.com
 
 
 
@@ -543,22 +509,22 @@ innovateer
 
 
 
-9762
+9837
 
 lib
 dir
 
-httpclient.class.php
+sparqlservicebase.class.php
 file
 
 
 
 
-2011-02-24T14:38:56.000000Z
-653372fe3f2d03922cae940ca0900b56
-2009-08-18T11:48:44.011566Z
-120
-mmmmmrob
+2011-08-31T22:57:41.000000Z
+07b0d9507a61d08c383ee9de5cdab6db
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -580,7 +546,41 @@ mmmmmrob
 
 
 
-1062
+13966
+
+graphpath.class.php
+file
+
+
+
+
+2011-08-31T22:57:41.000000Z
+01507d307df18e8f4d6d6bb090880716
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+36646
 
 COPYING
 file
@@ -616,17 +616,17 @@ me@iandavis.com
 
 17989
 
-graphpath.class.php
+httpclient.class.php
 file
 
 
 
 
 2011-02-24T14:38:56.000000Z
-c475dd1daebcbd2b712a48a73c4d66b5
-2010-09-20T16:29:45.429991Z
-273
-innovateer
+653372fe3f2d03922cae940ca0900b56
+2009-08-18T11:48:44.011566Z
+120
+mmmmmrob
 
 
 
@@ -648,75 +648,7 @@ innovateer
 
 
 
-36645
-
-sparqlservicebase.class.php
-file
-
-
-
-
-2011-02-24T14:38:56.000000Z
-7eee25ac8aa8394aa884a0b9aff88dac
-2011-01-17T15:19:37.139448Z
-286
-me@iandavis.com
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-13968
-
-constants.inc.php
-file
-
-
-
-
-2011-02-24T14:38:56.000000Z
-3318a5aef510891424ccf42013242e08
-2008-07-25T20:02:25.965682Z
-2
-me@iandavis.com
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-142
+1062
 
 datatableresult.class.php
 file
@@ -724,11 +656,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-838052201751033bd36190d1bed8dcee
-2010-02-22T00:33:32.408391Z
-255
-innovateer
+2011-08-31T22:57:41.000000Z
+e69c0e83bb9d3321fa8dc51674aadc5c
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -752,17 +684,17 @@ innovateer
 
 5545
 
-augmentservice.class.php
+constants.inc.php
 file
 
 
 
 
-2011-02-24T14:38:56.000000Z
-f1a270faca57b6f408d638bc3e7f14eb
-2011-02-23T14:55:57.385719Z
-294
-jhigman
+2011-08-31T22:57:41.000000Z
+ed2bbb743bb1405e4479bdaf348537fc
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -784,7 +716,7 @@ jhigman
 
 
 
-1858
+141
 
 datatable.class.php
 file
@@ -792,11 +724,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-abcdaca05211163ab28a79e3d8333c97
-2010-02-22T00:33:32.408391Z
-255
-innovateer
+2011-08-31T22:57:41.000000Z
+066706dcaa6082480ca94440760f0871
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -818,7 +750,41 @@ innovateer
 
 
 
-33100
+33101
+
+augmentservice.class.php
+file
+
+
+
+
+2011-08-31T22:57:41.000000Z
+90a50781148b8b99aae899eddb7e5e30
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1856
 
 sparqlservice.class.php
 file
@@ -826,11 +792,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-86c3d1986907b6464bb530093f9f565e
-2008-12-09T10:03:19.204186Z
-45
-me@iandavis.com
+2011-08-31T22:57:41.000000Z
+fbec781dc260a0bdb1dd07dfb53dd4a1
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -852,41 +818,7 @@ me@iandavis.com
 
 
 
-307
-
-queryprofile.class.php
-file
-
-
-
-
-2011-02-24T14:38:56.000000Z
-11bf0005dfd93e8b5b363817e10b624d
-2009-03-23T22:37:51.531358Z
-60
-me@iandavis.com
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3466
+305
 
 phphttpclient.class.php
 file
@@ -894,11 +826,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-18e1ef413c8e2d1033c2b5005527541e
-2010-03-21T12:36:37.497741Z
-262
-innovateer
+2011-08-31T22:57:41.000000Z
+f3f60389627bc65de16436159a4a120a
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -920,7 +852,41 @@ innovateer
 
 
 
-2423
+2432
+
+queryprofile.class.php
+file
+
+
+
+
+2011-08-31T22:57:41.000000Z
+3fd4317602cdbf9cfb86a2989b5e940b
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3464
 
 union.class.php
 file
@@ -928,11 +894,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-5ce42132201a9acb42c962b4ab361c4e
-2009-10-06T23:31:24.409227Z
-134
-me@iandavis.com
+2011-08-31T22:57:41.000000Z
+0c0a84ed2d238a3b48c30b0220b505a7
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -954,7 +920,7 @@ me@iandavis.com
 
 
 
-1249
+1251
 
 httpresponse.class.php
 file
@@ -962,11 +928,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-767878ab437cae2d5a1c3aaca13c57b8
-2010-10-10T21:46:18.254524Z
-276
-innovateer
+2011-08-31T22:57:41.000000Z
+3a4492434a3d1b6d2ed0dd6a5f61cad0
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -988,7 +954,7 @@ innovateer
 
 
 
-4677
+4675
 
 storegroupconfig.class.php
 file
@@ -996,11 +962,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-794252b01fd4317665488bfd60e08d15
-2009-03-23T22:37:51.531358Z
-60
-me@iandavis.com
+2011-08-31T22:57:41.000000Z
+51f01b35ab056c7412cc7ca5b71d4b53
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -1022,7 +988,7 @@ me@iandavis.com
 
 
 
-1122
+1121
 
 metabox.class.php
 file
@@ -1030,11 +996,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-2c01147fc15cf01c6a54370f51dc66d7
-2008-12-09T10:03:19.204186Z
-45
-me@iandavis.com
+2011-08-31T22:57:41.000000Z
+2c6921666b3d04f8a4f01c31ee0000bb
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -1056,7 +1022,7 @@ me@iandavis.com
 
 
 
-216
+214
 
 graph.class.php
 file
@@ -1064,11 +1030,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-f392835a3c55241556658becd866739f
-2010-12-15T23:35:07.407217Z
-283
-me@iandavis.com
+2011-08-31T22:57:41.000000Z
+d042187c44bc86a1426494dc47d40cc8
+2011-08-02T08:29:25.374371Z
+314
+jhigman@gmail.com
 
 
 
@@ -1090,7 +1056,7 @@ me@iandavis.com
 
 
 
-7255
+7958
 
 networkresource.class.php
 file
@@ -1098,11 +1064,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-bb4c1ca1a48490447d53d3654a28412b
-2009-09-28T21:27:41.901194Z
-130
-me@iandavis.com
+2011-08-31T22:57:41.000000Z
+11f0b2cce04edbf7581d88b59b708845
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -1124,7 +1090,7 @@ me@iandavis.com
 
 
 
-3416
+3415
 
 httpcache.class.php
 file
@@ -1132,11 +1098,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-3e7daf714e04b3eacf3a6ac76b91949a
-2009-04-20T15:22:17.444978Z
-63
-me@iandavis.com
+2011-08-31T22:57:41.000000Z
+5688a9b62e5258e0aba2c94ea51fc3c1
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -1158,7 +1124,7 @@ me@iandavis.com
 
 
 
-2052
+2044
 
 facetservice.class.php
 file
@@ -1166,11 +1132,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-70742b2077c2564823797a704b507997
-2010-01-13T13:42:49.214839Z
-238
-innovateer
+2011-08-31T22:57:41.000000Z
+bdbb6feb79e48d437d0d51eaf68f941d
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -1192,7 +1158,7 @@ innovateer
 
 
 
-5460
+5458
 
 curlhttpclient.class.php
 file
@@ -1200,11 +1166,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-4baab31d83ac9fe2a6d7375e196ad085
-2010-03-21T12:36:37.497741Z
-262
-innovateer
+2011-08-31T22:57:41.000000Z
+14facbedcb7c4149b3cba727ee7d686b
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -1226,7 +1192,7 @@ innovateer
 
 
 
-6000
+6070
 
 storegroup.class.php
 file
@@ -1234,11 +1200,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-fd51817a91336f4d1a287999a050461a
-2010-10-23T07:53:23.773468Z
-281
-innovateer
+2011-08-31T22:57:41.000000Z
+27c4aa11a6b6a1ddde5ea38bb61f0859
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -1260,7 +1226,7 @@ innovateer
 
 
 
-1402
+1400
 
 phing.xml
 file
@@ -1268,11 +1234,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
+2011-08-31T22:57:41.000000Z
 5d386ffac1ca35c0ec3279b0c40227ae
-2011-02-23T14:51:25.186310Z
-293
-jhigman
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 has-props
 
 
@@ -1302,11 +1268,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-2bb6713322fa3691b843c4345d559914
-2011-02-17T13:29:39.765597Z
-289
-nadeem.shabir@gmail.com
+2011-08-31T22:57:41.000000Z
+725003c4127155fd0d763fd6358306c3
+2011-08-02T15:53:06.985822Z
+316
+jhigman@gmail.com
 
 
 
@@ -1328,7 +1294,7 @@ nadeem.shabir@gmail.com
 
 
 
-45591
+47370
 
 jobqueue.class.php
 file
@@ -1336,11 +1302,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-c987c94c304420204d168ae248f5d1e0
-2009-12-22T17:21:52.610723Z
-167
-ajbate
+2011-08-31T22:57:42.000000Z
+a02fd64f47055633278d2cb4041fa0ef
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -1362,7 +1328,7 @@ ajbate
 
 
 
-5406
+5408
 
 httprequestfactory.class.php
 file
@@ -1370,11 +1336,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-3fa4f7a0a9789b022e2b24ebe45080a8
-2010-03-26T22:50:30.704272Z
-265
-K.J.W.Alexander
+2011-08-31T22:57:42.000000Z
+b8cbfe89ba0197da9110a46ac7d1583a
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -1396,7 +1362,7 @@ K.J.W.Alexander
 
 
 
-1991
+1989
 
 etc
 dir
@@ -1441,11 +1407,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-7911c43979a318fc48132048f00c33c0
-2008-08-28T23:58:16.617923Z
-13
-k.j.w.alexander
+2011-08-31T22:57:42.000000Z
+399dd90b0692ba0c3645eefdfbcb947f
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -1467,7 +1433,7 @@ k.j.w.alexander
 
 
 
-976
+975
 
 labeller.class.php
 file
@@ -1475,33 +1441,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-19666d914d874a399dd8ce6ffe107c5c
-2010-10-18T23:06:35.309317Z
-280
-innovateer
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-31787
+e8edf0cfdd8af89a5a5a6496a2a3381a
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 contentbox.class.php
 file
@@ -1509,11 +1453,11 @@ file
 
 
 
-2011-02-24T14:38:56.000000Z
-5892cae343afaa5cfccb6c6d2f34a8af
-2010-04-11T20:59:15.150870Z
-267
-K.J.W.Alexander
+2011-08-31T22:57:42.000000Z
+0fc2b01a9b4a907aa41882dde8a0ea04
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -1535,7 +1479,7 @@ K.J.W.Alexander
 
 
 
-6828
+6824
 
 examples
 dir

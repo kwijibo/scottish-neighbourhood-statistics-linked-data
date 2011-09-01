@@ -194,6 +194,5 @@ class DataTableResult {
 
     return $ret;
   }
-
-
 }
+?>

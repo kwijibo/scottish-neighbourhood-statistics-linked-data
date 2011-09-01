@@ -1,15 +1,15 @@
 10
 
 dir
-294
+320
 https://moriarty.googlecode.com/svn/trunk/tests
 https://moriarty.googlecode.com/svn
 
 
 
-2011-02-23T14:55:57.385719Z
-294
-jhigman
+2011-08-09T08:22:12.294040Z
+320
+k.j.w.alexander@gmail.com
 
 
 
@@ -100,11 +100,11 @@ file
 
 
 
-2011-02-24T14:38:55.000000Z
+2011-08-31T22:57:41.000000Z
 139d6a23f280001a6f58a1ea96c8ec1e
-2011-02-23T14:55:57.385719Z
-294
-jhigman
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -304,11 +304,11 @@ file
 
 
 
-2011-02-24T14:38:55.000000Z
-03713ae085210dd82322efe98a464a8d
-2010-04-12T14:42:03.084378Z
-268
-K.J.W.Alexander
+2011-08-31T22:57:41.000000Z
+ada6a3ca3d40b20cf67cc911b2369c6b
+2011-08-09T08:22:12.294040Z
+320
+k.j.w.alexander@gmail.com
 
 
 
@@ -330,7 +330,7 @@ K.J.W.Alexander
 
 
 
-17992
+26909
 
 multisparqlservice.test.php
 file
@@ -474,11 +474,11 @@ file
 
 
 
-2011-02-24T14:38:55.000000Z
-1f8d20ebb74ce273237ab49f53d50714
-2010-03-21T12:36:37.497741Z
-262
-innovateer
+2011-08-31T22:57:41.000000Z
+c13fe0b03940a563e0008a3ab252a6fb
+2011-08-02T08:29:25.374371Z
+314
+jhigman@gmail.com
 
 
 
@@ -500,7 +500,7 @@ innovateer
 
 
 
-16415
+17418
 
 fieldpredicatemap.test.php
 file
@@ -536,40 +536,6 @@ me@iandavis.com
 
 8634
 
-httpcache.test.php
-file
-
-
-
-
-2011-02-24T14:38:55.000000Z
-71e5fcd64a34c988b29ee2419d74b528
-2009-03-23T22:37:51.531358Z
-60
-me@iandavis.com
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-207
-
 facetservice.test.php
 file
 
@@ -603,6 +569,40 @@ K.J.W.Alexander
 
 
 7185
+
+httpcache.test.php
+file
+
+
+
+
+2011-02-24T14:38:55.000000Z
+71e5fcd64a34c988b29ee2419d74b528
+2009-03-23T22:37:51.531358Z
+60
+me@iandavis.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+207
 
 fakehttprequest.class.php
 file
@@ -706,40 +706,6 @@ me@iandavis.com
 
 7280
 
-runtests.php
-file
-
-
-
-
-2011-02-24T14:38:55.000000Z
-07e938b6701b9fddebbd663c96ce05f1
-2011-02-23T14:51:25.186310Z
-293
-jhigman
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4529
-
 storegroup.test.php
 file
 
@@ -773,6 +739,40 @@ me@iandavis.com
 
 
 270
+
+runtests.php
+file
+
+
+
+
+2011-08-31T22:57:41.000000Z
+07e938b6701b9fddebbd663c96ce05f1
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4529
 
 fakecredentials.class.php
 file
@@ -808,6 +808,40 @@ me@iandavis.com
 
 300
 
+simplegraph.test.php
+file
+
+
+
+
+2011-08-31T22:57:41.000000Z
+25b8c7dd7a582682c59bbffa8d3681cc
+2011-08-02T15:53:06.985822Z
+316
+jhigman@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+49876
+
 fakehttpresponse.class.php
 file
 
@@ -842,17 +876,17 @@ me@iandavis.com
 
 205
 
-simplegraph.test.php
+graphpath.test.php
 file
 
 
 
 
 2011-02-24T14:38:55.000000Z
-497345be7fc40ef6bba17c196edbbc47
-2011-02-23T14:11:43.335771Z
-292
-jhigman
+e41daea7c1ce684c1717c92f1f6fdac1
+2010-09-20T16:29:45.429991Z
+273
+innovateer
 
 
 
@@ -874,7 +908,7 @@ jhigman
 
 
 
-46242
+26117
 
 sparqlservicebase.test.php
 file
@@ -909,40 +943,6 @@ me@iandavis.com
 
 
 33128
-
-graphpath.test.php
-file
-
-
-
-
-2011-02-24T14:38:55.000000Z
-e41daea7c1ce684c1717c92f1f6fdac1
-2010-09-20T16:29:45.429991Z
-273
-innovateer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-26117
 
 jobqueue.test.php
 file
@@ -1225,11 +1225,11 @@ file
 
 
 
-2011-02-24T14:38:55.000000Z
-b8be2fe2ead16c367b472dd5b4900920
-2009-03-23T22:37:51.531358Z
-60
-me@iandavis.com
+2011-08-31T22:57:41.000000Z
+0dd7e5a0114fd54e5a72dec556db0f8c
+2011-08-09T08:22:12.294040Z
+320
+k.j.w.alexander@gmail.com
 
 
 
@@ -1251,7 +1251,7 @@ me@iandavis.com
 
 
 
-1105
+1267
 
 credentials.test.php
 file
@@ -1287,6 +1287,40 @@ me@iandavis.com
 
 367
 
+httpresponse.test.php
+file
+
+
+
+
+2011-08-31T22:57:41.000000Z
+82594563b7c0ee779e587eaeb2b057eb
+2011-07-29T15:34:10.347961Z
+311
+k.j.w.alexander@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+767
+
 changeset.test.php
 file
 
@@ -1321,51 +1355,17 @@ mmmmmrob
 
 33658
 
-changesetbatch.test.php
-file
-
-
-
-
-2011-02-24T14:38:55.000000Z
-83ae2c8ab8dca5fa01c008e0397b4e17
-2010-02-22T00:33:32.408391Z
-255
-innovateer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-6238
-
 curlhttpclient.test.php
 file
 
 
 
 
-2011-02-24T14:38:55.000000Z
-23a9565fe93cdf6d8be6c2d06920414c
-2009-08-18T11:48:44.011566Z
-120
-mmmmmrob
+2011-08-31T22:57:41.000000Z
+bb7df1025d04738b4d1b430c1d11bac1
+2011-08-02T08:13:40.906503Z
+313
+jhigman@gmail.com
 
 
 
@@ -1387,7 +1387,7 @@ mmmmmrob
 
 
 
-2742
+3027
 
 config.test.php
 file

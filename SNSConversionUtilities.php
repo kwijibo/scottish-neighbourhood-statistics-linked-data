@@ -12,11 +12,31 @@ define('XSDT', 'http://www.w3.org/2001/XMLSchema#');
 define('SKOS', 'http://www.w3.org/2004/02/skos/core#');
 define('VOID', 'http://rdfs.org/ns/void#');
 
+$geographyCodeMappings = SNSConversionUtilities::$geographyCodeMappings;
 
 class SNSConversionUtilities {
 
   const SNS = 'http://linkedscotland.org/def/';
   const base = 'http://reference.data.gov.uk/';
+
+  public static $geographyCodeMappings = array(
+  'IG' => 'intermediate-geography',
+  'DZ' => 'datazone',
+  'ZN' => 'datazone',
+  'CHP' => 'community-health-partnership',
+  'CPP' => 'community-planning-partnership',
+  'LA' => 'local-authority',
+  'HB' => 'health-board',
+  'SP' => 'scottish-parliamentary-constituency',
+  'W2' => 'ward',
+  'RC' => 'community-regeneration-community-planning-partnership',
+  'RL' => 'community-regeneration-local',
+  'MW' => 'multi-member-board',
+  'CH' => 'community-health-partnership',
+  'SC' => 'scotland',
+  'COA' => '2001-census-output-areas',
+);
+
 
   function dateToURI($date){
 
@@ -72,12 +92,21 @@ class SNSConversionUtilities {
   }
 
   function indicatorIdentifierToDatasetURI($id){
-    return BASE_URI.'dataset/'.$id;
+    return BASE_URI.'dataset/'.trim($id);
+  }
+
+  function getObservationUri($code, $date, $area){
+    return BASE_URI.'observation/'.trim($code).'/date/'.trim($date).'/area/'.trim($area);
   }
 
   function subjectTextToURI($text){
     $slug = self::getSlugFromText($text);
     return SNS_Concepts.$slug;
+  }
+
+  function getPlaceUri($geographyTypeCode, $areaCode){
+    $geographyCodeMappings = self::$geographyCodeMappings;
+    return BASE_URI.'geography/'.$geographyCodeMappings[$geographyTypeCode].'/'.$areaCode;
   }
 
   function publisherToUri($Publisher){
@@ -92,6 +121,23 @@ class SNSConversionUtilities {
   function unitOfMeaurementToURI($unit){
     return BASE_URI.'unit-of-measurement/'.trim(strtolower(self::getSlugFromText($unit)));
   }
+  function genderToUri($gender){
+    return BASE_URI.'gender/'.self::getSlugFromText($gender);
+  }
+  function getAgeRangeUri($start, $end){
+    return BASE_URI.'age-range/'.$start.'-'.$end;
+  }
+
+  function getSubjectsFromFileName($fileName){
+    if(preg_match_all('/[A-Z][a-z][A-Za-z\s]+/', $fileName, $m)){
+      $subjects = array();
+      foreach($m[0] as $subjectText) $subjects[]=$subjectText;
+      return  $subjects;
+    } else {
+      return array();
+    }
+  }
+
 }
 
 

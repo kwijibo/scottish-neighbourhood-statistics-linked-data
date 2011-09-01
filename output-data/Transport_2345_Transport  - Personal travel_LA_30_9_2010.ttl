@@ -5,6 +5,24 @@
 <http://linkedscotland.org/id/dataset/TR-bike> <http://www.w3.org/2000/01/rdf-schema#label> "Percentage of cycling journeys to work"@en-gb .
 <http://linkedscotland.org/id/dataset/TR-bike> <http://linkedscotland.org/def/identifier> "TR-bike" .
 <http://linkedscotland.org/id/dataset/TR-bike> <http://linkedscotland.org/def/shortTitle> "Percentage of cycling journeys to work"@en-gb .
+<http://linkedscotland.org/id/dataset/TR-bike> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/id/dataset/TR-bike> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/id/dataset/TR-bike> <http://purl.org/dc/terms/temporal> <http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport"@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport  "@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/transport> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-bike> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Travel"@en-gb .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-bike> .
+<http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> <http://www.w3.org/2000/01/rdf-schema#label> "2007-2008" .
 <http://linkedscotland.org/id/observation/TR-bike/date/2007-2008/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> <http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> .
 <http://linkedscotland.org/id/observation/TR-bike/date/2007-2008/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refArea> <http://linkedscotland.org/id/geography/local-authority/100> .
 <http://linkedscotland.org/id/observation/TR-bike/date/2007-2008/area/100> <http://linkedscotland.org/def/percentage_of_cycling_journeys_to_work> "3.5"^^<http://www.w3.org/2001/XMLSchema#float> .
@@ -172,6 +190,24 @@
 <http://linkedscotland.org/id/dataset/TR-bus> <http://www.w3.org/2000/01/rdf-schema#label> "Percentage of bus journeys to work"@en-gb .
 <http://linkedscotland.org/id/dataset/TR-bus> <http://linkedscotland.org/def/identifier> "TR-bus" .
 <http://linkedscotland.org/id/dataset/TR-bus> <http://linkedscotland.org/def/shortTitle> "Percentage of bus journeys to work"@en-gb .
+<http://linkedscotland.org/id/dataset/TR-bus> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/id/dataset/TR-bus> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/id/dataset/TR-bus> <http://purl.org/dc/terms/temporal> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport"@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport  "@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/transport> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-bus> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Travel"@en-gb .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-bus> .
+<http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> <http://www.w3.org/2000/01/rdf-schema#label> "2005-2006" .
 <http://linkedscotland.org/id/observation/TR-bus/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
 <http://linkedscotland.org/id/observation/TR-bus/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refArea> <http://linkedscotland.org/id/geography/local-authority/100> .
 <http://linkedscotland.org/id/observation/TR-bus/date/2005-2006/area/100> <http://linkedscotland.org/def/percentage_of_bus_journeys_to_work> "17"^^<http://www.w3.org/2001/XMLSchema#integer> .
@@ -332,6 +368,8 @@
 <http://linkedscotland.org/id/observation/TR-bus/date/2005-2006/area/400> <http://linkedscotland.org/def/percentage_of_bus_journeys_to_work> "9"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://linkedscotland.org/id/observation/TR-bus/date/2005-2006/area/400> <http://purl.org/linked-data/cube#dataset> <http://linkedscotland.org/id/dataset/TR-bus> .
 <http://linkedscotland.org/id/observation/TR-bus/date/2005-2006/area/400> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+<http://linkedscotland.org/id/dataset/TR-bus> <http://purl.org/dc/terms/temporal> <http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> .
+<http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> <http://www.w3.org/2000/01/rdf-schema#label> "2007-2008" .
 <http://linkedscotland.org/id/observation/TR-bus/date/2007-2008/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> <http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> .
 <http://linkedscotland.org/id/observation/TR-bus/date/2007-2008/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refArea> <http://linkedscotland.org/id/geography/local-authority/100> .
 <http://linkedscotland.org/id/observation/TR-bus/date/2007-2008/area/100> <http://linkedscotland.org/def/percentage_of_bus_journeys_to_work> "15.2"^^<http://www.w3.org/2001/XMLSchema#float> .
@@ -499,6 +537,24 @@
 <http://linkedscotland.org/id/dataset/TR-busi> <http://www.w3.org/2000/01/rdf-schema#label> "Percentage of business journeys"@en-gb .
 <http://linkedscotland.org/id/dataset/TR-busi> <http://linkedscotland.org/def/identifier> "TR-busi" .
 <http://linkedscotland.org/id/dataset/TR-busi> <http://linkedscotland.org/def/shortTitle> "Percentage of business journeys"@en-gb .
+<http://linkedscotland.org/id/dataset/TR-busi> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/id/dataset/TR-busi> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/id/dataset/TR-busi> <http://purl.org/dc/terms/temporal> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport"@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport  "@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/transport> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-busi> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Travel"@en-gb .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-busi> .
+<http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> <http://www.w3.org/2000/01/rdf-schema#label> "2005-2006" .
 <http://linkedscotland.org/id/observation/TR-busi/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
 <http://linkedscotland.org/id/observation/TR-busi/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refArea> <http://linkedscotland.org/id/geography/local-authority/100> .
 <http://linkedscotland.org/id/observation/TR-busi/date/2005-2006/area/100> <http://linkedscotland.org/def/percentage_of_business_journeys> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
@@ -666,6 +722,24 @@
 <http://linkedscotland.org/id/dataset/TR-comm> <http://www.w3.org/2000/01/rdf-schema#label> "Percentage of commuting journeys"@en-gb .
 <http://linkedscotland.org/id/dataset/TR-comm> <http://linkedscotland.org/def/identifier> "TR-comm" .
 <http://linkedscotland.org/id/dataset/TR-comm> <http://linkedscotland.org/def/shortTitle> "Percentage of commuting journeys"@en-gb .
+<http://linkedscotland.org/id/dataset/TR-comm> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/id/dataset/TR-comm> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/id/dataset/TR-comm> <http://purl.org/dc/terms/temporal> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport"@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport  "@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/transport> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-comm> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Travel"@en-gb .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-comm> .
+<http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> <http://www.w3.org/2000/01/rdf-schema#label> "2005-2006" .
 <http://linkedscotland.org/id/observation/TR-comm/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
 <http://linkedscotland.org/id/observation/TR-comm/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refArea> <http://linkedscotland.org/id/geography/local-authority/100> .
 <http://linkedscotland.org/id/observation/TR-comm/date/2005-2006/area/100> <http://linkedscotland.org/def/percentage_of_commuting_journeys> "28"^^<http://www.w3.org/2001/XMLSchema#integer> .
@@ -833,6 +907,24 @@
 <http://linkedscotland.org/id/dataset/TR-educ> <http://www.w3.org/2000/01/rdf-schema#label> "Percentage of education journeys"@en-gb .
 <http://linkedscotland.org/id/dataset/TR-educ> <http://linkedscotland.org/def/identifier> "TR-educ" .
 <http://linkedscotland.org/id/dataset/TR-educ> <http://linkedscotland.org/def/shortTitle> "Percentage of education journeys"@en-gb .
+<http://linkedscotland.org/id/dataset/TR-educ> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/id/dataset/TR-educ> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/id/dataset/TR-educ> <http://purl.org/dc/terms/temporal> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport"@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport  "@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/transport> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-educ> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Travel"@en-gb .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-educ> .
+<http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> <http://www.w3.org/2000/01/rdf-schema#label> "2005-2006" .
 <http://linkedscotland.org/id/observation/TR-educ/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
 <http://linkedscotland.org/id/observation/TR-educ/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refArea> <http://linkedscotland.org/id/geography/local-authority/100> .
 <http://linkedscotland.org/id/observation/TR-educ/date/2005-2006/area/100> <http://linkedscotland.org/def/percentage_of_education_journeys> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
@@ -1000,6 +1092,24 @@
 <http://linkedscotland.org/id/dataset/TR-health> <http://www.w3.org/2000/01/rdf-schema#label> "Percentage of health journeys"@en-gb .
 <http://linkedscotland.org/id/dataset/TR-health> <http://linkedscotland.org/def/identifier> "TR-health" .
 <http://linkedscotland.org/id/dataset/TR-health> <http://linkedscotland.org/def/shortTitle> "Percentage of health journeys"@en-gb .
+<http://linkedscotland.org/id/dataset/TR-health> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/id/dataset/TR-health> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/id/dataset/TR-health> <http://purl.org/dc/terms/temporal> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport"@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport  "@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/transport> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-health> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Travel"@en-gb .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-health> .
+<http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> <http://www.w3.org/2000/01/rdf-schema#label> "2005-2006" .
 <http://linkedscotland.org/id/observation/TR-health/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
 <http://linkedscotland.org/id/observation/TR-health/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refArea> <http://linkedscotland.org/id/geography/local-authority/100> .
 <http://linkedscotland.org/id/observation/TR-health/date/2005-2006/area/100> <http://linkedscotland.org/def/percentage_of_health_journeys> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
@@ -1167,6 +1277,24 @@
 <http://linkedscotland.org/id/dataset/TR-NCars> <http://www.w3.org/2000/01/rdf-schema#label> "Number of households without access to a car"@en-gb .
 <http://linkedscotland.org/id/dataset/TR-NCars> <http://linkedscotland.org/def/identifier> "TR-NCars" .
 <http://linkedscotland.org/id/dataset/TR-NCars> <http://linkedscotland.org/def/shortTitle> "Number of households without access to a car"@en-gb .
+<http://linkedscotland.org/id/dataset/TR-NCars> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/id/dataset/TR-NCars> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/id/dataset/TR-NCars> <http://purl.org/dc/terms/temporal> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport"@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport  "@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/transport> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-NCars> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Travel"@en-gb .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-NCars> .
+<http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> <http://www.w3.org/2000/01/rdf-schema#label> "2005-2006" .
 <http://linkedscotland.org/id/observation/TR-NCars/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
 <http://linkedscotland.org/id/observation/TR-NCars/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refArea> <http://linkedscotland.org/id/geography/local-authority/100> .
 <http://linkedscotland.org/id/observation/TR-NCars/date/2005-2006/area/100> <http://linkedscotland.org/def/number_of_households_without_access_to_a_car> "33.9"^^<http://www.w3.org/2001/XMLSchema#float> .
@@ -1327,6 +1455,8 @@
 <http://linkedscotland.org/id/observation/TR-NCars/date/2005-2006/area/400> <http://linkedscotland.org/def/number_of_households_without_access_to_a_car> "24.7"^^<http://www.w3.org/2001/XMLSchema#float> .
 <http://linkedscotland.org/id/observation/TR-NCars/date/2005-2006/area/400> <http://purl.org/linked-data/cube#dataset> <http://linkedscotland.org/id/dataset/TR-NCars> .
 <http://linkedscotland.org/id/observation/TR-NCars/date/2005-2006/area/400> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+<http://linkedscotland.org/id/dataset/TR-NCars> <http://purl.org/dc/terms/temporal> <http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> .
+<http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> <http://www.w3.org/2000/01/rdf-schema#label> "2007-2008" .
 <http://linkedscotland.org/id/observation/TR-NCars/date/2007-2008/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> <http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> .
 <http://linkedscotland.org/id/observation/TR-NCars/date/2007-2008/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refArea> <http://linkedscotland.org/id/geography/local-authority/100> .
 <http://linkedscotland.org/id/observation/TR-NCars/date/2007-2008/area/100> <http://linkedscotland.org/def/number_of_households_without_access_to_a_car> "31.2"^^<http://www.w3.org/2001/XMLSchema#float> .
@@ -1494,6 +1624,24 @@
 <http://linkedscotland.org/id/dataset/TR-OCars> <http://www.w3.org/2000/01/rdf-schema#label> "Number of household with access to one car"@en-gb .
 <http://linkedscotland.org/id/dataset/TR-OCars> <http://linkedscotland.org/def/identifier> "TR-OCars" .
 <http://linkedscotland.org/id/dataset/TR-OCars> <http://linkedscotland.org/def/shortTitle> "Number of household with access to one car"@en-gb .
+<http://linkedscotland.org/id/dataset/TR-OCars> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/id/dataset/TR-OCars> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/id/dataset/TR-OCars> <http://purl.org/dc/terms/temporal> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport"@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport  "@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/transport> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-OCars> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Travel"@en-gb .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-OCars> .
+<http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> <http://www.w3.org/2000/01/rdf-schema#label> "2005-2006" .
 <http://linkedscotland.org/id/observation/TR-OCars/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
 <http://linkedscotland.org/id/observation/TR-OCars/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refArea> <http://linkedscotland.org/id/geography/local-authority/100> .
 <http://linkedscotland.org/id/observation/TR-OCars/date/2005-2006/area/100> <http://linkedscotland.org/def/number_of_household_with_access_to_one_car> "42.1"^^<http://www.w3.org/2001/XMLSchema#float> .
@@ -1654,6 +1802,8 @@
 <http://linkedscotland.org/id/observation/TR-OCars/date/2005-2006/area/400> <http://linkedscotland.org/def/number_of_household_with_access_to_one_car> "44.3"^^<http://www.w3.org/2001/XMLSchema#float> .
 <http://linkedscotland.org/id/observation/TR-OCars/date/2005-2006/area/400> <http://purl.org/linked-data/cube#dataset> <http://linkedscotland.org/id/dataset/TR-OCars> .
 <http://linkedscotland.org/id/observation/TR-OCars/date/2005-2006/area/400> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+<http://linkedscotland.org/id/dataset/TR-OCars> <http://purl.org/dc/terms/temporal> <http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> .
+<http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> <http://www.w3.org/2000/01/rdf-schema#label> "2007-2008" .
 <http://linkedscotland.org/id/observation/TR-OCars/date/2007-2008/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> <http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> .
 <http://linkedscotland.org/id/observation/TR-OCars/date/2007-2008/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refArea> <http://linkedscotland.org/id/geography/local-authority/100> .
 <http://linkedscotland.org/id/observation/TR-OCars/date/2007-2008/area/100> <http://linkedscotland.org/def/number_of_household_with_access_to_one_car> "46.6"^^<http://www.w3.org/2001/XMLSchema#float> .
@@ -1821,6 +1971,24 @@
 <http://linkedscotland.org/id/dataset/TR-rail> <http://www.w3.org/2000/01/rdf-schema#label> "Percentage of train journeys to work"@en-gb .
 <http://linkedscotland.org/id/dataset/TR-rail> <http://linkedscotland.org/def/identifier> "TR-rail" .
 <http://linkedscotland.org/id/dataset/TR-rail> <http://linkedscotland.org/def/shortTitle> "Percentage of train journeys to work"@en-gb .
+<http://linkedscotland.org/id/dataset/TR-rail> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/id/dataset/TR-rail> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/id/dataset/TR-rail> <http://purl.org/dc/terms/temporal> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport"@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport  "@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/transport> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-rail> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Travel"@en-gb .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-rail> .
+<http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> <http://www.w3.org/2000/01/rdf-schema#label> "2005-2006" .
 <http://linkedscotland.org/id/observation/TR-rail/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
 <http://linkedscotland.org/id/observation/TR-rail/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refArea> <http://linkedscotland.org/id/geography/local-authority/100> .
 <http://linkedscotland.org/id/observation/TR-rail/date/2005-2006/area/100> <http://linkedscotland.org/def/percentage_of_train_journeys_to_work> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
@@ -1981,6 +2149,8 @@
 <http://linkedscotland.org/id/observation/TR-rail/date/2005-2006/area/400> <http://linkedscotland.org/def/percentage_of_train_journeys_to_work> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://linkedscotland.org/id/observation/TR-rail/date/2005-2006/area/400> <http://purl.org/linked-data/cube#dataset> <http://linkedscotland.org/id/dataset/TR-rail> .
 <http://linkedscotland.org/id/observation/TR-rail/date/2005-2006/area/400> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+<http://linkedscotland.org/id/dataset/TR-rail> <http://purl.org/dc/terms/temporal> <http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> .
+<http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> <http://www.w3.org/2000/01/rdf-schema#label> "2007-2008" .
 <http://linkedscotland.org/id/observation/TR-rail/date/2007-2008/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> <http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> .
 <http://linkedscotland.org/id/observation/TR-rail/date/2007-2008/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refArea> <http://linkedscotland.org/id/geography/local-authority/100> .
 <http://linkedscotland.org/id/observation/TR-rail/date/2007-2008/area/100> <http://linkedscotland.org/def/percentage_of_train_journeys_to_work> "0.3"^^<http://www.w3.org/2001/XMLSchema#float> .
@@ -2148,6 +2318,24 @@
 <http://linkedscotland.org/id/dataset/TR-shop> <http://www.w3.org/2000/01/rdf-schema#label> "Percentage of shopping journeys"@en-gb .
 <http://linkedscotland.org/id/dataset/TR-shop> <http://linkedscotland.org/def/identifier> "TR-shop" .
 <http://linkedscotland.org/id/dataset/TR-shop> <http://linkedscotland.org/def/shortTitle> "Percentage of shopping journeys"@en-gb .
+<http://linkedscotland.org/id/dataset/TR-shop> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/id/dataset/TR-shop> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/id/dataset/TR-shop> <http://purl.org/dc/terms/temporal> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport"@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport  "@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/transport> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-shop> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Travel"@en-gb .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-shop> .
+<http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> <http://www.w3.org/2000/01/rdf-schema#label> "2005-2006" .
 <http://linkedscotland.org/id/observation/TR-shop/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
 <http://linkedscotland.org/id/observation/TR-shop/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refArea> <http://linkedscotland.org/id/geography/local-authority/100> .
 <http://linkedscotland.org/id/observation/TR-shop/date/2005-2006/area/100> <http://linkedscotland.org/def/percentage_of_shopping_journeys> "20"^^<http://www.w3.org/2001/XMLSchema#integer> .
@@ -2315,6 +2503,24 @@
 <http://linkedscotland.org/id/dataset/TR-TCars> <http://www.w3.org/2000/01/rdf-schema#label> "Number of household with access to two or more cars"@en-gb .
 <http://linkedscotland.org/id/dataset/TR-TCars> <http://linkedscotland.org/def/identifier> "TR-TCars" .
 <http://linkedscotland.org/id/dataset/TR-TCars> <http://linkedscotland.org/def/shortTitle> "Number of household with access to two or more cars"@en-gb .
+<http://linkedscotland.org/id/dataset/TR-TCars> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/id/dataset/TR-TCars> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/id/dataset/TR-TCars> <http://purl.org/dc/terms/temporal> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport"@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport  "@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/transport> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-TCars> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Travel"@en-gb .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-TCars> .
+<http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> <http://www.w3.org/2000/01/rdf-schema#label> "2005-2006" .
 <http://linkedscotland.org/id/observation/TR-TCars/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
 <http://linkedscotland.org/id/observation/TR-TCars/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refArea> <http://linkedscotland.org/id/geography/local-authority/100> .
 <http://linkedscotland.org/id/observation/TR-TCars/date/2005-2006/area/100> <http://linkedscotland.org/def/number_of_household_with_access_to_two_or_more_cars> "24"^^<http://www.w3.org/2001/XMLSchema#integer> .
@@ -2475,6 +2681,8 @@
 <http://linkedscotland.org/id/observation/TR-TCars/date/2005-2006/area/400> <http://linkedscotland.org/def/number_of_household_with_access_to_two_or_more_cars> "31"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://linkedscotland.org/id/observation/TR-TCars/date/2005-2006/area/400> <http://purl.org/linked-data/cube#dataset> <http://linkedscotland.org/id/dataset/TR-TCars> .
 <http://linkedscotland.org/id/observation/TR-TCars/date/2005-2006/area/400> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+<http://linkedscotland.org/id/dataset/TR-TCars> <http://purl.org/dc/terms/temporal> <http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> .
+<http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> <http://www.w3.org/2000/01/rdf-schema#label> "2007-2008" .
 <http://linkedscotland.org/id/observation/TR-TCars/date/2007-2008/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> <http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> .
 <http://linkedscotland.org/id/observation/TR-TCars/date/2007-2008/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refArea> <http://linkedscotland.org/id/geography/local-authority/100> .
 <http://linkedscotland.org/id/observation/TR-TCars/date/2007-2008/area/100> <http://linkedscotland.org/def/number_of_household_with_access_to_two_or_more_cars> "22.2"^^<http://www.w3.org/2001/XMLSchema#float> .
@@ -2642,6 +2850,24 @@
 <http://linkedscotland.org/id/dataset/TR-walk> <http://www.w3.org/2000/01/rdf-schema#label> "Percentage of walking journeys to work"@en-gb .
 <http://linkedscotland.org/id/dataset/TR-walk> <http://linkedscotland.org/def/identifier> "TR-walk" .
 <http://linkedscotland.org/id/dataset/TR-walk> <http://linkedscotland.org/def/shortTitle> "Percentage of walking journeys to work"@en-gb .
+<http://linkedscotland.org/id/dataset/TR-walk> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/id/dataset/TR-walk> <http://purl.org/dc/terms/subject> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/id/dataset/TR-walk> <http://purl.org/dc/terms/temporal> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport"@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport  "@en-gb .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/transport> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-walk> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://linkedscotland.org/concepts/sns/personal_travel> .
+<http://linkedscotland.org/concepts/sns/transport> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Travel"@en-gb .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#inScheme> <http://linkedscotland.org/concepts/sns/> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://www.w3.org/2004/02/skos/core#broader> <http://linkedscotland.org/concepts/sns/transport> .
+<http://linkedscotland.org/concepts/sns/personal_travel> <http://linkedscotland.org/def/isTopicOf> <http://linkedscotland.org/id/dataset/TR-walk> .
+<http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> <http://www.w3.org/2000/01/rdf-schema#label> "2005-2006" .
 <http://linkedscotland.org/id/observation/TR-walk/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> <http://reference.data.gov.uk/id/gregorian-interval/2005-01-01T00:00:00/P1Y> .
 <http://linkedscotland.org/id/observation/TR-walk/date/2005-2006/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refArea> <http://linkedscotland.org/id/geography/local-authority/100> .
 <http://linkedscotland.org/id/observation/TR-walk/date/2005-2006/area/100> <http://linkedscotland.org/def/percentage_of_walking_journeys_to_work> "14"^^<http://www.w3.org/2001/XMLSchema#integer> .
@@ -2802,6 +3028,8 @@
 <http://linkedscotland.org/id/observation/TR-walk/date/2005-2006/area/400> <http://linkedscotland.org/def/percentage_of_walking_journeys_to_work> "7"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://linkedscotland.org/id/observation/TR-walk/date/2005-2006/area/400> <http://purl.org/linked-data/cube#dataset> <http://linkedscotland.org/id/dataset/TR-walk> .
 <http://linkedscotland.org/id/observation/TR-walk/date/2005-2006/area/400> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#Observation> .
+<http://linkedscotland.org/id/dataset/TR-walk> <http://purl.org/dc/terms/temporal> <http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> .
+<http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> <http://www.w3.org/2000/01/rdf-schema#label> "2007-2008" .
 <http://linkedscotland.org/id/observation/TR-walk/date/2007-2008/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> <http://reference.data.gov.uk/id/gregorian-interval/2007-01-01T00:00:00/P1Y> .
 <http://linkedscotland.org/id/observation/TR-walk/date/2007-2008/area/100> <http://purl.org/linked-data/sdmx/2009/dimension#refArea> <http://linkedscotland.org/id/geography/local-authority/100> .
 <http://linkedscotland.org/id/observation/TR-walk/date/2007-2008/area/100> <http://linkedscotland.org/def/percentage_of_walking_journeys_to_work> "14"^^<http://www.w3.org/2001/XMLSchema#integer> .

@@ -73,10 +73,10 @@ class PhpHttpClient extends HttpClient
     $response->body = $response_body;
     $response->info = $response_info;
 //ID20100317    $response->request = $request;
-    $response->request_method = $this->method;
-    $response->request_uri = $this->uri;
-    $response->request_headers = $this->headers;
-    $response->request_body = $this->body;
+    $response->request_method = $request->method;
+    $response->request_uri = $request->uri;
+    $response->request_headers = $request->headers;
+    $response->request_body = $request->body;
 
     $key = spl_object_hash($request);
     $this->responses[$key] = $response;
@@ -90,6 +90,4 @@ class PhpHttpClient extends HttpClient
     return @$this->responses[$key];
   }
 }
-
-
 ?>

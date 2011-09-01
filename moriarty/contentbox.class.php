@@ -222,5 +222,4 @@ class ResourceList {
    */
   var $items;
 }
-
 ?>

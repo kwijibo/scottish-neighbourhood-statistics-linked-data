@@ -9,25 +9,9 @@ require 'SNSConversionUtilities.php';
 //define('SNS', 'http://linkedscotland.org/def/');
 function isfloat($f) { return ($f == (string)(float)$f); } 
 
-$geographyCodeMappings = array(
-  'IG' => 'intermediate-geography',
-  'DZ' => 'datazone',
-  'ZN' => 'datazone',
-  'CHP' => 'community-health-partnership',
-  'CPP' => 'community-planning-partnership',
-  'LA' => 'local-authority',
-  'HB' => 'health-board',
-  'SP' => 'scottish-parliamentary-constituency',
-  'W2' => 'ward',
-  'RC' => 'community-regeneration-community-planning-partnership',
-  'RL' => 'community-regeneration-local',
-  'MW' => 'multi-member-board',
-  'CH' => 'community-health-partnership',
-  'SC' => 'scotland',
-  'COA' => '2001-census-output-areas',
-);
-
 $doc_location = $_SERVER['argv'][1];
+
+$subjects = SNSConversionUtilities::getSubjectsFromFileName(basename($doc_location));
 //$doc_location = 'sample.xml';
 
 //$xml = file_get_contents($doc_location);
@@ -60,7 +44,6 @@ while ($reader->read()) {
               $shortTitle = preg_replace('/(\s)+/','$1',$indicator->getElementsByTagName('shortTitle')->item(0)->textContent);
               $title = preg_replace('/(\s)+/','$1', $indicator->getElementsByTagName('title')->item(0)->textContent);
               $valueDimensionURI = SNSConversionUtilities::indicatorTitleToURI($title);
-
               $StatsGraph->add_resource_triple($valueDimensionURI, RDF_TYPE, QB.'MeasureProperty');
               $StatsGraph->add_literal_triple($valueDimensionURI, RDFS_LABEL, $shortTitle, 'en-gb');
               $StatsGraph->add_literal_triple($valueDimensionURI, RDFS_COMMENT, $title, 'en-gb');
@@ -74,12 +57,31 @@ while ($reader->read()) {
               $StatsGraph->add_literal_triple($datasetURI, SNS.'identifier', $code);
               $StatsGraph->add_literal_triple($datasetURI, SNS.'shortTitle', $shortTitle, 'en-gb');
 
+              foreach($subjects as $no => $Subject){
+                $SubjectURI = SNSConversionUtilities::subjectTextToURI($Subject);
+                $StatsGraph->add_resource_triple($datasetURI, DCT.'subject', $SubjectURI);
+                $StatsGraph->add_resource_triple($SubjectURI, RDF_TYPE, SKOS.'Concept');
+                $StatsGraph->add_literal_triple($SubjectURI, RDFS_LABEL, ucwords($Subject), 'en-gb');
+                $StatsGraph->add_resource_triple($SubjectURI, SKOS.'inScheme', SNS_Concepts);  
+                if($no===0) {
+                    $StatsGraph->add_resource_triple(SNS_Concepts, SKOS.'hasTopConcept', $SubjectURI);
+                } else {
+                  $TopConcept = SNSConversionUtilities::subjectTextToURI($subjects[0]);
+                  $StatsGraph->add_resource_triple($TopConcept, SKOS.'narrower', $SubjectURI);
+                  $StatsGraph->add_resource_triple($SubjectURI, SKOS.'broader', $TopConcept);
+                }
+                $StatsGraph->add_resource_triple($SubjectURI, SNS.'isTopicOf', $datasetURI);
+              }
+
 
     # do Observations
-    #
+              #
+
     foreach($indicator->getElementsByTagName('data') as $data){
-      $date = $data->getAttribute('date');
+      $date = trim($data->getAttribute('date'));
       $dateURI = SNSConversionUtilities::dateToURI($date);
+      $StatsGraph->add_resource_triple($datasetURI, DCT.'temporal',$dateURI);
+      $StatsGraph->add_literal_triple($dateURI, RDFS_LABEL, $date);
       foreach($data->childNodes as $child){
         if(isset($child->tagName) && $child->tagName=='area'){
             $area = $child;
@@ -101,15 +103,19 @@ while ($reader->read()) {
                   } else if(isFloat($dataValue)){
                     $valueDT = XSDT.'float';
                   }
-                }
-                $geographyURI = BASE_URI.'geography/'.$geographyCodeMappings[$geographyTypeCode].'/'.$areaCode;
-
-                $observationUri = str_replace('/id/dataset/','/id/observation/',$datasetURI).'/date/'.$date.'/area/'.$areaCode;
+                } 
+                
+                $geographyURI = SNSConversionUtilities::getPlaceUri($geographyTypeCode, $areaCode);
+                $observationUri = SNSConversionUtilities::getObservationUri($code,$date, $areaCode);
                 $StatsGraph->add_resource_triple($observationUri, SDMX_DIM.'refPeriod', $dateURI);
                 $StatsGraph->add_resource_triple($observationUri, SDMX_DIM.'refArea', $geographyURI);
                 $StatsGraph->add_literal_triple($observationUri, $valueDimensionURI, $dataValue, false, $valueDT);
                 $StatsGraph->add_resource_triple($observationUri, QB.'dataset', $datasetURI);
                 $StatsGraph->add_resource_triple($observationUri, RDF_TYPE, QB.'Observation');
+
+                //stream output
+                echo $StatsGraph->to_ntriples();
+                $StatsGraph = new SimpleGraph();
 
             }
         }
@@ -118,7 +124,7 @@ while ($reader->read()) {
                   }
               }
 
-            echo $StatsGraph->to_ntriples();
+//            echo $StatsGraph->to_ntriples();
 
         }
     }

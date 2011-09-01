@@ -40,7 +40,16 @@ class CurlHttpClientTest extends PHPUnit_Framework_TestCase {
 		$google_response = $client->get_response_for($google_key);
 
 		$this->assertEquals('gws', $google_response->headers['server']);
-		$this->assertEquals('http://open.login.yahooapis.com/openid20/www.yahoo.com/xrds', $yahoo_response->headers['x-xrds-location']);
+		$this->assertEquals('YTS/1.20.0', $yahoo_response->headers['server']);
+	}
+
+	function test_send_request_with_head_method()
+	{
+		$client = new CurlHttpClient();
+		$google_request = new HttpRequest('HEAD', 'http://www.google.com/');
+		$google_key = $client->send_request($google_request);
+		$google_response = $client->get_response_for($google_key);
+		$this->assertEquals('gws', $google_response->headers['server']);
 	}
 
 	function test_parse_response_parses_all_responses() {

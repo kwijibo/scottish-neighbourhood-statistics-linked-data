@@ -64,6 +64,38 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
   $SourceURI = $DatasetURI.'/source';
   $CanSpatiallyAggregate = strtolower(getText('CanSpatiallyAggregate',snsXML, $MDEl));
     //'http://linkedscotland.org/def/'.$systemID;
+
+  $wordsInLabel = explode(' ', strtolower($shortTitle));
+  foreach(array('female', 'male') as $gender){
+    if(in_array($gender,$wordsInLabel)){
+      $genderUri = SNSConversionUtilities::genderToUri($gender);
+      $graph->add_resource_triple($IndicatorURI, SNS.'gender', $genderUri);
+      $graph->add_literal_triple($genderUri, RDFS_LABEL, ucwords($gender));
+      $graph->add_resource_triple($genderUri, RDF_TYPE, SNS.'Gender');
+    }
+  }
+  if(in_array('age', $wordsInLabel) || in_array('aged', $wordsInLabel))){
+    if(preg_match('/aged? (\d+)(.+?)(\d+)/i', $shortTitle, $m)){
+      $startAge = $m[1];
+      $endAge = $m[3];
+      $ageRangeUri = SNSConversionUtilities::getAgeRangeUri($start,$end);
+      $graph->add_resource_triple($ageRangeUri, RDF_TYPE, SNS.'AgeRange');
+      $graph->add_literal_triple($ageRangeUri, RDFS_LABEL "Age: {$m[1]}-{$m[3]}", 'en-gb');
+      $graph->add_literal_triple($ageRangeUri, SNS.'startAge', $startAge,0,XSDT.'integer');
+      $graph->add_literal_triple($ageRangeUri, SNS.'endAge', $endAge,0,XSDT.'integer');
+      $graph->add_resource_triple($IndicatorURI, SNS.'ageRange', $ageRangeUri);
+    }
+  }
+
+  #subjects
+  $subjectWords = array(
+    'Health' => array(
+      'drug','alcohol','disease',
+    ),
+  
+  );
+
+
   $graph->add_resource_triple($IndicatorURI, RDF_TYPE,   QB.'MeasureProperty');
   $graph->add_resource_triple($IndicatorURI, RDFS_DOMAIN,   QB.'Observation');
   $graph->add_literal_triple($IndicatorURI, RDFS_LABEL, $shortTitle, 'en-gb');
