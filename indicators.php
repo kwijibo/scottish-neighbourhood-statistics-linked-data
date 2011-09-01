@@ -7,6 +7,17 @@ require 'SNSConversionUtilities.php';
 define('snsXML', 'urn:sns-scotexec-gov-uk/schemas/indicators/0.1');
 define('gmsXML', 'http://www.govtalk.gov.uk/CM/gms');
 
+function addAgeRangeToGraph(&$graph, $startAge, $endAge, $IndicatorURI){
+      $ageRangeUri = SNSConversionUtilities::getAgeRangeUri($startAge,$endAge);
+      $graph->add_resource_triple($ageRangeUri, RDF_TYPE, SNS.'AgeRange');
+      $graph->add_literal_triple($ageRangeUri, RDFS_LABEL, "Age: {$startAge}-{$endAge}", 'en-gb');
+      $graph->add_literal_triple($ageRangeUri, SNS.'startAge', $startAge,0,XSDT.'integer');
+      $graph->add_literal_triple($ageRangeUri, SNS.'endAge', $endAge,0,XSDT.'integer');
+      $graph->add_resource_triple($IndicatorURI, SNS.'ageRange', $ageRangeUri);
+      return $graph;
+}
+
+
 function getText($localName, $ns, &$el){
   if(!is_object($el->getElementsByTagNameNS($ns,$localName )->item(0))){
     die("$localName");
@@ -19,7 +30,7 @@ function getText($localName, $ns, &$el){
   return trim($text);
 }
 
-$xml = file_get_contents('data/QuarterlyC0R0IndicatorMetaData_1_10_2010.xml');
+$xml = file_get_contents('data_24_2_2011/FullC0R0IndicatorMetaData_30_9_2010.xml');
 
 $dom = new DomDocument();
 
@@ -65,7 +76,7 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
   $CanSpatiallyAggregate = strtolower(getText('CanSpatiallyAggregate',snsXML, $MDEl));
     //'http://linkedscotland.org/def/'.$systemID;
 
-  $wordsInLabel = explode(' ', strtolower($shortTitle));
+  $wordsInLabel = explode(' ', strtolower($title.' '.$shortTitle));
   $wordsInLabel = array_filter($wordsInLabel, create_function('$a','return rtrim($a,"s");'));
   foreach(array('female', 'male') as $gender){
     if(in_array($gender,$wordsInLabel)){
@@ -75,18 +86,24 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
       $graph->add_resource_triple($genderUri, RDF_TYPE, SNS.'Gender');
     }
   }
-  if(in_array('age', $wordsInLabel) || in_array('aged', $wordsInLabel)){
-    if(preg_match('/aged? (\d+)(.+?)(\d+)/i', $shortTitle, $m)){
+  
+  if(preg_match('/aged? (\d{1,2})(.+?)(\d{1,2}\b)/i', $shortTitle, $m)){
       $startAge = $m[1];
       $endAge = $m[3];
-      $ageRangeUri = SNSConversionUtilities::getAgeRangeUri($startAge,$endAge);
-      $graph->add_resource_triple($ageRangeUri, RDF_TYPE, SNS.'AgeRange');
-      $graph->add_literal_triple($ageRangeUri, RDFS_LABEL, "Age: {$m[1]}-{$m[3]}", 'en-gb');
-      $graph->add_literal_triple($ageRangeUri, SNS.'startAge', $startAge,0,XSDT.'integer');
-      $graph->add_literal_triple($ageRangeUri, SNS.'endAge', $endAge,0,XSDT.'integer');
-      $graph->add_resource_triple($IndicatorURI, SNS.'ageRange', $ageRangeUri);
+      $graph = addAgeRangeToGraph($graph, $startAge, $endAge, $IndicatorURI);
+   }
+
+  if(preg_match('/ ((under)|(over)) (\d{1,2})\b/', $title, $m)){
+    if($m[1]=='under'){
+      $startAge = 0;
+      $endAge = $m[4];
+    } else {
+      $startAge = $m[4];
+      $endAge = 'upwards';
     }
+    $graph = addAgeRangeToGraph($graph, $startAge, $endAge, $IndicatorURI);
   }
+
 
   #subjects
   $subjectWords = array(
@@ -125,7 +142,7 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
     $graph->add_resource_triple($SubjectURI, RDF_TYPE, SKOS.'Concept');
     $graph->add_literal_triple($SubjectURI, RDFS_LABEL, ucwords($Subject), 'en-gb');
     $graph->add_resource_triple($SubjectURI, SKOS.'inScheme', SNS_Concepts);  
-    $graph->add_resource_triple(SNS_Concepts, SKOS.'hasTopConcept', $SubjectURI);
+ //   $graph->add_resource_triple(SNS_Concepts, SKOS.'hasTopConcept', $SubjectURI);
     $graph->add_resource_triple($SubjectURI, SNS.'isTopicOf', $DatasetURI);
   }
 
@@ -206,4 +223,5 @@ if(!empty($Publisher)){
 }
 
 file_put_contents('output-data/indicators.ttl', $graph->to_turtle());
+file_put_contents('output-data/indicators.nt', $graph->to_ntriples());
 ?>

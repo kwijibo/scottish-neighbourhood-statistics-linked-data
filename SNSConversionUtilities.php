@@ -87,6 +87,11 @@ class SNSConversionUtilities {
     return self::SNS.$valueDimensionSlug;
   }
 
+  function fileNameToDatasetUri($f){
+    $f = str_replace('.xml','',$f);
+    return BASE_URI.'dataset/'.self::getSlugFromText($f);
+  }
+  
   function getSlugFromText($title){
    return trim(strtolower(str_replace('__','_',preg_replace('@[^a-zA-Z0-9]+@','_', $title))), '_');
   }
@@ -107,6 +112,11 @@ class SNSConversionUtilities {
   function getPlaceUri($geographyTypeCode, $areaCode){
     $geographyCodeMappings = self::$geographyCodeMappings;
     return BASE_URI.'geography/'.$geographyCodeMappings[$geographyTypeCode].'/'.$areaCode;
+  }
+
+  function getSpatialCoverageUri($geographyTypeCode){
+    $geographyCodeMappings = self::$geographyCodeMappings;
+    return BASE_URI.'geography/'.$geographyCodeMappings[$geographyTypeCode];
   }
 
   function publisherToUri($Publisher){
