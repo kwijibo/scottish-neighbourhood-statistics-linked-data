@@ -11,7 +11,7 @@ define('QB', 'http://purl.org/linked-data/cube#');
 define('XSDT', 'http://www.w3.org/2001/XMLSchema#');
 define('SKOS', 'http://www.w3.org/2004/02/skos/core#');
 define('VOID', 'http://rdfs.org/ns/void#');
-
+define('DC', 'http://purl.org/dc/elements/1.1/');
 $geographyCodeMappings = SNSConversionUtilities::$geographyCodeMappings;
 
 class SNSConversionUtilities {

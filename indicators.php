@@ -66,6 +66,7 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
     //'http://linkedscotland.org/def/'.$systemID;
 
   $wordsInLabel = explode(' ', strtolower($shortTitle));
+  $wordsInLabel = array_filter($wordsInLabel, create_function('$a','return rtrim($a,"s");'));
   foreach(array('female', 'male') as $gender){
     if(in_array($gender,$wordsInLabel)){
       $genderUri = SNSConversionUtilities::genderToUri($gender);
@@ -74,13 +75,13 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
       $graph->add_resource_triple($genderUri, RDF_TYPE, SNS.'Gender');
     }
   }
-  if(in_array('age', $wordsInLabel) || in_array('aged', $wordsInLabel))){
+  if(in_array('age', $wordsInLabel) || in_array('aged', $wordsInLabel)){
     if(preg_match('/aged? (\d+)(.+?)(\d+)/i', $shortTitle, $m)){
       $startAge = $m[1];
       $endAge = $m[3];
-      $ageRangeUri = SNSConversionUtilities::getAgeRangeUri($start,$end);
+      $ageRangeUri = SNSConversionUtilities::getAgeRangeUri($startAge,$endAge);
       $graph->add_resource_triple($ageRangeUri, RDF_TYPE, SNS.'AgeRange');
-      $graph->add_literal_triple($ageRangeUri, RDFS_LABEL "Age: {$m[1]}-{$m[3]}", 'en-gb');
+      $graph->add_literal_triple($ageRangeUri, RDFS_LABEL, "Age: {$m[1]}-{$m[3]}", 'en-gb');
       $graph->add_literal_triple($ageRangeUri, SNS.'startAge', $startAge,0,XSDT.'integer');
       $graph->add_literal_triple($ageRangeUri, SNS.'endAge', $endAge,0,XSDT.'integer');
       $graph->add_resource_triple($IndicatorURI, SNS.'ageRange', $ageRangeUri);
