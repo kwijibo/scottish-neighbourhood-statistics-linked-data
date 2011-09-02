@@ -1,0 +1,52 @@
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix sdmx:    <http://purl.org/linked-data/sdmx#> .
+@prefix sdmx-dim:    <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix qb:      <http://purl.org/linked-data/cube#> .
+
+@base <http://linkedscotland.org/> .
+
+<id/dataset/sns>
+  a void:Dataset ;
+  dcterms:creator <http://keithalexander.co.uk/id/me> , <bill> , <peter> ;
+  rdfs:label "Scottish Neighbourhood Statistics"@en-gb ;
+  void:sparqlEndpoint <http://api.talis.com/stores/kwijibo-dev4/services/sparql> ;
+  dcterms:description """
+This is a conversion of the XML data available from http://www.sns.gov.uk/Downloads/DownloadHome.aspx
+The data consists of Indicators (such as 'percentage of journeys cycled to work'); each indicator has 2 dimensions: place and time.
+
+Time dimensions can refer to different lengths of period - eg: month or quarter, or year, or multi year span.
+
+Spatial dimensions can refer to different kinds of geographical boundary 
+    - eg: 
+        Local Authority, 
+        Datazone, 
+        Multimember Ward, 
+        Scottish Parliamentary Constituencey
+        Scotland
+(not a comprehensive list).
+
+The Linked Data modelling uses the Data Cube vocabulary, and basically models an indicator as a qb:MeasureProperty.
+Each XML file contains multiple related indicators. The file itself is modelled as a qb:DataSet.
+Each indicator also has some provenance metadata about it ; who uploaded it, when, what the source is, etc. This has been modelled as a dcat:Dataset .
+
+"""@en-gb ;
+
+void:vocabulary void: , dcat: , qb: sns: sdmx-dim: , skos: , dc: dcterms: , foaf: ;
+.
+
+<bill> a foaf:Person;
+  foaf:name "Bill Roberts" ;
+.
+<peter> a foaf:Person ;
+  foaf:name "Peter Winstanley" ;
+.
+
+
