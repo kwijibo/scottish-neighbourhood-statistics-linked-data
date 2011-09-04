@@ -1,5 +1,5 @@
 <?php
-$files = glob('data_24_2_2011/*.xml') ;
+$files = glob('data_24_2_2011/*Liquor*.xml') ;
 $files = array_reverse($files);
 foreach($files as $filename){
   if(!strpos( $filename, 'Metadata') AND !strpos( $filename, 'Copyright')){
@@ -9,7 +9,7 @@ foreach($files as $filename){
 
       $turtle = implode("\n", $output);
       $fileID = str_replace('.xml','',basename($filename));
-      file_put_contents('output-data/'.$fileID.'.ttl', $turtle);
+      file_put_contents('output-data/'.$fileID.'.nt', $turtle);
 //      echo $turtle;
 //      die;
 

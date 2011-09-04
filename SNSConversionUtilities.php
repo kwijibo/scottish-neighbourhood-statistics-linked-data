@@ -1,17 +1,22 @@
 <?php
 
 define('SNS', 'http://linkedscotland.org/def/');
-define('SNS_Concepts', 'http://linkedscotland.org/concepts/sns/');
 define('BASE_URI', 'http://linkedscotland.org/id/');
-define('SNS_DATASET_URI',  'http://linkedscotland.org/id/dataset/sns');
+define('SNS_DSD', BASE_URI.'dataset-structure-definition/sns');
+define('SNS_Concepts', BASE_URI.'concept-scheme/sns');
+define('SNS_DATASET_URI',  BASE_URI.'dataset/sns');
 define('FOAF', 'http://xmlns.com/foaf/0.1/');
 define('SDMX_DIM', 'http://purl.org/linked-data/sdmx/2009/dimension#');
+define('SDMX_ATT', 'http://purl.org/linked-data/sdmx/2009/attribute#');
 define('DCT', 'http://purl.org/dc/terms/');
 define('QB', 'http://purl.org/linked-data/cube#');
 define('XSDT', 'http://www.w3.org/2001/XMLSchema#');
 define('SKOS', 'http://www.w3.org/2004/02/skos/core#');
 define('VOID', 'http://rdfs.org/ns/void#');
 define('DC', 'http://purl.org/dc/elements/1.1/');
+define('DCAT', 'http://www.w3.org/ns/dcat#');
+define('OV', 'http://open.vocab.org/terms/');
+
 $geographyCodeMappings = SNSConversionUtilities::$geographyCodeMappings;
 
 class SNSConversionUtilities {
@@ -43,6 +48,7 @@ class SNSConversionUtilities {
     $calendarYear = '/^[0-9]{4}$/';
     $calendarYearWithSpaces = '/^[0-9]{4}\W+$/';
     $multiYearSpan = '/^([0-9]{4})-([0-9]{4})$/';
+    $multiYearSpanSlash = '/^([0-9]{4})\/([0-9]{4})$/';
     $yearWithMonth = '/^([0-9]{4})M([0-9]{2})$/';
     $yearWithQuarter = '/^([0-9]{4})Q([0-9]{2})$/';
     $governmentYearmentYear = '/^([0-9]{4})\/([0-9]{4})/';
@@ -54,6 +60,9 @@ class SNSConversionUtilities {
     } else if(preg_match($calendarYearWithSpaces,$date, $m)){
       return self::base.'id/year/'.trim($m[0]);
     } else if(preg_match($multiYearSpan, $date, $m)){
+      $difference = $m[2] - $m[1];
+      return self::base.'id/gregorian-interval/'.$m[1].'-01-01T00:00:00/P'.$difference.'Y';
+    }  else if(preg_match($multiYearSpanSlash, $date, $m)){
       $difference = $m[2] - $m[1];
       return self::base.'id/gregorian-interval/'.$m[1].'-01-01T00:00:00/P'.$difference.'Y';
     } else if(preg_match($yearWithMonth, $date, $m)){
@@ -100,6 +109,18 @@ class SNSConversionUtilities {
     return BASE_URI.'dataset/'.trim($id);
   }
 
+  function indicatorIdentifierToSliceURI($id){
+    return BASE_URI.'slice/'.trim($id);
+  }
+
+  function indicatorIdentifierToSliceKeyURI($id){
+    return BASE_URI.'slice-key/'.trim($id);
+  }
+
+  function getSliceUri($code, $date){
+    return self::indicatorIdentifierToSliceURI($code).'/'.self::getSlugFromText($date);
+  }
+
   function getObservationUri($code, $date, $area){
     return BASE_URI.'observation/'.trim($code).'/date/'.trim($date).'/area/'.trim($area);
   }
@@ -141,8 +162,8 @@ class SNSConversionUtilities {
   function getSubjectsFromFileName($fileName){
     if(preg_match_all('/[A-Z][a-z][A-Za-z\s]+/', $fileName, $m)){
       $subjects = array();
-      foreach($m[0] as $subjectText) $subjects[]=$subjectText;
-      return  $subjects;
+      foreach($m[0] as $subjectText) $subjects[]= trim($subjectText, '? ');
+      return  array_unique($subjects);
     } else {
       return array();
     }

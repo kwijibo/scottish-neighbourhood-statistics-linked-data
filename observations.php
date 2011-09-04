@@ -13,12 +13,23 @@ $doc_location = $_SERVER['argv'][1];
 $subjects = SNSConversionUtilities::getSubjectsFromFileName(basename($doc_location));
 $datasetURI = SNSConversionUtilities::fileNameToDatasetUri(basename($doc_location));
 $StatsGraph = new SimpleGraph();
-
+$placesGraph = new SimpleGraph();
+$placesGraph->add_turtle(file_get_contents('local-authorities.ttl'));
 $DatasetTitle = str_replace('_', ' ' , basename(str_replace('.xml','',$doc_location)));
-  $StatsGraph->add_resource_triple($datasetURI, RDF_TYPE, QB.'Dataset');
+foreach(SNSConversionUtilities::$geographyCodeMappings as $code => $slug){
+  $words = ucwords(str_replace('-',' ',$slug));
+  $DatasetTitle = str_replace($code,'- '.$words.' ',$DatasetTitle);
+}
+  if(preg_match('/[0-9 ]+$/', $DatasetTitle, $m)){
+    $date = str_replace(' ','-',trim($m[0]));
+    $DatasetTitle = str_replace($m[0], ' '.date('F jS Y',strtotime($date)), $DatasetTitle);
+  }
+
+
+  $DatasetTitle = preg_replace('/^(\D+)(\d+)(.+)$/','$1:$3 ($2)', $DatasetTitle);
+  $StatsGraph->add_resource_triple($datasetURI, RDF_TYPE, QB.'DataSet');
   $StatsGraph->add_literal_triple($datasetURI, RDFS_LABEL, $DatasetTitle, 'en-gb');
-//  $StatsGraph->add_literal_triple($datasetURI, SNS.'identifier', $code);
-//  $StatsGraph->add_literal_triple($datasetURI, SNS.'shortTitle', $shortTitle, 'en-gb');
+  $StatsGraph->add_resource_triple($datasetURI, QB.'structure', SNS_DSD);
 
   foreach($subjects as $no => $Subject){
     $SubjectURI = SNSConversionUtilities::subjectTextToURI($Subject);
@@ -56,24 +67,36 @@ while ($reader->read()) {
             $xpath = new DomXPath($dom);
 
             foreach($xpath->query('//indicator') as $indicator){
-
+             $observationCountForThisIndicator=0;
               $indicatorCount++;
               #generate a qb:Dataset
               #
               $code = $indicator->getElementsByTagName('code')->item(0)->textContent;
               $shortTitle = preg_replace('/(\s)+/','$1',$indicator->getElementsByTagName('shortTitle')->item(0)->textContent);
               $title = preg_replace('/(\s)+/','$1', $indicator->getElementsByTagName('title')->item(0)->textContent);
-              $valueDimensionURI = SNSConversionUtilities::indicatorTitleToURI($title);
-              $StatsGraph->add_resource_triple($valueDimensionURI, RDF_TYPE, QB.'MeasureProperty');
-              $StatsGraph->add_literal_triple($valueDimensionURI, RDFS_LABEL, $shortTitle, 'en-gb');
-              $StatsGraph->add_literal_triple($valueDimensionURI, RDFS_COMMENT, $title, 'en-gb');
-
-
+              $measurePropertyURI = SNSConversionUtilities::indicatorTitleToURI($title);
+              $StatsGraph->add_resource_triple($measurePropertyURI, RDF_TYPE, QB.'MeasureProperty');
+              $StatsGraph->add_literal_triple($measurePropertyURI, RDFS_LABEL, $shortTitle, 'en-gb');
+              $StatsGraph->add_literal_triple($measurePropertyURI, RDFS_COMMENT, $title, 'en-gb');
+              $StatsGraph->add_literal_triple($measurePropertyURI, SNS.'indicatorCode', $code);
+              $json = array(
+                'indicators' => array($measurePropertyURI => array()),
+                'labels' => array(
+                  $measurePropertyURI => $shortTitle,
+                )
+              );
+ 
               $spatialCoverageSet = false;
              
-              $indicatorDatasetURI = SNSConversionUtilities::indicatorIdentifierToDatasetURI($code);
-              $StatsGraph->add_resource_triple($indicatorDatasetURI, DCT.'isPartOf', $datasetURI);
-              $StatsGraph->add_resource_triple($datasetURI, VOID.'subset', $indicatorDatasetURI);
+              $indicatorSliceURI = SNSConversionUtilities::indicatorIdentifierToSliceURI($code);
+              $indicatorSliceKeyURI = SNSConversionUtilities::indicatorIdentifierToSliceKeyURI($code);
+              $StatsGraph->add_resource_triple($indicatorSliceURI, RDF_TYPE, QB.'Slice');
+              $StatsGraph->add_resource_triple($indicatorSliceURI, DCT.'isPartOf', $datasetURI);
+              $StatsGraph->add_resource_triple($indicatorSliceURI, QB.'sliceStructure', $indicatorSliceKeyURI);
+              $StatsGraph->add_literal_triple($indicatorSliceURI, SNS.'indicatorCode', $code);
+              $StatsGraph->add_resource_triple($datasetURI, QB.'slice', $indicatorSliceURI);
+              $StatsGraph->add_resource_triple($indicatorSliceKeyURI, QB.'measure', $measurePropertyURI);
+              $StatsGraph->add_resource_triple($measurePropertyURI, SNS.'dataset', $indicatorSliceURI);
 
 
     # do Observations
@@ -84,6 +107,12 @@ while ($reader->read()) {
       $dateURI = SNSConversionUtilities::dateToURI($date);
       $StatsGraph->add_resource_triple($datasetURI, DCT.'temporal',$dateURI);
       $StatsGraph->add_literal_triple($dateURI, RDFS_LABEL, $date);
+
+      $dateSliceUri = SNSConversionUtilities::getSliceUri($code, $date);
+      
+      $StatsGraph->add_resource_triple($indicatorSliceURI, QB.'subSlice', $dateSliceUri);
+      $StatsGraph->add_resource_triple($dateSliceUri, SDMX_DIM.'refPeriod', $dateURI);
+
       foreach($data->childNodes as $child){
         if(isset($child->tagName) && $child->tagName=='area'){
             $area = $child;
@@ -113,17 +142,20 @@ while ($reader->read()) {
                 } 
                 
                 $observationCount++;
-
+                $observationCountForThisIndicator++;
                 $geographyURI = SNSConversionUtilities::getPlaceUri($geographyTypeCode, $areaCode);
                 $observationUri = SNSConversionUtilities::getObservationUri($code,$date, $areaCode);
-                $StatsGraph->add_resource_triple($observationUri, SDMX_DIM.'refPeriod', $dateURI);
+//                $StatsGraph->add_resource_triple($observationUri, SDMX_DIM.'refPeriod', $dateURI);
                 $StatsGraph->add_resource_triple($observationUri, SDMX_DIM.'refArea', $geographyURI);
-                $StatsGraph->add_literal_triple($observationUri, $valueDimensionURI, $dataValue, false, $valueDT);
+                $StatsGraph->add_literal_triple($observationUri, $measurePropertyURI, $dataValue, false, $valueDT);
                 $StatsGraph->add_resource_triple($observationUri, QB.'dataset', $datasetURI);
+                $StatsGraph->add_resource_triple($dateSliceUri, QB.'observation', $observationUri);
                 $StatsGraph->add_resource_triple($observationUri, RDF_TYPE, QB.'Observation');
-
+                $json['indicators'][$indicatorSliceURI][$dateURI][$geographyURI]=$dataValue;
+                $json['labels'][$geographyURI] = $placesGraph->get_label($geographyURI);
+                $json['labels'][$dateURI] = $date;
                 //stream output
-                echo $StatsGraph->to_ntriples();
+                echo trim($StatsGraph->to_ntriples());
                 $StatsGraph = new SimpleGraph();
 
             }
@@ -131,9 +163,11 @@ while ($reader->read()) {
       }
 
                   }
+$StatsGraph->add_literal_triple($indicatorSliceURI, SNS.'numberOfObservations', $observationCountForThisIndicator, 0, XSDT.'integer');
+$StatsGraph->add_literal_triple($indicatorSliceURI, OV.'json', str_replace('\/','/',json_encode($json, JSON_HEX_QUOT)));
               }
 
-//            echo $StatsGraph->to_ntriples();
+            echo trim($StatsGraph->to_ntriples());
 
         }
     }

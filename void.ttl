@@ -10,8 +10,24 @@
 @prefix sdmx:    <http://purl.org/linked-data/sdmx#> .
 @prefix sdmx-dim:    <http://purl.org/linked-data/sdmx/2009/dimension#> .
 @prefix qb:      <http://purl.org/linked-data/cube#> .
-
+@prefix sns: <http://linkedscotland.org/def/> .
 @base <http://linkedscotland.org/> .
+@prefix comp: <id/dataset-structure-definition-component/> .
+
+<id/dataset-structure-definition/sns> a qb:DataStructureDefinition ;
+  rdfs:label "Data Structure Definition for Scottish Neighbourhood Statistics"@en ;
+  qb:component comp:sns-area , comp:sns-period ;
+.
+comp:sns-period a qb:ComponentSpecification ;
+  qb:dimension sdmx-dim:refPeriod ;
+  qb:order 1 ;
+.
+
+comp:sns-area a qb:ComponentSpecification ;
+  qb:dimension sdmx-dim:refArea ;
+  qb:order 2 ;
+.
+
 
 <id/dataset/sns>
   a void:Dataset ;
@@ -39,7 +55,7 @@ Each indicator also has some provenance metadata about it ; who uploaded it, whe
 
 """@en-gb ;
 
-void:vocabulary void: , dcat: , qb: sns: sdmx-dim: , skos: , dc: dcterms: , foaf: ;
+void:vocabulary void: , dcat: , qb:, sns:, sdmx-dim: , skos: , dc:, dcterms: , foaf: ;
 .
 
 <bill> a foaf:Person;
