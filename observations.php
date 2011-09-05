@@ -79,13 +79,7 @@ while ($reader->read()) {
               $StatsGraph->add_literal_triple($measurePropertyURI, RDFS_LABEL, $shortTitle, 'en-gb');
               $StatsGraph->add_literal_triple($measurePropertyURI, RDFS_COMMENT, $title, 'en-gb');
               $StatsGraph->add_literal_triple($measurePropertyURI, SNS.'indicatorCode', $code);
-              $json = array(
-                'indicators' => array($measurePropertyURI => array()),
-                'labels' => array(
-                  $measurePropertyURI => $shortTitle,
-                )
-              );
- 
+
               $spatialCoverageSet = false;
              
               $indicatorSliceURI = SNSConversionUtilities::indicatorIdentifierToSliceURI($code);
@@ -98,6 +92,13 @@ while ($reader->read()) {
               $StatsGraph->add_resource_triple($indicatorSliceKeyURI, QB.'measure', $measurePropertyURI);
               $StatsGraph->add_resource_triple($measurePropertyURI, SNS.'dataset', $indicatorSliceURI);
 
+            $json = array(
+                'indicators' => array(),
+                'labels' => array(
+                  $indicatorSliceURI => $shortTitle,
+                )
+              );
+ 
 
     # do Observations
               #
@@ -158,14 +159,23 @@ while ($reader->read()) {
                 echo trim($StatsGraph->to_ntriples());
                 $StatsGraph = new SimpleGraph();
 
-            }
+            } //each area
         }
       }
+      
+ $dateSliceObservations = array_values($json['indicators'][$indicatorSliceURI][$dateURI]);    
+ $dateSliceMean = array_sum($dateSliceObservations)/count($dateSliceObservations);
+ $StatsGraph->add_literal_triple($dateSliceUri, SNS.'meanObservationValue', $dateSliceMean,0, XSDT.'decimal');
+ $StatsGraph->add_literal_triple($dateSliceUri, SNS.'numberOfObservations', count($dateSliceObservations),0, XSDT.'integer');
+$maxminAreas = SNSConversionUtilities::getAreasWithMaxAndMinValues($json['indicators'][$indicatorSliceURI][$dateURI]);
 
-                  }
+foreach($maxminAreas['max'] as $maxArea) $StatsGraph->add_resource_triple($dateSliceUri, SNS.'areaWithHighestValue', $maxArea);
+foreach($maxminAreas['min'] as $minArea) $StatsGraph->add_resource_triple($dateSliceUri, SNS.'areaWithLowestValue', $minArea);
+                  } // date
+              
 $StatsGraph->add_literal_triple($indicatorSliceURI, SNS.'numberOfObservations', $observationCountForThisIndicator, 0, XSDT.'integer');
 $StatsGraph->add_literal_triple($indicatorSliceURI, OV.'json', str_replace('\/','/',json_encode($json, JSON_HEX_QUOT)));
-              }
+              } //indicator
 
             echo trim($StatsGraph->to_ntriples());
 

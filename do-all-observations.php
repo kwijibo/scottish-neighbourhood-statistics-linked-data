@@ -1,5 +1,5 @@
 <?php
-$files = glob('data_24_2_2011/*Liquor*.xml') ;
+$files = glob('data_24_2_2011/*Reconvictions*.xml') ;
 $files = array_reverse($files);
 foreach($files as $filename){
   if(!strpos( $filename, 'Metadata') AND !strpos( $filename, 'Copyright')){

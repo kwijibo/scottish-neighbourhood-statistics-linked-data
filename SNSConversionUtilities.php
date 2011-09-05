@@ -1,10 +1,11 @@
 <?php
 
-define('SNS', 'http://linkedscotland.org/def/');
-define('BASE_URI', 'http://linkedscotland.org/id/');
+define('LINKED_SCOTLAND', 'http://linkedscotland.org/id/');
+define('SNS', 'http://sns.linkedscotland.org/def/');
+define('BASE_URI', 'http://sns.linkedscotland.org/id/');
 define('SNS_DSD', BASE_URI.'dataset-structure-definition/sns');
 define('SNS_Concepts', BASE_URI.'concept-scheme/sns');
-define('SNS_DATASET_URI',  BASE_URI.'dataset/sns');
+define('SNS_DATASET_URI',  BASE_URI.'dataset');
 define('FOAF', 'http://xmlns.com/foaf/0.1/');
 define('SDMX_DIM', 'http://purl.org/linked-data/sdmx/2009/dimension#');
 define('SDMX_ATT', 'http://purl.org/linked-data/sdmx/2009/attribute#');
@@ -21,7 +22,6 @@ $geographyCodeMappings = SNSConversionUtilities::$geographyCodeMappings;
 
 class SNSConversionUtilities {
 
-  const SNS = 'http://linkedscotland.org/def/';
   const base = 'http://reference.data.gov.uk/';
 
   public static $geographyCodeMappings = array(
@@ -93,7 +93,7 @@ class SNSConversionUtilities {
 
   function indicatorTitleToURI($title){  
     $valueDimensionSlug = self::getSlugFromText($title);
-    return self::SNS.$valueDimensionSlug;
+    return BASE_URI.$valueDimensionSlug;
   }
 
   function fileNameToDatasetUri($f){
@@ -127,17 +127,17 @@ class SNSConversionUtilities {
 
   function subjectTextToURI($text){
     $slug = self::getSlugFromText($text);
-    return SNS_Concepts.$slug;
+    return SNS_Concepts.'/'.$slug;
   }
 
   function getPlaceUri($geographyTypeCode, $areaCode){
     $geographyCodeMappings = self::$geographyCodeMappings;
-    return BASE_URI.'geography/'.$geographyCodeMappings[$geographyTypeCode].'/'.$areaCode;
+    return LINKED_SCOTLAND.'geography/'.$geographyCodeMappings[$geographyTypeCode].'/'.$areaCode;
   }
 
   function getSpatialCoverageUri($geographyTypeCode){
     $geographyCodeMappings = self::$geographyCodeMappings;
-    return BASE_URI.'geography/'.$geographyCodeMappings[$geographyTypeCode];
+    return LINKED_SCOTLAND.'geography/'.$geographyCodeMappings[$geographyTypeCode];
   }
 
   function publisherToUri($Publisher){
@@ -167,6 +167,16 @@ class SNSConversionUtilities {
     } else {
       return array();
     }
+  }
+
+  function getAreasWithMaxAndMinValues($areasAndValues){
+    $return = array();
+    $values = array_filter(array_values($areasAndValues));
+    foreach($areasAndValues as $area => $value){
+      if($value===max($values))$return['max'][]=$area;
+      if($value===min($values))$return['min'][]=$area;
+    }
+    return $return;
   }
 
 }

@@ -10,8 +10,9 @@
 @prefix sdmx:    <http://purl.org/linked-data/sdmx#> .
 @prefix sdmx-dim:    <http://purl.org/linked-data/sdmx/2009/dimension#> .
 @prefix qb:      <http://purl.org/linked-data/cube#> .
-@prefix sns: <http://linkedscotland.org/def/> .
-@base <http://linkedscotland.org/> .
+@prefix sns: <http://sns.linkedscotland.org/def/> .
+@base <http://sns.linkedscotland.org/> .
+
 @prefix comp: <id/dataset-structure-definition-component/> .
 
 <id/dataset-structure-definition/sns> a qb:DataStructureDefinition ;
@@ -29,7 +30,7 @@ comp:sns-area a qb:ComponentSpecification ;
 .
 
 
-<id/dataset/sns>
+<id/dataset>
   a void:Dataset ;
   dcterms:creator <http://keithalexander.co.uk/id/me> , <bill> , <peter> ;
   rdfs:label "Scottish Neighbourhood Statistics"@en-gb ;
