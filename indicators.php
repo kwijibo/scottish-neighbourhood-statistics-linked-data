@@ -3,20 +3,39 @@
 define('MORIARTY_ARC_DIR', 'arc/');
 require 'moriarty/simplegraph.class.php';
 require 'SNSConversionUtilities.php';
+
+require 'Triplific/conversiongraph.class.php';
+
 //define('SNS', 'http://linkedscotland.org/def/');
 define('snsXML', 'urn:sns-scotexec-gov-uk/schemas/indicators/0.1');
 define('gmsXML', 'http://www.govtalk.gov.uk/CM/gms');
 
-function addAgeRangeToGraph(&$graph, $startAge, $endAge, $IndicatorURI){
+function addAgeRangeToGraph(&$graph, $startAge, $endAge, $subject, $predicate = false){
+      if(!$predicate) $predicate = SNS.'ageRange';
       $ageRangeUri = SNSConversionUtilities::getAgeRangeUri($startAge,$endAge);
       $graph->add_resource_triple($ageRangeUri, RDF_TYPE, SNS.'AgeRange');
       $graph->add_literal_triple($ageRangeUri, RDFS_LABEL, "Age: {$startAge}-{$endAge}", 'en-gb');
       if(intval($startAge)) $graph->add_literal_triple($ageRangeUri, SNS.'startAge', $startAge,0,XSDT.'integer');
+      else { $graph->add_literal_triple($ageRangeUri, SNS.'startAge', 0,0,XSDT.'integer'); }
       if(intval($endAge)) $graph->add_literal_triple($ageRangeUri, SNS.'endAge', $endAge,0,XSDT.'integer');
-      $graph->add_resource_triple($IndicatorURI, SNS.'ageRange', $ageRangeUri);
+      $graph->add_resource_triple($subject, $predicate, $ageRangeUri);
+
+      if($predicate==SKOS.'broader'){
+        $graph->add_resource_triple($ageRangeUri, SKOS.'narrower', $subject);
+      } else {
+        if($endAge <= 16){
+          addAgeRangeToGraph($graph, '0', '16', $ageRangeUri, SKOS.'broader');
+        }
+        if($startAge >= 16 && $startAge <= 65) {
+          addAgeRangeToGraph($graph, '16', '65', $ageRangeUri, SKOS.'broader');
+        }
+        if($startAge >=65) {
+          addAgeRangeToGraph($graph, '16', '65', $ageRangeUri, SKOS.'broader');
+        }
+      }
+
       return $graph;
 }
-
 
 function getText($localName, $ns, &$el){
   if(!is_object($el->getElementsByTagNameNS($ns,$localName )->item(0))){
@@ -38,7 +57,11 @@ $dom->loadXML($xml);
 
 $xpath = new DomXPath($dom);
 
-$graph = new SimpleGraph();
+$graph = new ConversionGraph();
+
+$graph->set_dataset_description(SNS_DATASET_URI, file_get_contents('void.ttl'));
+
+//var_dump($graph->dataset_description_graph->to_turtle());
 
 $graph->add_resource_triple(SNS_Concepts, RDF_TYPE, SKOS.'Scheme');
 $graph->add_literal_triple(SNS_Concepts, RDFS_LABEL, 'Scottish Neighbourhood Statistics Concept Scheme', 'en-gb');
@@ -54,7 +77,7 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
   $HelpEmail = getText('HelpEmail', snsXML, $MDEl);
   $title = getText('Title', gmsXML, $MDEl); 
   $shortTitle = getText('ShortTitle', snsXML, $MDEl);
-  $Subject = getText('Subject', gmsXML, $MDEl);
+  $Subject = ucwords(trim(getText('SNSTopic', snsXML, $MDEl), '?'));
   $description = getText('Description', gmsXML, $MDEl);
   $rights = getText('Rights', gmsXML, $MDEl);
   $geographicCoverageNotes = getText('GeographicReferencing', snsXML, $MDEl);
@@ -69,11 +92,10 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
   $UnitOfMeasurement = getText('UnitOfMeasurement', snsXML, $MDEl);
   $Factor = getText('Factor', snsXML, $MDEl);
   $SubjectURI = SNSConversionUtilities::subjectTextToURI($Subject);
-  $IndicatorURI = SNSConversionUtilities::indicatorTitleToURI($title);
-  $IndicatorSliceURI = SNSConversionUtilities::indicatorIdentifierToDatasetURI($systemID);
-  $IndicatorSliceURI = SNSConversionUtilities::indicatorIdentifierToSliceURI($systemID);
+  $IndicatorURI = SNSConversionUtilities::indicatorTitleToMeasurePropertyURI($title);
+  $IndicatorDatasetURI = SNSConversionUtilities::indicatorIdentifierToDatasetURI($systemID);
   $TotalDatasetURI = SNSConversionUtilities::indicatorIdentifierToDatasetURI($TotalIndicator);
-  $SourceURI = $IndicatorSliceURI.'/source';
+  $SourceURI = $IndicatorDatasetURI.'/source';
   $CanSpatiallyAggregate = strtolower(getText('CanSpatiallyAggregate',snsXML, $MDEl));
     //'http://linkedscotland.org/def/'.$systemID;
 
@@ -88,18 +110,15 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
     }
   }
   
-  if(preg_match('/aged? (\d{1,2})(.+?)(\d{1,2}\b)/i', $shortTitle, $m)){
+  if(preg_match('/aged? (\d{1,2})([^\+]+?)(\d{1,2}\b)/i', $shortTitle, $m)){
       $startAge = $m[1];
       $endAge = $m[3];
-      $graph = addAgeRangeToGraph($graph, $startAge, $endAge, $IndicatorURI);
+      $graph = addAgeRangeToGraph($graph, $startAge, $endAge, $IndicatorDatasetURI);
    } else  if(preg_match('/aged? (\d{1,2})\+?/i', $shortTitle, $m)){
       $startAge = $m[1];
       $endAge = 'upwards';
-      $graph = addAgeRangeToGraph($graph, $startAge, $endAge, $IndicatorURI);
-   }
-
-
-  if(preg_match('/ ((under)|(over)) (\d{1,2})\b/', $title, $m)){
+      $graph = addAgeRangeToGraph($graph, $startAge, $endAge, $IndicatorDatasetURI);
+   } else if(preg_match('/ ((under)|(over)) (\d{1,2})\b/', $title, $m)){
     if($m[1]=='under'){
       $startAge = 0;
       $endAge = $m[4];
@@ -107,7 +126,11 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
       $startAge = $m[4];
       $endAge = 'upwards';
     }
-    $graph = addAgeRangeToGraph($graph, $startAge, $endAge, $IndicatorURI);
+    $graph = addAgeRangeToGraph($graph, $startAge, $endAge, $IndicatorDatasetURI);
+  } else if(preg_match('/ (\d{1,2})\+|( and over)/', $title, $m)){
+    $startAge = $m[1];
+    $endAge = 'upwards';
+    $graph = addAgeRangeToGraph($graph, $startAge, $endAge, $IndicatorDatasetURI);
   }
 
 
@@ -126,7 +149,7 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
   $graph->add_literal_triple($IndicatorURI, RDFS_COMMENT, $title, 'en-gb');
   $graph->add_literal_triple($IndicatorURI, DCT.'identifier', $systemID);
   $UnitOfMeasurementUri = SNSConversionUtilities::unitOfMeaurementToURI($UnitOfMeasurement);
-  $graph->add_resource_triple($IndicatorSliceURI, SDMX_ATT.'unitMeasure', $UnitOfMeasurementUri);
+  $graph->add_resource_triple($IndicatorDatasetURI, SDMX_ATT.'unitMeasure', $UnitOfMeasurementUri);
   $graph->add_resource_triple($IndicatorURI, SDMX_ATT.'unitMeasure', $UnitOfMeasurementUri);
   $graph->add_literal_triple($UnitOfMeasurementUri, RDFS_LABEL, ucwords($UnitOfMeasurement), 'en-gb');
   $graph->add_resource_triple($UnitOfMeasurementUri, RDF_TYPE, SNS.'UnitOfMeasurement');
@@ -137,49 +160,49 @@ foreach($xpath->query('//SNSMetaData') as $MDEl){
   if(!empty($additionalInformation)){
     $graph->add_literal_triple($IndicatorURI, SKOS.'note', $additionalInformation, 'en-gb');
   }
-  $graph->add_resource_triple($IndicatorURI, SNS.'dataset', $IndicatorSliceURI);
+  $graph->add_resource_triple($IndicatorURI, SNS.'dataset', $IndicatorDatasetURI);
   if (trim($CanSpatiallyAggregate)=='true') {
     $graph->add_resource_triple($IndicatorURI, SNS.'aggregationCapability', SNS.'SpatialAggregation');
     $graph->add_literal_triple(SNS.'SpatialAggregation', RDFS_COMMENT, "Summing up the figures for all the areas within a larger area to get a total figure; some indicators can't be spatially aggregated because the data has been rounded, perturbed for disclosure control purposes or shouldn't be summed for some other reason (e.g. rank, median, etc.).", 'en-gb');
     $graph->add_literal_triple(SNS.'SpatialAggregation', RDFS_LABEL, 'Spatial Aggregation', 'en-gb');
   }
   if(!empty($Subject)){
-    $graph->add_resource_triple($IndicatorSliceURI, DCT.'subject', $SubjectURI);
+    $graph->add_resource_triple($IndicatorDatasetURI, DCT.'subject', $SubjectURI);
     $graph->add_resource_triple($SubjectURI, RDF_TYPE, SKOS.'Concept');
     $graph->add_literal_triple($SubjectURI, RDFS_LABEL, ucwords($Subject), 'en-gb');
     $graph->add_resource_triple($SubjectURI, SKOS.'inScheme', SNS_Concepts);  
  //   $graph->add_resource_triple(SNS_Concepts, SKOS.'hasTopConcept', $SubjectURI);
-    $graph->add_resource_triple($SubjectURI, SNS.'isTopicOf', $IndicatorSliceURI);
+    $graph->add_resource_triple($SubjectURI, SNS.'isTopicOf', $IndicatorDatasetURI);
   }
 
-    $graph->add_resource_triple($IndicatorSliceURI,RDF_TYPE, QB.'Slice');
-  //$graph->add_resource_triple($IndicatorSliceURI, DCT.'isPartOf',SNS_DATASET_URI);
-  //$graph->add_resource_triple(SNS_DATASET_URI,  DCT.'hasPart', $IndicatorSliceURI);
+    $graph->add_resource_triple($IndicatorDatasetURI,RDF_TYPE, QB.'DataSet');
+  //$graph->add_resource_triple($IndicatorDatasetURI, DCT.'isPartOf',SNS_DATASET_URI);
+  //$graph->add_resource_triple(SNS_DATASET_URI,  DCT.'hasPart', $IndicatorDatasetURI);
   if(!empty($TotalIndicator) AND $TotalIndicator!=$systemID){ 
-    $graph->add_resource_triple($IndicatorSliceURI, SNS.'partOfTotal', $TotalDatasetURI);
-    $graph->add_resource_triple($TotalDatasetURI, SNS.'totalledFrom',$IndicatorSliceURI);
+    $graph->add_resource_triple($IndicatorDatasetURI, SNS.'partOfTotal', $TotalDatasetURI);
+    $graph->add_resource_triple($TotalDatasetURI, SNS.'totalledFrom',$IndicatorDatasetURI);
   }
-  $graph->add_literal_triple($IndicatorSliceURI, DCT.'description',  'Data using the "'.$title.'" indicator.', 'en-gb');
-  $graph->add_literal_triple($IndicatorSliceURI, RDFS_LABEL,  $title, 'en-gb');
+  $graph->add_literal_triple($IndicatorDatasetURI, DCT.'description',  'Data using the "'.$title.'" indicator.', 'en-gb');
+  $graph->add_literal_triple($IndicatorDatasetURI, RDFS_LABEL,  $title, 'en-gb');
   foreach(array('uploader'=>$upLoaderEmail, 'helpContact'=> $HelpEmail) as $role => $agentEmail){
-    if(preg_match('/.+@.+/',$agentEmail)){
+    if(preg_match('/^\S+@\S+$/',$agentEmail)){
       $agentUri = SNSConversionUtilities::emailToURI($agentEmail);
-      $graph->add_resource_triple($IndicatorSliceURI, SNS.$role, $agentUri);
+      $graph->add_resource_triple($IndicatorDatasetURI, SNS.$role, $agentUri);
       $graph->add_resource_triple($agentUri, FOAF.'mbox',  'mailto:'.$agentEmail);
-      $graph->add_resource_triple($agentUri, SNS.'isContactFor', $IndicatorSliceURI);
+      $graph->add_resource_triple($agentUri, SNS.'isContactFor', $IndicatorDatasetURI);
       $graph->add_resource_triple($agentUri, RDF_TYPE, FOAF.'Agent');
       $name = ucwords(str_replace('.',' ', array_shift(explode('@', $agentEmail))));
       $graph->add_literal_triple($agentUri, RDFS_LABEL, $name);
     }
   }
  
-  $graph->add_resource_triple($IndicatorSliceURI, SNS.'indicator', $IndicatorURI);
-  $graph->add_literal_triple($IndicatorSliceURI, DC.'rights', $rights, 'en-gb');
-  $graph->add_literal_triple($IndicatorSliceURI, SNS.'geographicCoverageNotes', $geographicCoverageNotes, 'en-gb');
-  $graph->add_literal_triple($IndicatorSliceURI, SNS.'accuracyNotes', $accuracyNotes, 'en-gb');
-  $graph->add_literal_triple($IndicatorSliceURI, SNS.'comparabilityNotes', $comparabilityNotes, 'en-gb');
-  $graph->add_literal_triple($IndicatorSliceURI, SNS.'disclosureControlNotes', $disclouseNotes, 'en-gb');
-  $graph->add_resource_triple($IndicatorSliceURI, DCT.'source', $SourceURI);
+  $graph->add_resource_triple($IndicatorDatasetURI, SNS.'indicator', $IndicatorURI);
+  $graph->add_literal_triple($IndicatorDatasetURI, DC.'rights', $rights, 'en-gb');
+  $graph->add_literal_triple($IndicatorDatasetURI, SNS.'geographicCoverageNotes', $geographicCoverageNotes, 'en-gb');
+  $graph->add_literal_triple($IndicatorDatasetURI, SNS.'accuracyNotes', $accuracyNotes, 'en-gb');
+  $graph->add_literal_triple($IndicatorDatasetURI, SNS.'comparabilityNotes', $comparabilityNotes, 'en-gb');
+  $graph->add_literal_triple($IndicatorDatasetURI, SNS.'disclosureControlNotes', $disclouseNotes, 'en-gb');
+  $graph->add_resource_triple($IndicatorDatasetURI, DCT.'source', $SourceURI);
   $graph->add_literal_triple($SourceURI, DC.'format', $format);
   $graph->add_literal_triple($SourceURI, DC.'publisher', $Publisher, 'en-gb');
   $graph->add_literal_triple($SourceURI, SNS.'dateAcquired', date('c', strtotime($dateAcquired)), false, XSDT.'dateTime');
@@ -228,6 +251,8 @@ if(!empty($Publisher)){
 
 }
 
+$graph->write_statistics_to_dataset();
+echo $graph->get_dataset_graph()->to_turtle();
 file_put_contents('output-data/indicators.ttl', $graph->to_turtle());
 file_put_contents('output-data/indicators.nt', $graph->to_ntriples());
 ?>

@@ -4,8 +4,8 @@ define('LINKED_SCOTLAND', 'http://linkedscotland.org/id/');
 define('SNS', 'http://sns.linkedscotland.org/def/');
 define('BASE_URI', 'http://sns.linkedscotland.org/id/');
 define('SNS_DSD', BASE_URI.'dataset-structure-definition/sns');
-define('SNS_Concepts', BASE_URI.'concept-scheme/sns');
-define('SNS_DATASET_URI',  BASE_URI.'dataset');
+define('SNS_Concepts', BASE_URI.'collection/topics');
+define('SNS_DATASET_URI',  BASE_URI.'dataset/sns');
 define('FOAF', 'http://xmlns.com/foaf/0.1/');
 define('SDMX_DIM', 'http://purl.org/linked-data/sdmx/2009/dimension#');
 define('SDMX_ATT', 'http://purl.org/linked-data/sdmx/2009/attribute#');
@@ -51,6 +51,7 @@ class SNSConversionUtilities {
     $multiYearSpanSlash = '/^([0-9]{4})\/([0-9]{4})$/';
     $yearWithMonth = '/^([0-9]{4})M([0-9]{2})$/';
     $yearWithQuarter = '/^([0-9]{4})Q([0-9]{2})$/';
+    $governmentYear = '/^([0-9]{4})\/([0-9]{4})/';
     $governmentYearmentYear = '/^([0-9]{4})\/([0-9]{4})/';
     $yearStartingFirstApril = '/^([0-9]{4})\/([0-9]{2})-([0-9]{4})\/([0-9]{2})$/';
     $financialYearWithQuarter = "/^([0-9]{4})\/([0-9]{2})Q([0-9]{2})/";
@@ -74,7 +75,6 @@ class SNSConversionUtilities {
      
     } else if(preg_match($yearStartingFirstApril, $date, $m)){
       return self::base.'id/government-interval/'.$m[1].'_'.self::sortDate($m[2]).'-'.$m[3].'_'.self::sortDate($m[4]);
-     
     } else if(preg_match($financialYearWithQuarter, $date, $m)){
       return self::base.'id/government-quarter/'.$m[1].'-'.self::sortDate($m[2]).'/Q'.ltrim($m[3], '0');
     } else {
@@ -84,6 +84,7 @@ class SNSConversionUtilities {
   }
 
   function sortDate($date){
+    if($date > 1900) return $date;
     if($date > 95){
       return 1900 + $date;
     } else {
@@ -91,14 +92,14 @@ class SNSConversionUtilities {
     }
   }
 
-  function indicatorTitleToURI($title){  
+  function indicatorTitleToMeasurePropertyURI($title){  
     $valueDimensionSlug = self::getSlugFromText($title);
-    return BASE_URI.$valueDimensionSlug;
+    return SNS.$valueDimensionSlug;
   }
 
   function fileNameToDatasetUri($f){
     $f = str_replace('.xml','',$f);
-    return BASE_URI.'dataset/'.self::getSlugFromText($f);
+    return BASE_URI.'collection/'.self::getSlugFromText($f);
   }
   
   function getSlugFromText($title){
@@ -127,7 +128,7 @@ class SNSConversionUtilities {
 
   function subjectTextToURI($text){
     $slug = self::getSlugFromText($text);
-    return SNS_Concepts.'/'.$slug;
+    return BASE_URI.'topic/'.$slug;
   }
 
   function getPlaceUri($geographyTypeCode, $areaCode){
@@ -143,7 +144,7 @@ class SNSConversionUtilities {
   function publisherToUri($Publisher){
     $publisherStringStart = array_shift(explode('.', $Publisher));
     $slug = self::getSlugFromText($publisherStringStart);
-    return BASE_URI.'sns-source-publisher/'.$slug;
+    return BASE_URI.'publisher/'.$slug;
   }
 
   function emailToURI($email){

@@ -12,7 +12,7 @@
 @prefix qb:      <http://purl.org/linked-data/cube#> .
 @prefix sns: <http://sns.linkedscotland.org/def/> .
 @base <http://sns.linkedscotland.org/> .
-
+@prefix : <id/datasets/> .
 @prefix comp: <id/dataset-structure-definition-component/> .
 
 <id/dataset-structure-definition/sns> a qb:DataStructureDefinition ;
@@ -30,7 +30,7 @@ comp:sns-area a qb:ComponentSpecification ;
 .
 
 
-<id/dataset>
+<id/dataset/sns>
   a void:Dataset ;
   dcterms:creator <http://keithalexander.co.uk/id/me> , <bill> , <peter> ;
   rdfs:label "Scottish Neighbourhood Statistics"@en-gb ;
@@ -57,11 +57,78 @@ Each indicator also has some provenance metadata about it ; who uploaded it, whe
 """@en-gb ;
 
 void:vocabulary void: , dcat: , qb:, sns:, sdmx-dim: , skos: , dc:, dcterms: , foaf: ;
+
+void:classPartition :skosScheme, 
+                    :snsAgeRange, 
+                    :qbMeasureProperty, 
+                    :qbUnitOfMeasures , 
+                    :skosConcept, 
+                    :qbDatasets , 
+                    :DataPublishers ,
+                    :foafAgents ,
+                    :qbSlices , 
+                    :dcCollections , 
+                    :foafAgents ,
+                    :foafPersons ,
+                    :snsGenders ;
+
 .
 
-<bill> a foaf:Person;
+:snsGenders
+  void:class sns:Gender ;
+  void:uriSpace "http://sns.linkedscotland.org/id/gender/" ;
+.
+
+:foafAgents void:class foaf:Agent; 
+  void:uriSpace "http://sns.linkedscotland.org/id/agent/" ;
+.
+
+:foafPersons void:class foaf:Person ;
+  void:uriSpace "*" .
+
+:skosScheme
+  void:class skos:Scheme ;
+  void:uriSpace "http://sns.linkedscotland.org/id/collection/";
+#  void:uriRegexPattern "^http://sns\\.linkedscotland\\.org/id/collection/topics$";
+  void:entities 1 .
+
+:qbDatasets 
+  void:class qb:DataSet ;
+  void:uriSpace "http://sns.linkedscotland.org/id/dataset/";
+  #void:uriRegexPattern """^http://sns\\.linkedscotland\\.org/id/dataset/[^\\s/]+$""" ;
+.
+
+:snsAgeRange
+  void:class <http://sns.linkedscotland.org/def/AgeRange> ;
+#  void:uriRegexPattern """^http://sns\\.linkedscotland\\.org/id/age-range/\\d+-[\\d\\w]+$""" ;
+  void:uriSpace "http://sns.linkedscotland.org/id/age-range/";
+.
+
+:qbMeasureProperty 
+  void:class qb:MeasureProperty ;
+  void:uriSpace "http://sns.linkedscotland.org/def/" ;
+.
+
+:qbUnitOfMeasures
+  void:class sns:UnitOfMeasurement ;
+  void:uriSpace "http://sns.linkedscotland.org/id/unit-of-measurement/" ;
+.
+
+:skosConcept 
+  void:class skos:Concept ;
+  void:uriSpace "http://sns.linkedscotland.org/id/topic/" ;
+.
+
+:DataPublishers
+  void:class sns:DataPublisher ;
+  void:uriSpace "http://sns.linkedscotland.org/id/publisher/" ;
+.
+
+<http://swirrl.com/bill.rdf#me> a foaf:Person;
   foaf:name "Bill Roberts" ;
 .
+
+
 <peter> a foaf:Person ;
   foaf:name "Peter Winstanley" ;
 .
