@@ -70,8 +70,37 @@ void:classPartition :skosScheme,
                     :dcCollections , 
                     :foafAgents ,
                     :foafPersons ,
-                    :snsGenders ;
+                    :snsGenders ,
+                    :Collections,
+                    :Observations ,
+                    :Dsds ,
+                    :indicatorDatasets,
+                    :geographyLevels ,
+                    :postcodeUnits;
 
+.
+
+:postcodeUnits void:class <http://data.ordnancesurvey.co.uk/ontology/postcode/PostcodeUnit> ;
+  void:uriSpace "http://data.ordnancesurvey.co.uk/id/postcodeunit" .
+
+:geographyLevels void:class sns:AreaType ;
+  void:uriSpace "http://sns.linkedscotland.org/id/geography/" ;
+.
+
+:Dsds void:class qb:DataStructureDefinition ;
+  void:uriSpace "http://sns.linkedscotland.org/id/datastructure-definition/"; 
+.
+
+:Observations void:class qb:Observation ;
+  void:uriSpace "http://sns.linkedscotland.org/id/observation/" ;
+.
+  
+:qbSlices void:class qb:Slice ;
+  void:uriSpace "http://sns.linkedscotland.org/id/slice/";
+.
+
+:Collections void:class dcterms:Collection ;
+  void:uriSpace "http://sns.linkedscotland.org/id/collection/" ;
 .
 
 :snsGenders
@@ -94,10 +123,14 @@ void:classPartition :skosScheme,
 
 :qbDatasets 
   void:class qb:DataSet ;
-  void:uriSpace "http://sns.linkedscotland.org/id/dataset/";
+  void:uriSpace "http://sns.linkedscotland.org/id/indicator-dataset/";
   #void:uriRegexPattern """^http://sns\\.linkedscotland\\.org/id/dataset/[^\\s/]+$""" ;
 .
 
+:indicatorDatasets
+  void:class void:Dataset ;
+  void:uriSpace "http://sns.linkedscotland.org/id/indicator-dataset/" ;
+.
 :snsAgeRange
   void:class <http://sns.linkedscotland.org/def/AgeRange> ;
 #  void:uriRegexPattern """^http://sns\\.linkedscotland\\.org/id/age-range/\\d+-[\\d\\w]+$""" ;

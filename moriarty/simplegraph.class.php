@@ -537,7 +537,7 @@ class SimpleGraph {
   function add_rdf($rdf=false, $base='') {
     if ($rdf) {
         $trimRdf = trim($rdf);
-     if($trimRdf[0]=='{'){ //lazy is-this-json assessment  - might be better to try json_decode - but more costly
+     if(@$trimRdf[0]=='{'){ //lazy is-this-json assessment  - might be better to try json_decode - but more costly
          $this->add_json($trimRdf);
          unset($trimRdf);
      } else {

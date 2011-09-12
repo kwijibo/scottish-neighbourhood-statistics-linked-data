@@ -21,6 +21,8 @@ class Graph {
    */
   var $request_factory;
 
+  var $use_gzip_compression=false;
+
   /**
    * Create a new instance of this class
    * @param string uri URI of the graph

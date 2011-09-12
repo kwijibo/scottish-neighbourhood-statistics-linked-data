@@ -6,24 +6,33 @@ require_once MORIARTY_DIR . 'httprequestfactory.class.php';
 
 class Snapshots{
 
-	var $uri, $errors, $credentials;
+	var $uri, $errors, $credentials, $request_factory;
 	
 	function __construct($uri, $credentials=false)
 	{
 		$this->uri = $uri;
 		$this->credentials = $credentials;
 	}
-	/**
-	 * get_snapshots
+
+/**
+	 * get_item_uris
 	 *
 	 * @return array
-	 * @author Keith Alexander
+	 * @author Chris Clarke
 	 **/
 	public function get_item_uris()
 	{
+        if (empty( $this->request_factory) ) {
+          $this->request_factory = new HttpRequestFactory();
+        }
+        $request = $this->request_factory->make( 'GET', $this->uri, $this->credentials );
+        $request->set_accept("application/rdf+xml");
+        $response = $request->execute();
+
 		$parser = ARC2::getRDFXMLParser();
-		$parser->parse($this->uri);
+		$parser->parse('',$response->body);
 		$triples = $parser->getTriples();
+
 		$this->errors = $parser->getErrors();
 		$uris = array();
 		foreach($triples as $t)
@@ -32,7 +41,7 @@ class Snapshots{
 		}
 		return $uris;
 	}
-	
+
 	/**
 	 * get_errors
 	 *

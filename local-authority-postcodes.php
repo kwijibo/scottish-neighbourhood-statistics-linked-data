@@ -21,9 +21,8 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX postcode: <http://data.ordnancesurvey.co.uk/ontology/postcode/>
 PREFIX spatial: <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/>
 construct {
-?postcode postcode:ward ?ward ; rdfs:label ?label .
-?ward 
-  spatial:contains ?postcode ; 
+?postcode postcode:ward ?ward  .
+?ward spatial:contains ?postcode ; 
 .
 <{$s}> spatial:contains ?ward .
 
