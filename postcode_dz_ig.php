@@ -33,8 +33,8 @@ while($r = fgetcsv($fp)){
   $dzUri = SNSConversionUtilities::getPlaceUri('DZ', $dz);
   $igUri = SNSConversionUtilities::getPlaceUri('IG', $r[4]);
   $osPostcodeUri = SNSConversionUtilities::getOsPostcodeUri($postcode);
-  $graph->add_resource_triple($osPostcodeUri, SNS.'datazone', $dzUri);
-  $graph->add_resource_triple($osPostcodeUri, SNS.'intermediateGeography', $igUri);
+  $graph->add_resource_triple($osPostcodeUri, LS_GEO.'datazone', $dzUri);
+  $graph->add_resource_triple($osPostcodeUri, LS_GEO.'intermediateGeography', $igUri);
   $graph->add_type_and_label($osPostcodeUri , 'http://data.ordnancesurvey.co.uk/ontology/postcode/PostcodeUnit', $postcode, '');
 
   if($counter > 500){

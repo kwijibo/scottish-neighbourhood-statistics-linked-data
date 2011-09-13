@@ -5,13 +5,11 @@
 @prefix ns1: <http://sns.linkedscotland.org/def/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-<http://sns.linkedscotland.org/def/datazone> rdf:type rdf:Property ;
-                                             rdfs:label "Datazone"@en ;
-                                             rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> . 
+<http://sns.linkedscotland.org/def/UnitOfMeasurement> rdf:type rdfs:Class ;
+                                                      rdfs:label "Unit Of Measurement"@en-gb ;
+                                                      rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> . 
 
-<http://sns.linkedscotland.org/def/> ov:defines <http://sns.linkedscotland.org/def/datazone> ,
-                                                <http://sns.linkedscotland.org/def/intermediateGeography> ,
-                                                <http://sns.linkedscotland.org/def/UnitOfMeasurement> ,
+<http://sns.linkedscotland.org/def/> ov:defines <http://sns.linkedscotland.org/def/UnitOfMeasurement> ,
                                                 <http://sns.linkedscotland.org/def/factor> ,
                                                 <http://sns.linkedscotland.org/def/dataset> ,
                                                 <http://sns.linkedscotland.org/def/AgeRange> ,
@@ -22,6 +20,9 @@
                                                 <http://sns.linkedscotland.org/def/measure> ,
                                                 <http://sns.linkedscotland.org/def/dateAcquired> ,
                                                 <http://sns.linkedscotland.org/def/dateAvailable> ,
+                                                <http://sns.linkedscotland.org/def/AreaType> ,
+                                                <http://sns.linkedscotland.org/def/datazone> ,
+                                                <http://sns.linkedscotland.org/def/intermediateGeography> ,
                                                 <http://sns.linkedscotland.org/def/indicatorCode> ,
                                                 <http://sns.linkedscotland.org/def/sliceOf> ,
                                                 <http://sns.linkedscotland.org/def/areaType> ,
@@ -30,14 +31,6 @@
                                                 <http://sns.linkedscotland.org/def/numberOfObservations> ,
                                                 <http://sns.linkedscotland.org/def/areaWithHighestValue> ,
                                                 <http://sns.linkedscotland.org/def/areaWithLowestValue> . 
-
-<http://sns.linkedscotland.org/def/intermediateGeography> rdf:type rdf:Property ;
-                                                          rdfs:label "Intermediate Geography"@en ;
-                                                          rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> . 
-
-<http://sns.linkedscotland.org/def/UnitOfMeasurement> rdf:type rdfs:Class ;
-                                                      rdfs:label "Unit Of Measurement"@en-gb ;
-                                                      rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> . 
 
 <http://sns.linkedscotland.org/def/factor> rdf:type rdf:Property ;
                                            rdfs:label "factor"@en ;
@@ -86,6 +79,18 @@
 <http://sns.linkedscotland.org/def/dateAvailable> rdf:type rdf:Property ;
                                                   rdfs:label "date available"@en ;
                                                   rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> . 
+
+<http://sns.linkedscotland.org/def/AreaType> rdf:type rdfs:Class ;
+                                             rdfs:label "Area Type"@en-gb ;
+                                             rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> . 
+
+<http://sns.linkedscotland.org/def/datazone> rdf:type rdf:Property ;
+                                             rdfs:label "Datazone"@en ;
+                                             rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> . 
+
+<http://sns.linkedscotland.org/def/intermediateGeography> rdf:type rdf:Property ;
+                                                          rdfs:label "Intermediate Geography"@en ;
+                                                          rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> . 
 
 <http://sns.linkedscotland.org/def/indicatorCode> rdf:type rdf:Property ;
                                                   rdfs:label "indicator code"@en ;

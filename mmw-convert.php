@@ -13,7 +13,7 @@ while($r = fgetcsv($fp)){
   if($mmw=='TOTAL') break;
   //$postcodeURI = SNSConversionUtilities::getPostcodeUri($postcode);
   $mmwUri = SNSConversionUtilities::getPlaceUri('MW', $mmw);
-  $graph->add_type_and_label($mmwUri , SNS.'MultiMemberWard', $label, 'en-gb');
+  $graph->add_type_and_label($mmwUri , LS_GEO.'MultiMemberWard', $label, 'en-gb');
 
   if($counter > 500){
     echo $graph->to_ntriples();
