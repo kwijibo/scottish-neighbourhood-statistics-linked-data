@@ -1,0 +1,14 @@
+#ConversionGraph:
+
+##Throws an exception if you try to add bad triples:
+
+* malformed lang tags
+* values that don't match their datatypes
+* bad URIs
+
+
+##Checks triples as you add them against  a void file describing your expectations of your data.
+
+* For every rdf:type triple, there must be a classPartition of that class, with a void:uriSpace that matches the subject URI
+* For every linkset in your void description, any resource triples with that predicate must have a subject and object matching the uriSpaces of the subjectsTarget and the objectsTarget.
+

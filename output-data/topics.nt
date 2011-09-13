@@ -1,0 +1,743 @@
+<http://sns.linkedscotland.org/id/topic/access_to_services> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/access_to_services> <http://www.w3.org/2000/01/rdf-schema#label> "Access To Services"@en-gb .
+<http://sns.linkedscotland.org/id/topic/access_to_services> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/access_to_services> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_1625_education_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/access_to_services> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_1626_health_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/access_to_services> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_1627_financial_services_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/access_to_services> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_1628_retail_services_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/access_to_services> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_1629_other_services_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/access_to_services> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_1625_education_sc_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/access_to_services> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_1626_health_sc_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/access_to_services> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_1627_financial_services_sc_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/access_to_services> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_1628_retail_services_sc_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/access_to_services> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_1629_other_services_sc_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/access_to_services> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_2047_drive_time_2006_zn_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/access_to_services> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/education> .
+<http://sns.linkedscotland.org/id/topic/access_to_services> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/health> .
+<http://sns.linkedscotland.org/id/topic/access_to_services> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/financial_services> .
+<http://sns.linkedscotland.org/id/topic/access_to_services> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/retail_services> .
+<http://sns.linkedscotland.org/id/topic/access_to_services> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/other_services> .
+<http://sns.linkedscotland.org/id/topic/access_to_services> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/drive_time> .
+<http://sns.linkedscotland.org/id/collection/topics> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://sns.linkedscotland.org/id/topic/access_to_services> .
+<http://sns.linkedscotland.org/id/collection/topics> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> .
+<http://sns.linkedscotland.org/id/collection/topics> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://sns.linkedscotland.org/id/topic/community_care> .
+<http://sns.linkedscotland.org/id/collection/topics> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://sns.linkedscotland.org/id/topic/community_well> .
+<http://sns.linkedscotland.org/id/collection/topics> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://sns.linkedscotland.org/id/topic/crime_and_justice> .
+<http://sns.linkedscotland.org/id/collection/topics> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://sns.linkedscotland.org/id/topic/economic_activity_benefits_and_tax_credits> .
+<http://sns.linkedscotland.org/id/collection/topics> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://sns.linkedscotland.org/id/topic/education_skills_and_training> .
+<http://sns.linkedscotland.org/id/collection/topics> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://sns.linkedscotland.org/id/topic/geographic_classifications> .
+<http://sns.linkedscotland.org/id/collection/topics> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://sns.linkedscotland.org/id/topic/health> .
+<http://sns.linkedscotland.org/id/collection/topics> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://sns.linkedscotland.org/id/topic/housing> .
+<http://sns.linkedscotland.org/id/collection/topics> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://sns.linkedscotland.org/id/topic/other_and_special_interest_reports> .
+<http://sns.linkedscotland.org/id/collection/topics> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://sns.linkedscotland.org/id/topic/physical_environment> .
+<http://sns.linkedscotland.org/id/collection/topics> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://sns.linkedscotland.org/id/topic/population> .
+<http://sns.linkedscotland.org/id/collection/topics> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://sns.linkedscotland.org/id/topic/transport> .
+<http://sns.linkedscotland.org/id/topic/education> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/education> <http://www.w3.org/2000/01/rdf-schema#label> "Education"@en-gb .
+<http://sns.linkedscotland.org/id/topic/education> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/education> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/access_to_services> .
+<http://sns.linkedscotland.org/id/topic/education> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_1625_education_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/education> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_1625_education_sc_5_9_2011> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/education> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/health> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/financial_services> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/retail_services> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/other_services> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/businesses_in_construction_manufacturing_an> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/business_sites_by_sector> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/research_and_development> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/gross_value_added_office_for_national_stati> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/business_births_deaths_and_survival_rates> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/energy_consumption> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/employment> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/day_care> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/home_care> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/social_care_financial_provision> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/social_care_direct_payments> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/social_care_social_work_staffing> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/adults_with_learning_disabilities_the_same_as_you> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/care_homes> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/registered_blind_and_partially_sighted> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/social_environment> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/caring_responsibilities> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/participation_in_community_organisa> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/perceptions_of_neighbourhood_and_se> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/voting> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/criminal_justice_social_work> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/homicide> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/crimes_and_offences_recorded_by_the_police> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/crime_rates_per> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/clear> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/rates> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/reconvictions> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/labour_market> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/individual_benefits> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/combination_of_key_benefits> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/benefits_by_client_group> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/skills_and_training> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/school_education> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/geographic_areas> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/hospital_admissions> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/cancer_registrations> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/immunisations> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/drug_misuse> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/primary_care> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/maternity> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/disability_living_allowance> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/smoking_prevalence> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/sport> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/self_assessed_health> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/delayed_discharges> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/scotland_resource_allocation_committee_nrac_formula> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/dwellings> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/council_house_sales> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/tenure> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/household_spaces> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/house_sales_and_prices> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/household_estimates> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/new_build_housing> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/homeless_households> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/scottish_house_condition_survey> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/local_authority_housing_council_housing> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/special_interest> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/children_and_young_people> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/ambient_air_quality> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/area_of_derelict_land> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/proximity_to_derelict_sites> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/proximity_to_a_spri_site> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/dwellings_in_flood_risk_areas> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/physical_environment_indicators> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/waste> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/carbon_dioxide_emission_estimates> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/area_of_vacant_land> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/births_and_deaths> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/census> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/mid> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/year_estimates> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/life_expectancy_at_birth> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/historic_mid_year_estimates_sape_pre> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/national_indicators> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/road_statistics> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/school_children> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/bus_statistics> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/rail_statistics> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/personal_travel> .
+<http://sns.linkedscotland.org/id/dataset/sns> <http://purl.org/dc/terms/subject> <http://sns.linkedscotland.org/id/topic/drive_time> .
+<http://sns.linkedscotland.org/id/topic/health> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/health> <http://www.w3.org/2000/01/rdf-schema#label> "Health"@en-gb .
+<http://sns.linkedscotland.org/id/topic/health> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/health> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/access_to_services> .
+<http://sns.linkedscotland.org/id/topic/health> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_1626_health_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/health> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_1648_hospital_admissions_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/health> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_1711_cancer_registrations_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/health> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_1717_immunisations_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/health> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_1724_drug_misuse_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/health> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_1729_primary_care_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/health> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_1935_maternity_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/health> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_2001_disability_living_allowance_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/health> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_2295_smoking_prevalence_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/health> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_2397_sport_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/health> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_2398_self_assessed_health_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/health> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_2406_delayed_discharges_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/health> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_2499_nhsscotland_resource_allocation_committee_nrac_formula_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/health> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_1626_health_sc_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/health> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/hospital_admissions> .
+<http://sns.linkedscotland.org/id/topic/health> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/cancer_registrations> .
+<http://sns.linkedscotland.org/id/topic/health> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/immunisations> .
+<http://sns.linkedscotland.org/id/topic/health> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/drug_misuse> .
+<http://sns.linkedscotland.org/id/topic/health> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/primary_care> .
+<http://sns.linkedscotland.org/id/topic/health> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/maternity> .
+<http://sns.linkedscotland.org/id/topic/health> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/disability_living_allowance> .
+<http://sns.linkedscotland.org/id/topic/health> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/smoking_prevalence> .
+<http://sns.linkedscotland.org/id/topic/health> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/sport> .
+<http://sns.linkedscotland.org/id/topic/health> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/self_assessed_health> .
+<http://sns.linkedscotland.org/id/topic/health> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/delayed_discharges> .
+<http://sns.linkedscotland.org/id/topic/health> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/scotland_resource_allocation_committee_nrac_formula> .
+<http://sns.linkedscotland.org/id/topic/financial_services> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/financial_services> <http://www.w3.org/2000/01/rdf-schema#label> "Financial Services"@en-gb .
+<http://sns.linkedscotland.org/id/topic/financial_services> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/financial_services> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/access_to_services> .
+<http://sns.linkedscotland.org/id/topic/financial_services> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_1627_financial_services_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/financial_services> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_1627_financial_services_sc_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/retail_services> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/retail_services> <http://www.w3.org/2000/01/rdf-schema#label> "Retail Services"@en-gb .
+<http://sns.linkedscotland.org/id/topic/retail_services> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/retail_services> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/access_to_services> .
+<http://sns.linkedscotland.org/id/topic/retail_services> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_1628_retail_services_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/retail_services> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_1628_retail_services_sc_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/other_services> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/other_services> <http://www.w3.org/2000/01/rdf-schema#label> "Other Services"@en-gb .
+<http://sns.linkedscotland.org/id/topic/other_services> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/other_services> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/access_to_services> .
+<http://sns.linkedscotland.org/id/topic/other_services> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_1629_other_services_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/other_services> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_1629_other_services_sc_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> <http://www.w3.org/2000/01/rdf-schema#label> "Business Enterprise And Energy"@en-gb .
+<http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/business_enterprise_and_energy_1639_businesses_in_construction_manufacturing_an_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/business_enterprise_and_energy_1640_business_sites_by_sector_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/business_enterprise_and_energy_2313_research_and_development_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/business_enterprise_and_energy_2401_gross_value_added_office_for_national_stati_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/business_enterprise_and_energy_2403_business_births_deaths_and_survival_rates_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/business_enterprise_and_energy_2466_energy_consumption_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/business_enterprise_and_energy_2475_employment_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/businesses_in_construction_manufacturing_an> .
+<http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/business_sites_by_sector> .
+<http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/research_and_development> .
+<http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/gross_value_added_office_for_national_stati> .
+<http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/business_births_deaths_and_survival_rates> .
+<http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/energy_consumption> .
+<http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/employment> .
+<http://sns.linkedscotland.org/id/topic/businesses_in_construction_manufacturing_an> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/businesses_in_construction_manufacturing_an> <http://www.w3.org/2000/01/rdf-schema#label> "Businesses In Construction Manufacturing An"@en-gb .
+<http://sns.linkedscotland.org/id/topic/businesses_in_construction_manufacturing_an> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/businesses_in_construction_manufacturing_an> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> .
+<http://sns.linkedscotland.org/id/topic/businesses_in_construction_manufacturing_an> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/business_enterprise_and_energy_1639_businesses_in_construction_manufacturing_an_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/business_sites_by_sector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/business_sites_by_sector> <http://www.w3.org/2000/01/rdf-schema#label> "Business Sites By Sector"@en-gb .
+<http://sns.linkedscotland.org/id/topic/business_sites_by_sector> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/business_sites_by_sector> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> .
+<http://sns.linkedscotland.org/id/topic/business_sites_by_sector> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/business_enterprise_and_energy_1640_business_sites_by_sector_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/research_and_development> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/research_and_development> <http://www.w3.org/2000/01/rdf-schema#label> "Research And Development"@en-gb .
+<http://sns.linkedscotland.org/id/topic/research_and_development> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/research_and_development> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> .
+<http://sns.linkedscotland.org/id/topic/research_and_development> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/business_enterprise_and_energy_2313_research_and_development_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/gross_value_added_office_for_national_stati> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/gross_value_added_office_for_national_stati> <http://www.w3.org/2000/01/rdf-schema#label> "Gross Value Added Office For National Stati"@en-gb .
+<http://sns.linkedscotland.org/id/topic/gross_value_added_office_for_national_stati> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/gross_value_added_office_for_national_stati> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> .
+<http://sns.linkedscotland.org/id/topic/gross_value_added_office_for_national_stati> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/business_enterprise_and_energy_2401_gross_value_added_office_for_national_stati_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/business_births_deaths_and_survival_rates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/business_births_deaths_and_survival_rates> <http://www.w3.org/2000/01/rdf-schema#label> "Business Births Deaths And Survival Rates"@en-gb .
+<http://sns.linkedscotland.org/id/topic/business_births_deaths_and_survival_rates> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/business_births_deaths_and_survival_rates> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> .
+<http://sns.linkedscotland.org/id/topic/business_births_deaths_and_survival_rates> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/business_enterprise_and_energy_2403_business_births_deaths_and_survival_rates_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/energy_consumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/energy_consumption> <http://www.w3.org/2000/01/rdf-schema#label> "Energy Consumption"@en-gb .
+<http://sns.linkedscotland.org/id/topic/energy_consumption> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/energy_consumption> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> .
+<http://sns.linkedscotland.org/id/topic/energy_consumption> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/business_enterprise_and_energy_2466_energy_consumption_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/employment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/employment> <http://www.w3.org/2000/01/rdf-schema#label> "Employment"@en-gb .
+<http://sns.linkedscotland.org/id/topic/employment> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/employment> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/business_enterprise_and_energy> .
+<http://sns.linkedscotland.org/id/topic/employment> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/business_enterprise_and_energy_2475_employment_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/community_care> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/community_care> <http://www.w3.org/2000/01/rdf-schema#label> "Community Care"@en-gb .
+<http://sns.linkedscotland.org/id/topic/community_care> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/community_care> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_care_1735_day_care_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/community_care> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_care_1748_home_care_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/community_care> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_care_1753_social_care_financial_provision_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/community_care> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_care_1760_social_care_direct_payments_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/community_care> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_care_1873_social_care_social_work_staffing_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/community_care> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_care_2175_adults_with_learning_disabilities_the_same_as_you_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/community_care> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_care_2177_care_homes_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/community_care> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_care_2183_registered_blind_and_partially_sighted_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/community_care> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/day_care> .
+<http://sns.linkedscotland.org/id/topic/community_care> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/home_care> .
+<http://sns.linkedscotland.org/id/topic/community_care> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/social_care_financial_provision> .
+<http://sns.linkedscotland.org/id/topic/community_care> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/social_care_direct_payments> .
+<http://sns.linkedscotland.org/id/topic/community_care> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/social_care_social_work_staffing> .
+<http://sns.linkedscotland.org/id/topic/community_care> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/adults_with_learning_disabilities_the_same_as_you> .
+<http://sns.linkedscotland.org/id/topic/community_care> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/care_homes> .
+<http://sns.linkedscotland.org/id/topic/community_care> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/registered_blind_and_partially_sighted> .
+<http://sns.linkedscotland.org/id/topic/day_care> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/day_care> <http://www.w3.org/2000/01/rdf-schema#label> "Day Care"@en-gb .
+<http://sns.linkedscotland.org/id/topic/day_care> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/day_care> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/community_care> .
+<http://sns.linkedscotland.org/id/topic/day_care> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_care_1735_day_care_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/home_care> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/home_care> <http://www.w3.org/2000/01/rdf-schema#label> "Home Care"@en-gb .
+<http://sns.linkedscotland.org/id/topic/home_care> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/home_care> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/community_care> .
+<http://sns.linkedscotland.org/id/topic/home_care> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_care_1748_home_care_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/social_care_financial_provision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/social_care_financial_provision> <http://www.w3.org/2000/01/rdf-schema#label> "Social Care Financial Provision"@en-gb .
+<http://sns.linkedscotland.org/id/topic/social_care_financial_provision> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/social_care_financial_provision> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/community_care> .
+<http://sns.linkedscotland.org/id/topic/social_care_financial_provision> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_care_1753_social_care_financial_provision_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/social_care_direct_payments> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/social_care_direct_payments> <http://www.w3.org/2000/01/rdf-schema#label> "Social Care Direct Payments"@en-gb .
+<http://sns.linkedscotland.org/id/topic/social_care_direct_payments> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/social_care_direct_payments> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/community_care> .
+<http://sns.linkedscotland.org/id/topic/social_care_direct_payments> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_care_1760_social_care_direct_payments_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/social_care_social_work_staffing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/social_care_social_work_staffing> <http://www.w3.org/2000/01/rdf-schema#label> "Social Care Social Work Staffing"@en-gb .
+<http://sns.linkedscotland.org/id/topic/social_care_social_work_staffing> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/social_care_social_work_staffing> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/community_care> .
+<http://sns.linkedscotland.org/id/topic/social_care_social_work_staffing> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_care_1873_social_care_social_work_staffing_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/adults_with_learning_disabilities_the_same_as_you> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/adults_with_learning_disabilities_the_same_as_you> <http://www.w3.org/2000/01/rdf-schema#label> "Adults With Learning Disabilities The Same As You"@en-gb .
+<http://sns.linkedscotland.org/id/topic/adults_with_learning_disabilities_the_same_as_you> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/adults_with_learning_disabilities_the_same_as_you> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/community_care> .
+<http://sns.linkedscotland.org/id/topic/adults_with_learning_disabilities_the_same_as_you> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_care_2175_adults_with_learning_disabilities_the_same_as_you_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/care_homes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/care_homes> <http://www.w3.org/2000/01/rdf-schema#label> "Care Homes"@en-gb .
+<http://sns.linkedscotland.org/id/topic/care_homes> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/care_homes> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/community_care> .
+<http://sns.linkedscotland.org/id/topic/care_homes> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_care_2177_care_homes_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/registered_blind_and_partially_sighted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/registered_blind_and_partially_sighted> <http://www.w3.org/2000/01/rdf-schema#label> "Registered Blind And Partially Sighted"@en-gb .
+<http://sns.linkedscotland.org/id/topic/registered_blind_and_partially_sighted> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/registered_blind_and_partially_sighted> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/community_care> .
+<http://sns.linkedscotland.org/id/topic/registered_blind_and_partially_sighted> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_care_2183_registered_blind_and_partially_sighted_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/community_well> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/community_well> <http://www.w3.org/2000/01/rdf-schema#label> "Community Well"@en-gb .
+<http://sns.linkedscotland.org/id/topic/community_well> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/community_well> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_well_beingsocial_environment_1631_caring_responsibilities_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/community_well> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_well_beingsocial_environment_1632_participation_in_community_organisa_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/community_well> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_well_beingsocial_environment_1633_perceptions_of_neighbourhood_and_se_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/community_well> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_well_beingsocial_environment_1634_voting_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/community_well> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/social_environment> .
+<http://sns.linkedscotland.org/id/topic/community_well> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/caring_responsibilities> .
+<http://sns.linkedscotland.org/id/topic/community_well> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/participation_in_community_organisa> .
+<http://sns.linkedscotland.org/id/topic/community_well> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/perceptions_of_neighbourhood_and_se> .
+<http://sns.linkedscotland.org/id/topic/community_well> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/voting> .
+<http://sns.linkedscotland.org/id/topic/social_environment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/social_environment> <http://www.w3.org/2000/01/rdf-schema#label> "Social Environment"@en-gb .
+<http://sns.linkedscotland.org/id/topic/social_environment> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/social_environment> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/community_well> .
+<http://sns.linkedscotland.org/id/topic/social_environment> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_well_beingsocial_environment_1631_caring_responsibilities_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/social_environment> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_well_beingsocial_environment_1632_participation_in_community_organisa_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/social_environment> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_well_beingsocial_environment_1633_perceptions_of_neighbourhood_and_se_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/social_environment> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_well_beingsocial_environment_1634_voting_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/caring_responsibilities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/caring_responsibilities> <http://www.w3.org/2000/01/rdf-schema#label> "Caring Responsibilities"@en-gb .
+<http://sns.linkedscotland.org/id/topic/caring_responsibilities> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/caring_responsibilities> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/community_well> .
+<http://sns.linkedscotland.org/id/topic/caring_responsibilities> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_well_beingsocial_environment_1631_caring_responsibilities_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/participation_in_community_organisa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/participation_in_community_organisa> <http://www.w3.org/2000/01/rdf-schema#label> "Participation In Community Organisa"@en-gb .
+<http://sns.linkedscotland.org/id/topic/participation_in_community_organisa> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/participation_in_community_organisa> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/community_well> .
+<http://sns.linkedscotland.org/id/topic/participation_in_community_organisa> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_well_beingsocial_environment_1632_participation_in_community_organisa_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/perceptions_of_neighbourhood_and_se> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/perceptions_of_neighbourhood_and_se> <http://www.w3.org/2000/01/rdf-schema#label> "Perceptions Of Neighbourhood And Se"@en-gb .
+<http://sns.linkedscotland.org/id/topic/perceptions_of_neighbourhood_and_se> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/perceptions_of_neighbourhood_and_se> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/community_well> .
+<http://sns.linkedscotland.org/id/topic/perceptions_of_neighbourhood_and_se> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_well_beingsocial_environment_1633_perceptions_of_neighbourhood_and_se_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/voting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/voting> <http://www.w3.org/2000/01/rdf-schema#label> "Voting"@en-gb .
+<http://sns.linkedscotland.org/id/topic/voting> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/voting> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/community_well> .
+<http://sns.linkedscotland.org/id/topic/voting> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/community_well_beingsocial_environment_1634_voting_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/crime_and_justice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/crime_and_justice> <http://www.w3.org/2000/01/rdf-schema#label> "Crime And Justice"@en-gb .
+<http://sns.linkedscotland.org/id/topic/crime_and_justice> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/crime_and_justice> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/crime_and_justice_1860_criminal_justice_social_work_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/crime_and_justice> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/crime_and_justice_2100_homicide_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/crime_and_justice> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/crime_and_justice_2222_crimes_and_offences_recorded_by_the_police_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/crime_and_justice> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/crime_and_justice_2223_crime_rates_per_10000_population_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/crime_and_justice> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/crime_and_justice_2224_clear_up_rates_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/crime_and_justice> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/crime_and_justice_2325_reconvictions_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/crime_and_justice> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/criminal_justice_social_work> .
+<http://sns.linkedscotland.org/id/topic/crime_and_justice> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/homicide> .
+<http://sns.linkedscotland.org/id/topic/crime_and_justice> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/crimes_and_offences_recorded_by_the_police> .
+<http://sns.linkedscotland.org/id/topic/crime_and_justice> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/crime_rates_per> .
+<http://sns.linkedscotland.org/id/topic/crime_and_justice> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/clear> .
+<http://sns.linkedscotland.org/id/topic/crime_and_justice> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/rates> .
+<http://sns.linkedscotland.org/id/topic/crime_and_justice> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/reconvictions> .
+<http://sns.linkedscotland.org/id/topic/criminal_justice_social_work> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/criminal_justice_social_work> <http://www.w3.org/2000/01/rdf-schema#label> "Criminal Justice Social Work"@en-gb .
+<http://sns.linkedscotland.org/id/topic/criminal_justice_social_work> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/criminal_justice_social_work> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/crime_and_justice> .
+<http://sns.linkedscotland.org/id/topic/criminal_justice_social_work> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/crime_and_justice_1860_criminal_justice_social_work_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/homicide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/homicide> <http://www.w3.org/2000/01/rdf-schema#label> "Homicide"@en-gb .
+<http://sns.linkedscotland.org/id/topic/homicide> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/homicide> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/crime_and_justice> .
+<http://sns.linkedscotland.org/id/topic/homicide> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/crime_and_justice_2100_homicide_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/crimes_and_offences_recorded_by_the_police> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/crimes_and_offences_recorded_by_the_police> <http://www.w3.org/2000/01/rdf-schema#label> "Crimes And Offences Recorded By The Police"@en-gb .
+<http://sns.linkedscotland.org/id/topic/crimes_and_offences_recorded_by_the_police> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/crimes_and_offences_recorded_by_the_police> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/crime_and_justice> .
+<http://sns.linkedscotland.org/id/topic/crimes_and_offences_recorded_by_the_police> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/crime_and_justice_2222_crimes_and_offences_recorded_by_the_police_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/crime_rates_per> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/crime_rates_per> <http://www.w3.org/2000/01/rdf-schema#label> "Crime Rates Per"@en-gb .
+<http://sns.linkedscotland.org/id/topic/crime_rates_per> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/crime_rates_per> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/crime_and_justice> .
+<http://sns.linkedscotland.org/id/topic/crime_rates_per> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/crime_and_justice_2223_crime_rates_per_10000_population_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/clear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/clear> <http://www.w3.org/2000/01/rdf-schema#label> "Clear"@en-gb .
+<http://sns.linkedscotland.org/id/topic/clear> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/clear> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/crime_and_justice> .
+<http://sns.linkedscotland.org/id/topic/clear> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/crime_and_justice_2224_clear_up_rates_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/rates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/rates> <http://www.w3.org/2000/01/rdf-schema#label> "Rates"@en-gb .
+<http://sns.linkedscotland.org/id/topic/rates> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/rates> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/crime_and_justice> .
+<http://sns.linkedscotland.org/id/topic/rates> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/crime_and_justice_2224_clear_up_rates_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/reconvictions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/reconvictions> <http://www.w3.org/2000/01/rdf-schema#label> "Reconvictions"@en-gb .
+<http://sns.linkedscotland.org/id/topic/reconvictions> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/reconvictions> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/crime_and_justice> .
+<http://sns.linkedscotland.org/id/topic/reconvictions> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/crime_and_justice_2325_reconvictions_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/economic_activity_benefits_and_tax_credits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/economic_activity_benefits_and_tax_credits> <http://www.w3.org/2000/01/rdf-schema#label> "Economic Activity Benefits And Tax Credits"@en-gb .
+<http://sns.linkedscotland.org/id/topic/economic_activity_benefits_and_tax_credits> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/economic_activity_benefits_and_tax_credits> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/economic_activity_benefits_and_tax_credits_1893_labour_market_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/economic_activity_benefits_and_tax_credits> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/economic_activity_benefits_and_tax_credits_2056_individual_benefits_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/economic_activity_benefits_and_tax_credits> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/economic_activity_benefits_and_tax_credits_2057_combination_of_key_benefits_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/economic_activity_benefits_and_tax_credits> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/economic_activity_benefits_and_tax_credits_2226_benefits_by_client_group_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/economic_activity_benefits_and_tax_credits> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/labour_market> .
+<http://sns.linkedscotland.org/id/topic/economic_activity_benefits_and_tax_credits> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/individual_benefits> .
+<http://sns.linkedscotland.org/id/topic/economic_activity_benefits_and_tax_credits> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/combination_of_key_benefits> .
+<http://sns.linkedscotland.org/id/topic/economic_activity_benefits_and_tax_credits> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/benefits_by_client_group> .
+<http://sns.linkedscotland.org/id/topic/labour_market> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/labour_market> <http://www.w3.org/2000/01/rdf-schema#label> "Labour Market"@en-gb .
+<http://sns.linkedscotland.org/id/topic/labour_market> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/labour_market> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/economic_activity_benefits_and_tax_credits> .
+<http://sns.linkedscotland.org/id/topic/labour_market> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/economic_activity_benefits_and_tax_credits_1893_labour_market_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/individual_benefits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/individual_benefits> <http://www.w3.org/2000/01/rdf-schema#label> "Individual Benefits"@en-gb .
+<http://sns.linkedscotland.org/id/topic/individual_benefits> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/individual_benefits> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/economic_activity_benefits_and_tax_credits> .
+<http://sns.linkedscotland.org/id/topic/individual_benefits> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/economic_activity_benefits_and_tax_credits_2056_individual_benefits_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/combination_of_key_benefits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/combination_of_key_benefits> <http://www.w3.org/2000/01/rdf-schema#label> "Combination Of Key Benefits"@en-gb .
+<http://sns.linkedscotland.org/id/topic/combination_of_key_benefits> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/combination_of_key_benefits> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/economic_activity_benefits_and_tax_credits> .
+<http://sns.linkedscotland.org/id/topic/combination_of_key_benefits> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/economic_activity_benefits_and_tax_credits_2057_combination_of_key_benefits_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/benefits_by_client_group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/benefits_by_client_group> <http://www.w3.org/2000/01/rdf-schema#label> "Benefits By Client Group"@en-gb .
+<http://sns.linkedscotland.org/id/topic/benefits_by_client_group> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/benefits_by_client_group> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/economic_activity_benefits_and_tax_credits> .
+<http://sns.linkedscotland.org/id/topic/benefits_by_client_group> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/economic_activity_benefits_and_tax_credits_2226_benefits_by_client_group_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/education_skills_and_training> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/education_skills_and_training> <http://www.w3.org/2000/01/rdf-schema#label> "Education Skills And Training"@en-gb .
+<http://sns.linkedscotland.org/id/topic/education_skills_and_training> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/education_skills_and_training> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/education_skills_and_training_1645_skills_and_training_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/education_skills_and_training> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/education_skills_and_training_2007_school_education_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/education_skills_and_training> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/skills_and_training> .
+<http://sns.linkedscotland.org/id/topic/education_skills_and_training> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/school_education> .
+<http://sns.linkedscotland.org/id/topic/skills_and_training> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/skills_and_training> <http://www.w3.org/2000/01/rdf-schema#label> "Skills And Training"@en-gb .
+<http://sns.linkedscotland.org/id/topic/skills_and_training> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/skills_and_training> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/education_skills_and_training> .
+<http://sns.linkedscotland.org/id/topic/skills_and_training> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/education_skills_and_training_1645_skills_and_training_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/school_education> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/school_education> <http://www.w3.org/2000/01/rdf-schema#label> "School Education"@en-gb .
+<http://sns.linkedscotland.org/id/topic/school_education> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/school_education> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/education_skills_and_training> .
+<http://sns.linkedscotland.org/id/topic/school_education> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/education_skills_and_training_2007_school_education_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/geographic_classifications> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/geographic_classifications> <http://www.w3.org/2000/01/rdf-schema#label> "Geographic Classifications"@en-gb .
+<http://sns.linkedscotland.org/id/topic/geographic_classifications> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/geographic_classifications> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/geographic_classifications_2144_geographic_areas_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/geographic_classifications> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/geographic_areas> .
+<http://sns.linkedscotland.org/id/topic/geographic_areas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/geographic_areas> <http://www.w3.org/2000/01/rdf-schema#label> "Geographic Areas"@en-gb .
+<http://sns.linkedscotland.org/id/topic/geographic_areas> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/geographic_areas> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/geographic_classifications> .
+<http://sns.linkedscotland.org/id/topic/geographic_areas> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/geographic_classifications_2144_geographic_areas_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/hospital_admissions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/hospital_admissions> <http://www.w3.org/2000/01/rdf-schema#label> "Hospital Admissions"@en-gb .
+<http://sns.linkedscotland.org/id/topic/hospital_admissions> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/hospital_admissions> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/health> .
+<http://sns.linkedscotland.org/id/topic/hospital_admissions> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_1648_hospital_admissions_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/cancer_registrations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/cancer_registrations> <http://www.w3.org/2000/01/rdf-schema#label> "Cancer Registrations"@en-gb .
+<http://sns.linkedscotland.org/id/topic/cancer_registrations> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/cancer_registrations> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/health> .
+<http://sns.linkedscotland.org/id/topic/cancer_registrations> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_1711_cancer_registrations_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/immunisations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/immunisations> <http://www.w3.org/2000/01/rdf-schema#label> "Immunisations"@en-gb .
+<http://sns.linkedscotland.org/id/topic/immunisations> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/immunisations> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/health> .
+<http://sns.linkedscotland.org/id/topic/immunisations> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_1717_immunisations_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/drug_misuse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/drug_misuse> <http://www.w3.org/2000/01/rdf-schema#label> "Drug Misuse"@en-gb .
+<http://sns.linkedscotland.org/id/topic/drug_misuse> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/drug_misuse> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/health> .
+<http://sns.linkedscotland.org/id/topic/drug_misuse> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_1724_drug_misuse_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/primary_care> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/primary_care> <http://www.w3.org/2000/01/rdf-schema#label> "Primary Care"@en-gb .
+<http://sns.linkedscotland.org/id/topic/primary_care> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/primary_care> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/health> .
+<http://sns.linkedscotland.org/id/topic/primary_care> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_1729_primary_care_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/maternity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/maternity> <http://www.w3.org/2000/01/rdf-schema#label> "Maternity"@en-gb .
+<http://sns.linkedscotland.org/id/topic/maternity> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/maternity> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/health> .
+<http://sns.linkedscotland.org/id/topic/maternity> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_1935_maternity_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/disability_living_allowance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/disability_living_allowance> <http://www.w3.org/2000/01/rdf-schema#label> "Disability Living Allowance"@en-gb .
+<http://sns.linkedscotland.org/id/topic/disability_living_allowance> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/disability_living_allowance> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/health> .
+<http://sns.linkedscotland.org/id/topic/disability_living_allowance> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_2001_disability_living_allowance_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/smoking_prevalence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/smoking_prevalence> <http://www.w3.org/2000/01/rdf-schema#label> "Smoking Prevalence"@en-gb .
+<http://sns.linkedscotland.org/id/topic/smoking_prevalence> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/smoking_prevalence> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/health> .
+<http://sns.linkedscotland.org/id/topic/smoking_prevalence> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_2295_smoking_prevalence_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/sport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/sport> <http://www.w3.org/2000/01/rdf-schema#label> "Sport"@en-gb .
+<http://sns.linkedscotland.org/id/topic/sport> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/sport> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/health> .
+<http://sns.linkedscotland.org/id/topic/sport> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_2397_sport_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/self_assessed_health> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/self_assessed_health> <http://www.w3.org/2000/01/rdf-schema#label> "Self Assessed Health"@en-gb .
+<http://sns.linkedscotland.org/id/topic/self_assessed_health> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/self_assessed_health> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/health> .
+<http://sns.linkedscotland.org/id/topic/self_assessed_health> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_2398_self_assessed_health_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/delayed_discharges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/delayed_discharges> <http://www.w3.org/2000/01/rdf-schema#label> "Delayed Discharges"@en-gb .
+<http://sns.linkedscotland.org/id/topic/delayed_discharges> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/delayed_discharges> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/health> .
+<http://sns.linkedscotland.org/id/topic/delayed_discharges> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_2406_delayed_discharges_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/scotland_resource_allocation_committee_nrac_formula> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/scotland_resource_allocation_committee_nrac_formula> <http://www.w3.org/2000/01/rdf-schema#label> "Scotland Resource Allocation Committee NRAC Formula"@en-gb .
+<http://sns.linkedscotland.org/id/topic/scotland_resource_allocation_committee_nrac_formula> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/scotland_resource_allocation_committee_nrac_formula> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/health> .
+<http://sns.linkedscotland.org/id/topic/scotland_resource_allocation_committee_nrac_formula> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/health_2499_nhsscotland_resource_allocation_committee_nrac_formula_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://www.w3.org/2000/01/rdf-schema#label> "Housing"@en-gb .
+<http://sns.linkedscotland.org/id/topic/housing> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/housing_1763_dwellings_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/housing_1764_council_house_sales_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/housing_1918_tenure_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/housing_1921_household_spaces_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/housing_2094_house_sales_and_prices_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/housing_2329_household_estimates_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/housing_2340_new_build_housing_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/housing_2346_homeless_households_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/housing_2370_scottish_house_condition_survey_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/housing_2412_local_authority_housing_council_housing_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/dwellings> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/council_house_sales> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/tenure> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/household_spaces> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/house_sales_and_prices> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/household_estimates> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/new_build_housing> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/homeless_households> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/scottish_house_condition_survey> .
+<http://sns.linkedscotland.org/id/topic/housing> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/local_authority_housing_council_housing> .
+<http://sns.linkedscotland.org/id/topic/dwellings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/dwellings> <http://www.w3.org/2000/01/rdf-schema#label> "Dwellings"@en-gb .
+<http://sns.linkedscotland.org/id/topic/dwellings> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/dwellings> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/housing> .
+<http://sns.linkedscotland.org/id/topic/dwellings> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/housing_1763_dwellings_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/council_house_sales> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/council_house_sales> <http://www.w3.org/2000/01/rdf-schema#label> "Council House Sales"@en-gb .
+<http://sns.linkedscotland.org/id/topic/council_house_sales> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/council_house_sales> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/housing> .
+<http://sns.linkedscotland.org/id/topic/council_house_sales> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/housing_1764_council_house_sales_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/tenure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/tenure> <http://www.w3.org/2000/01/rdf-schema#label> "Tenure"@en-gb .
+<http://sns.linkedscotland.org/id/topic/tenure> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/tenure> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/housing> .
+<http://sns.linkedscotland.org/id/topic/tenure> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/housing_1918_tenure_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/household_spaces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/household_spaces> <http://www.w3.org/2000/01/rdf-schema#label> "Household Spaces"@en-gb .
+<http://sns.linkedscotland.org/id/topic/household_spaces> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/household_spaces> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/housing> .
+<http://sns.linkedscotland.org/id/topic/household_spaces> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/housing_1921_household_spaces_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/house_sales_and_prices> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/house_sales_and_prices> <http://www.w3.org/2000/01/rdf-schema#label> "House Sales And Prices"@en-gb .
+<http://sns.linkedscotland.org/id/topic/house_sales_and_prices> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/house_sales_and_prices> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/housing> .
+<http://sns.linkedscotland.org/id/topic/house_sales_and_prices> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/housing_2094_house_sales_and_prices_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/household_estimates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/household_estimates> <http://www.w3.org/2000/01/rdf-schema#label> "Household Estimates"@en-gb .
+<http://sns.linkedscotland.org/id/topic/household_estimates> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/household_estimates> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/housing> .
+<http://sns.linkedscotland.org/id/topic/household_estimates> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/housing_2329_household_estimates_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/new_build_housing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/new_build_housing> <http://www.w3.org/2000/01/rdf-schema#label> "New Build Housing"@en-gb .
+<http://sns.linkedscotland.org/id/topic/new_build_housing> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/new_build_housing> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/housing> .
+<http://sns.linkedscotland.org/id/topic/new_build_housing> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/housing_2340_new_build_housing_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/homeless_households> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/homeless_households> <http://www.w3.org/2000/01/rdf-schema#label> "Homeless Households"@en-gb .
+<http://sns.linkedscotland.org/id/topic/homeless_households> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/homeless_households> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/housing> .
+<http://sns.linkedscotland.org/id/topic/homeless_households> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/housing_2346_homeless_households_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/scottish_house_condition_survey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/scottish_house_condition_survey> <http://www.w3.org/2000/01/rdf-schema#label> "Scottish House Condition Survey"@en-gb .
+<http://sns.linkedscotland.org/id/topic/scottish_house_condition_survey> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/scottish_house_condition_survey> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/housing> .
+<http://sns.linkedscotland.org/id/topic/scottish_house_condition_survey> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/housing_2370_scottish_house_condition_survey_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/local_authority_housing_council_housing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/local_authority_housing_council_housing> <http://www.w3.org/2000/01/rdf-schema#label> "Local Authority Housing Council Housing"@en-gb .
+<http://sns.linkedscotland.org/id/topic/local_authority_housing_council_housing> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/local_authority_housing_council_housing> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/housing> .
+<http://sns.linkedscotland.org/id/topic/local_authority_housing_council_housing> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/housing_2412_local_authority_housing_council_housing_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/other_and_special_interest_reports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/other_and_special_interest_reports> <http://www.w3.org/2000/01/rdf-schema#label> "Other And Special Interest Reports"@en-gb .
+<http://sns.linkedscotland.org/id/topic/other_and_special_interest_reports> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/other_and_special_interest_reports> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/other_and_special_interest_reports_2053_special_interest_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/other_and_special_interest_reports> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/other_and_special_interest_reports_2503_children_and_young_people_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/other_and_special_interest_reports> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/special_interest> .
+<http://sns.linkedscotland.org/id/topic/other_and_special_interest_reports> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/children_and_young_people> .
+<http://sns.linkedscotland.org/id/topic/special_interest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/special_interest> <http://www.w3.org/2000/01/rdf-schema#label> "Special Interest"@en-gb .
+<http://sns.linkedscotland.org/id/topic/special_interest> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/special_interest> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/other_and_special_interest_reports> .
+<http://sns.linkedscotland.org/id/topic/special_interest> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/other_and_special_interest_reports_2053_special_interest_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/children_and_young_people> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/children_and_young_people> <http://www.w3.org/2000/01/rdf-schema#label> "Children And Young People"@en-gb .
+<http://sns.linkedscotland.org/id/topic/children_and_young_people> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/children_and_young_people> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/other_and_special_interest_reports> .
+<http://sns.linkedscotland.org/id/topic/children_and_young_people> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/other_and_special_interest_reports_2503_children_and_young_people_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://www.w3.org/2000/01/rdf-schema#label> "Physical Environment"@en-gb .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/physical_environment_2095_ambient_air_quality_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/physical_environment_2117_area_of_derelict_land_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/physical_environment_2118_proximity_to_derelict_sites_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/physical_environment_2273_proximity_to_a_spri_site_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/physical_environment_2308_dwellings_in_flood_risk_areas_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/physical_environment_2320_physical_environment_indicators_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/physical_environment_2367_waste_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/physical_environment_2396_carbon_dioxide_emission_estimates_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/physical_environment_2404_area_of_vacant_land_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/ambient_air_quality> .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/area_of_derelict_land> .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/proximity_to_derelict_sites> .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/proximity_to_a_spri_site> .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/dwellings_in_flood_risk_areas> .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/physical_environment_indicators> .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/waste> .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/carbon_dioxide_emission_estimates> .
+<http://sns.linkedscotland.org/id/topic/physical_environment> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/area_of_vacant_land> .
+<http://sns.linkedscotland.org/id/topic/ambient_air_quality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/ambient_air_quality> <http://www.w3.org/2000/01/rdf-schema#label> "Ambient Air Quality"@en-gb .
+<http://sns.linkedscotland.org/id/topic/ambient_air_quality> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/ambient_air_quality> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/physical_environment> .
+<http://sns.linkedscotland.org/id/topic/ambient_air_quality> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/physical_environment_2095_ambient_air_quality_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/area_of_derelict_land> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/area_of_derelict_land> <http://www.w3.org/2000/01/rdf-schema#label> "Area Of Derelict Land"@en-gb .
+<http://sns.linkedscotland.org/id/topic/area_of_derelict_land> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/area_of_derelict_land> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/physical_environment> .
+<http://sns.linkedscotland.org/id/topic/area_of_derelict_land> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/physical_environment_2117_area_of_derelict_land_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/proximity_to_derelict_sites> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/proximity_to_derelict_sites> <http://www.w3.org/2000/01/rdf-schema#label> "Proximity To Derelict Sites"@en-gb .
+<http://sns.linkedscotland.org/id/topic/proximity_to_derelict_sites> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/proximity_to_derelict_sites> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/physical_environment> .
+<http://sns.linkedscotland.org/id/topic/proximity_to_derelict_sites> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/physical_environment_2118_proximity_to_derelict_sites_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/proximity_to_a_spri_site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/proximity_to_a_spri_site> <http://www.w3.org/2000/01/rdf-schema#label> "Proximity To A SPRI Site"@en-gb .
+<http://sns.linkedscotland.org/id/topic/proximity_to_a_spri_site> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/proximity_to_a_spri_site> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/physical_environment> .
+<http://sns.linkedscotland.org/id/topic/proximity_to_a_spri_site> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/physical_environment_2273_proximity_to_a_spri_site_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/dwellings_in_flood_risk_areas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/dwellings_in_flood_risk_areas> <http://www.w3.org/2000/01/rdf-schema#label> "Dwellings In Flood Risk Areas"@en-gb .
+<http://sns.linkedscotland.org/id/topic/dwellings_in_flood_risk_areas> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/dwellings_in_flood_risk_areas> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/physical_environment> .
+<http://sns.linkedscotland.org/id/topic/dwellings_in_flood_risk_areas> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/physical_environment_2308_dwellings_in_flood_risk_areas_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/physical_environment_indicators> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/physical_environment_indicators> <http://www.w3.org/2000/01/rdf-schema#label> "Physical Environment Indicators"@en-gb .
+<http://sns.linkedscotland.org/id/topic/physical_environment_indicators> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/physical_environment_indicators> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/physical_environment> .
+<http://sns.linkedscotland.org/id/topic/physical_environment_indicators> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/physical_environment_2320_physical_environment_indicators_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/waste> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/waste> <http://www.w3.org/2000/01/rdf-schema#label> "Waste"@en-gb .
+<http://sns.linkedscotland.org/id/topic/waste> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/waste> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/physical_environment> .
+<http://sns.linkedscotland.org/id/topic/waste> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/physical_environment_2367_waste_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/carbon_dioxide_emission_estimates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/carbon_dioxide_emission_estimates> <http://www.w3.org/2000/01/rdf-schema#label> "Carbon Dioxide Emission Estimates"@en-gb .
+<http://sns.linkedscotland.org/id/topic/carbon_dioxide_emission_estimates> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/carbon_dioxide_emission_estimates> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/physical_environment> .
+<http://sns.linkedscotland.org/id/topic/carbon_dioxide_emission_estimates> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/physical_environment_2396_carbon_dioxide_emission_estimates_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/area_of_vacant_land> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/area_of_vacant_land> <http://www.w3.org/2000/01/rdf-schema#label> "Area Of Vacant Land"@en-gb .
+<http://sns.linkedscotland.org/id/topic/area_of_vacant_land> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/area_of_vacant_land> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/physical_environment> .
+<http://sns.linkedscotland.org/id/topic/area_of_vacant_land> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/physical_environment_2404_area_of_vacant_land_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/population> <http://www.w3.org/2000/01/rdf-schema#label> "Population"@en-gb .
+<http://sns.linkedscotland.org/id/topic/population> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/population> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/population_1895_births_and_deaths_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/population> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/population_1948_2001_census_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/population> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/population_2150_mid_year_estimates_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/population> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/population_2280_life_expectancy_at_birth_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/population> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/population_2286_historic_mid_year_estimates_sape_pre_2001_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/population> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/births_and_deaths> .
+<http://sns.linkedscotland.org/id/topic/population> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/census> .
+<http://sns.linkedscotland.org/id/topic/population> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/mid> .
+<http://sns.linkedscotland.org/id/topic/population> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/year_estimates> .
+<http://sns.linkedscotland.org/id/topic/population> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/life_expectancy_at_birth> .
+<http://sns.linkedscotland.org/id/topic/population> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/historic_mid_year_estimates_sape_pre> .
+<http://sns.linkedscotland.org/id/topic/births_and_deaths> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/births_and_deaths> <http://www.w3.org/2000/01/rdf-schema#label> "Births And Deaths"@en-gb .
+<http://sns.linkedscotland.org/id/topic/births_and_deaths> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/births_and_deaths> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/population> .
+<http://sns.linkedscotland.org/id/topic/births_and_deaths> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/population_1895_births_and_deaths_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/census> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/census> <http://www.w3.org/2000/01/rdf-schema#label> "Census"@en-gb .
+<http://sns.linkedscotland.org/id/topic/census> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/census> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/population> .
+<http://sns.linkedscotland.org/id/topic/census> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/population_1948_2001_census_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/mid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/mid> <http://www.w3.org/2000/01/rdf-schema#label> "Mid"@en-gb .
+<http://sns.linkedscotland.org/id/topic/mid> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/mid> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/population> .
+<http://sns.linkedscotland.org/id/topic/mid> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/population_2150_mid_year_estimates_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/year_estimates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/year_estimates> <http://www.w3.org/2000/01/rdf-schema#label> "Year Estimates"@en-gb .
+<http://sns.linkedscotland.org/id/topic/year_estimates> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/year_estimates> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/population> .
+<http://sns.linkedscotland.org/id/topic/year_estimates> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/population_2150_mid_year_estimates_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/life_expectancy_at_birth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/life_expectancy_at_birth> <http://www.w3.org/2000/01/rdf-schema#label> "Life Expectancy At Birth"@en-gb .
+<http://sns.linkedscotland.org/id/topic/life_expectancy_at_birth> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/life_expectancy_at_birth> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/population> .
+<http://sns.linkedscotland.org/id/topic/life_expectancy_at_birth> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/population_2280_life_expectancy_at_birth_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/historic_mid_year_estimates_sape_pre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/historic_mid_year_estimates_sape_pre> <http://www.w3.org/2000/01/rdf-schema#label> "Historic Mid Year Estimates SAPE Pre"@en-gb .
+<http://sns.linkedscotland.org/id/topic/historic_mid_year_estimates_sape_pre> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/historic_mid_year_estimates_sape_pre> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/population> .
+<http://sns.linkedscotland.org/id/topic/historic_mid_year_estimates_sape_pre> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/population_2286_historic_mid_year_estimates_sape_pre_2001_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/transport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport"@en-gb .
+<http://sns.linkedscotland.org/id/topic/transport> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/transport> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/transport_2310_transport_national_indicators_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/transport> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/transport_2339_transport_road_statistics_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/transport> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/transport_2342_transport_school_children_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/transport> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/transport_2343_transport_bus_statistics_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/transport> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/transport_2344_transport_rail_statistics_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/transport> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/transport_2345_transport_personal_travel_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/national_indicators> .
+<http://sns.linkedscotland.org/id/topic/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/road_statistics> .
+<http://sns.linkedscotland.org/id/topic/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/school_children> .
+<http://sns.linkedscotland.org/id/topic/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/bus_statistics> .
+<http://sns.linkedscotland.org/id/topic/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/rail_statistics> .
+<http://sns.linkedscotland.org/id/topic/transport> <http://www.w3.org/2004/02/skos/core#narrower> <http://sns.linkedscotland.org/id/topic/personal_travel> .
+<http://sns.linkedscotland.org/id/topic/national_indicators> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/national_indicators> <http://www.w3.org/2000/01/rdf-schema#label> "National Indicators"@en-gb .
+<http://sns.linkedscotland.org/id/topic/national_indicators> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/national_indicators> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/transport> .
+<http://sns.linkedscotland.org/id/topic/national_indicators> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/transport_2310_transport_national_indicators_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/road_statistics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/road_statistics> <http://www.w3.org/2000/01/rdf-schema#label> "Road Statistics"@en-gb .
+<http://sns.linkedscotland.org/id/topic/road_statistics> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/road_statistics> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/transport> .
+<http://sns.linkedscotland.org/id/topic/road_statistics> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/transport_2339_transport_road_statistics_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/school_children> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/school_children> <http://www.w3.org/2000/01/rdf-schema#label> "School Children"@en-gb .
+<http://sns.linkedscotland.org/id/topic/school_children> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/school_children> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/transport> .
+<http://sns.linkedscotland.org/id/topic/school_children> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/transport_2342_transport_school_children_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/bus_statistics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/bus_statistics> <http://www.w3.org/2000/01/rdf-schema#label> "Bus Statistics"@en-gb .
+<http://sns.linkedscotland.org/id/topic/bus_statistics> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/bus_statistics> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/transport> .
+<http://sns.linkedscotland.org/id/topic/bus_statistics> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/transport_2343_transport_bus_statistics_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/rail_statistics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/rail_statistics> <http://www.w3.org/2000/01/rdf-schema#label> "Rail Statistics"@en-gb .
+<http://sns.linkedscotland.org/id/topic/rail_statistics> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/rail_statistics> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/transport> .
+<http://sns.linkedscotland.org/id/topic/rail_statistics> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/transport_2344_transport_rail_statistics_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/personal_travel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/personal_travel> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Travel"@en-gb .
+<http://sns.linkedscotland.org/id/topic/personal_travel> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/personal_travel> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/transport> .
+<http://sns.linkedscotland.org/id/topic/personal_travel> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/transport_2345_transport_personal_travel_la_5_9_2011> .
+<http://sns.linkedscotland.org/id/topic/drive_time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://sns.linkedscotland.org/id/topic/drive_time> <http://www.w3.org/2000/01/rdf-schema#label> "Drive Time"@en-gb .
+<http://sns.linkedscotland.org/id/topic/drive_time> <http://www.w3.org/2004/02/skos/core#inScheme> <http://sns.linkedscotland.org/id/collection/topics> .
+<http://sns.linkedscotland.org/id/topic/drive_time> <http://www.w3.org/2004/02/skos/core#broader> <http://sns.linkedscotland.org/id/topic/access_to_services> .
+<http://sns.linkedscotland.org/id/topic/drive_time> <http://sns.linkedscotland.org/def/isTopicOf> <http://sns.linkedscotland.org/id/collection/access_to_services_2047_drive_time_2006_zn_5_9_2011> .

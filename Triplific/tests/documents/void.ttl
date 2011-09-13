@@ -1,0 +1,19 @@
+@base <http://example.com/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix ex: <http://example.com/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<dataset> 
+  void:uriSpace "http://example.com/" ;
+  void:classPartition [
+  void:class ex:Person ;
+  void:uriSpace "http://example.com/people/" ;
+] ;
+  void:subset [
+    a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:subjectsTarget <dataset> ;
+    void:objectsTarget <dbpedia> ;
+  ] .
+
+<dbpedia> void:uriSpace "http://dbpedia.org/" .
