@@ -27,6 +27,17 @@ require_once 'moriarty/simplegraph.class.php';
 require_once 'Triplific/conversiongraph.class.php';
 $geographyCodeMappings = SNSConversionUtilities::$geographyCodeMappings;
 
+class FasterGraph extends SimpleGraph {
+
+   function add_type_and_label($s, $type, $label, $lang='en'){
+    $this->add_resource_triple($s, RDF_TYPE, $type);
+    $this->add_literal_triple($s, RDFS_LABEL, $label, $lang);
+  }
+
+
+
+}
+
 class StatsGraph extends ConversionGraph {
 
   var $vocab_graph;

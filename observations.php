@@ -220,8 +220,8 @@ while ($reader->read()) {
                 $json['labels'][$dateURI] = $date;
                 $json['labels'][$lastSlice] = $StatsGraph->get_label($lastSlice);
                 //stream output
-//                echo trim($StatsGraph->to_ntriples());
-//                $StatsGraph = new StatsGraph();
+                echo trim($StatsGraph->to_ntriples());
+                $StatsGraph = new FasterGraph();
 
             } //each area
         }
@@ -259,7 +259,7 @@ foreach($json['indicators'] as $uri_of_slice => $dates){
               } //indicator
 
             echo trim($StatsGraph->to_ntriples());
-            $StatsGraph = new StatsGraph();
+            $StatsGraph = new FasterGraph();
         }
     }
 }

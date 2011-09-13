@@ -16,11 +16,11 @@ while($r = fgetcsv($fp)){
   $izUri = SNSConversionUtilities::getPlaceUri('IG', $iz);
   $dzUri = SNSConversionUtilities::getPlaceUri('DZ', $dz);
   $laUri = SNSConversionUtilities::getPlaceUri('LA', $la);
-  $graph->add_resource_triple($dzUri, SNS.'multiMemberWard', $mmwUri);
-  $graph->add_resource_triple($izUri, SNS.'multiMemberWard', $mmwUri);
-  $graph->add_resource_triple($mmwUri, SNS.'localAuthority', $laUri);
-  $graph->add_resource_triple($mmwUri, SNS.'intermediateGeography', $izUri);
-  $graph->add_resource_triple($laUri, SNS.'multiMemberWard', $mmwUri);
+  $graph->add_resource_triple($dzUri, LS_GEO.'multiMemberWard', $mmwUri);
+  $graph->add_resource_triple($izUri, LS_GEO.'multiMemberWard', $mmwUri);
+  $graph->add_resource_triple($mmwUri, LS_GEO.'localAuthority', $laUri);
+  $graph->add_resource_triple($mmwUri, LS_GEO.'intermediateGeography', $izUri);
+  $graph->add_resource_triple($laUri, LS_GEO.'multiMemberWard', $mmwUri);
   if($counter > 5000){
     echo $graph->to_ntriples();
     $graph = new StatsGraph();

@@ -1,8 +1,6 @@
 <?php
 require_once 'uploader.class.php';
 
-$uploader = new Uploader('http://localhost:3030/dataset/data?default');
-$uploader = new FileWriter();
 $context = new ZMQContext();
 
 // Socket to receive messages on
@@ -16,6 +14,7 @@ $sender->connect("tcp://localhost:5558");
 // Process tasks forever
 while (true) {
 $xmlFile = $receiver->recv();
+$writer = new FileWriter('compiled-dump/'.str_replace('.xml','.nt', basename( $xmlFile)));
 
 // Do the work
 
@@ -27,44 +26,20 @@ $xmlFile = $receiver->recv();
       while($line = fgets($pointer)){
         $lineCount++;
         $buffer.=$line;
-        if($lineCount> 1000){
+        if($lineCount> 500){
           $ar = explode("\n",$buffer);
           $ar = array_unique($ar);
           $count = count($ar);
-          $duplicates = 1000-$count;
-          if($count <= 1000) echo "\n there were {$duplicates} duplicate triples \n";
+          $duplicates = 500-$count;
+          if($count <= 500) echo "\n there were {$duplicates} duplicate triples \n";
           $buffer = implode("\n", $ar);
-/*
-          $gz = gzopen('output-data/ntriples.gz','a9');
-          if(!$gz){
-            throw new Exception("coudln't' open file");
-          }
-          var_dump(gzwrite($gz, $buffer));
-          gzclose($gz);
-*/
-          $uploader->from_turtle($buffer);
+          $writer->from_turtle($buffer);
           $buffer='';
           $lineCount=0;
         }
       }
-/*
-      $gz = gzopen('output-data/ntriples.gz','a9');
-      gzwrite($gz, $buffer);
-
-      gzclose($gz);
- */
-      $uploader->from_turtle($buffer);
-      
-
+     $writer->from_turtle($buffer);
 }      
 
-/*
-      $ntriples = implode("\n", $output);
-      $fileID = str_replace('.xml','',basename($xmlFile));
-      $ntriplesFile = 'output-data/'.$fileID.'.nt';
-      file_put_contents($ntriplesFile, $ntriples);
-      $uploader->from_ntriples_file($ntriplesFile);
-      unlink($ntriplesFile);
- */
 ?>
 
