@@ -49,14 +49,14 @@ function getText($localName, $ns, &$el){
   } catch (Exception $e) { 
     throw new Exception("couldn't get $localName from $ns");
   }
-  return trim($text);
+  return trim(str_replace(']]>','', $text));
 }
 
-$doc_location = ('SNS_FullData_XML_5_9_2011/FullC0R0IndicatorMetaData_5_9_2011.xml');
+$doc_location = ('input-data/FullXML/FullC0R0IndicatorMetaData_5_9_2011.xml');
 
 $graph = new StatsGraph();
 
-$graph->set_dataset_description(SNS_DATASET_URI, file_get_contents('void.ttl'));
+$graph->set_dataset_description(SNS_DATASET_URI, file_get_contents('output-data/void.ttl'));
 
 //var_dump($graph->dataset_description_graph->to_turtle());
 
@@ -259,7 +259,7 @@ while ($reader->read()) {
     }
   }
  
-  $graph->add_resource_triple($IndicatorDatasetUri, SNS.'indicator', $MeasurePropertyURI);
+  $graph->add_resource_triple($IndicatorDatasetUri, SNS.'measure', $MeasurePropertyURI);
   if(!empty($rights)) $graph->add_literal_triple($IndicatorDatasetUri, DC.'rights', $rights, 'en-gb');
   if(!empty($geographicCoverageNotes)) $graph->add_literal_triple($IndicatorDatasetUri, SNS.'geographicCoverageNotes', $geographicCoverageNotes, 'en-gb');
   if(!empty($comparabilityNotes)) $graph->add_literal_triple($IndicatorDatasetUri, SNS.'accuracyNotes', $accuracyNotes, 'en-gb');

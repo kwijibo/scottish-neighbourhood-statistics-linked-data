@@ -2,17 +2,20 @@
 
 # connect to xml database
 
+try {
 require_once 'SNSConversionUtilities.php';
 
 $doc_location = $_SERVER['argv'][1];
-$dz_la_lookup = unserialize(file_get_contents('DZ_LA_lookup.serialised.php'));
-$ig_la_lookup = unserialize(file_get_contents('IG_LA_lookup.serialised.php'));
 
 $subjects = SNSConversionUtilities::getSubjectsFromFileName(basename($doc_location));
 $datasetURI = SNSConversionUtilities::fileNameToDatasetUri(basename($doc_location));
 $StatsGraph = new StatsGraph();
 $placesGraph = new SimpleGraph();
-$placesGraph->add_turtle(file_get_contents('local-authorities.ttl'));
+$datesGraph = new StatsGraph();
+$TopicGraph = new StatsGraph();
+$datesGraph->add_turtle(file_get_contents('output-data/dates.nt'));
+$TopicGraph->add_turtle(file_get_contents('output-data/topics.nt'));
+$placesGraph->add_turtle(file_get_contents('output-data/local-authorities.ttl'));
 $DatasetTitle = str_replace('_', ' ' , basename(str_replace('.xml','',$doc_location)));
 foreach(SNSConversionUtilities::$geographyCodeMappings as $code => $slug){
   $words = ucwords(str_replace('-',' ',$slug));
@@ -30,19 +33,19 @@ foreach(SNSConversionUtilities::$geographyCodeMappings as $code => $slug){
 
   foreach($subjects as $no => $Subject){
     $SubjectURI = SNSConversionUtilities::subjectTextToURI($Subject);
-    $StatsGraph->add_resource_triple($datasetURI, DCT.'subject', $SubjectURI);
-    $StatsGraph->add_resource_triple($SubjectURI, RDF_TYPE, SKOS.'Concept');
-    $StatsGraph->add_literal_triple($SubjectURI, RDFS_LABEL, ucwords($Subject), 'en-gb');
-    $StatsGraph->add_resource_triple($SubjectURI, SKOS.'inScheme', SNS_Concepts);  
+//    $TopicGraph->add_resource_triple($datasetURI, DCT.'subject', $SubjectURI);
+    $TopicGraph->add_resource_triple($SubjectURI, RDF_TYPE, SKOS.'Concept');
+    $TopicGraph->add_literal_triple($SubjectURI, RDFS_LABEL, ucwords($Subject), 'en-gb');
+    $TopicGraph->add_resource_triple($SubjectURI, SKOS.'inScheme', SNS_Concepts);  
     if($no===0) {
-        $StatsGraph->add_resource_triple(SNS_Concepts, SKOS.'hasTopConcept', $SubjectURI);
+        $TopicGraph->add_resource_triple(SNS_Concepts, SKOS.'hasTopConcept', $SubjectURI);
     } else {
       $TopConcept = SNSConversionUtilities::subjectTextToURI($subjects[0]);
-      $StatsGraph->add_resource_triple(SNS_DATASET_URI, DCT.'subject', $SubjectURI);
-      $StatsGraph->add_resource_triple($TopConcept, SKOS.'narrower', $SubjectURI);
-      $StatsGraph->add_resource_triple($SubjectURI, SKOS.'broader', $TopConcept);
+      $TopicGraph->add_resource_triple(SNS_DATASET_URI, DCT.'subject', $SubjectURI);
+      $TopicGraph->add_resource_triple($TopConcept, SKOS.'narrower', $SubjectURI);
+      $TopicGraph->add_resource_triple($SubjectURI, SKOS.'broader', $TopConcept);
     }
-    $StatsGraph->add_resource_triple($SubjectURI, SNS.'isTopicOf', $datasetURI);
+    $TopicGraph->add_resource_triple($SubjectURI, SNS.'isTopicOf', $datasetURI);
   }
 
   $indicatorCount = 0;
@@ -82,6 +85,22 @@ while ($reader->read()) {
               
               $geographyTypeCode = $indicator->getElementsByTagName('data')->item(0)->childNodes->item(0)->getAttribute('type');
 
+
+              if($geographyTypeCode == 'MW'){
+                $mw_la_lookup = unserialize(file_get_contents('mw_la.serialised.php'));
+              }
+
+              if($geographyTypeCode == 'ZN'){
+                $dz_la_lookup = unserialize(file_get_contents('DZ_LA_lookup.serialised.php'));
+              }
+
+              if($geographyTypeCode == 'IG'){
+                $ig_la_lookup = unserialize(file_get_contents('IG_LA_lookup.serialised.php'));
+              }
+
+
+
+
               $SliceUri = SNSConversionUtilities::indicatorIdentifierToSliceURI($code, $geographyTypeCode);
               $indicatorSliceKeyURI = SNSConversionUtilities::indicatorIdentifierToSliceKeyURI($code, $geographyTypeCode);
               $GeographyTypeLabel = SNSConversionUtilities::getGeographyLabel($geographyTypeCode);
@@ -117,9 +136,13 @@ while ($reader->read()) {
     foreach($indicator->getElementsByTagName('data') as $data){
       $date = str_replace('_','-',trim($data->getAttribute('date')));
       $geographyTypeCode = trim($data->childNodes->item(0)->getAttribute('type'));
+
+
+
+
       $dateURI = SNSConversionUtilities::dateToURI($date);
       $StatsGraph->add_resource_triple($IndicatorDatasetUri, DCT.'temporal',$dateURI);
-      $StatsGraph->add_literal_triple($dateURI, RDFS_LABEL, $date);
+      $datesGraph->add_literal_triple($dateURI, RDFS_LABEL, $date);
 
       $dateSliceUri = SNSConversionUtilities::getSliceUri($code, $date, $geographyTypeCode);
       $StatsGraph->add_resource_triple($SliceUri, QB.'subSlice', $dateSliceUri);
@@ -161,19 +184,24 @@ while ($reader->read()) {
                 //
                 $lastSlice = $dateSliceUri;
                 $localAuthorityURI = false;
-                if($geographyTypeCode == 'DZ' || $geographyTypeCode == 'ZN' || $geographyTypeCode == 'IG'){
+                if($geographyTypeCode == 'DZ' || $geographyTypeCode == 'ZN' || $geographyTypeCode == 'IG' || $geographyTypeCode == 'MW'){
                   if($geographyTypeCode == 'IG'){
                     $LA_code = $ig_la_lookup[$areaCode];
                   }
-                  else {
+                  else if($geographyTypeCode=='ZN' || $geographyTypeCode == 'DZ'){
                     $LA_code = $dz_la_lookup[$areaCode];
+                  } else if ($geographyTypeCode =='MW'){
+                    ksort($mw_la_lookup);
+                    //var_dump($mw_la_lookup);
+                    if(isset($mw_la_lookup[$areaCode])) $LA_code = $mw_la_lookup[$areaCode];
+                    else $LA_code = 'unknown';
                   }
                   $localAuthorityURI = SNSConversionUtilities::getPlaceUri('LA', $LA_code);
                   $localAuthoritySliceUri = $dateSliceUri.'-LA-'.$LA_code;
                   $lastSlice = $localAuthoritySliceUri;
                   $StatsGraph->add_resource_triple($dateSliceUri, QB.'subSlice', $localAuthoritySliceUri);
                   $StatsGraph->add_resource_triple($localAuthoritySliceUri, QB.'observation', $observationUri);
-                  $StatsGraph->add_resource_triple($localAuthoritySliceUri, SNS.'localAuthority', $localAuthorityURI);
+                  if($LA_code!='unknown') $StatsGraph->add_resource_triple($localAuthoritySliceUri, SNS.'localAuthority', $localAuthorityURI);
                   $StatsGraph->add_type_and_label($localAuthoritySliceUri, QB.'Slice',  $shortTitle.': '.$date.': '.$placesGraph->get_label($localAuthorityURI), 'en-gb' );
 
                 } else {
@@ -215,6 +243,7 @@ foreach($json['indicators'] as $uri_of_slice => $dates){
       foreach($maxminAreas['max'] as $maxArea) $StatsGraph->add_resource_triple($uri_of_slice, SNS.'areaWithHighestValue', $maxArea);
       foreach($maxminAreas['min'] as $minArea) $StatsGraph->add_resource_triple($uri_of_slice, SNS.'areaWithLowestValue', $minArea);
 
+      /*
       $this_json = array();
       $this_json['indicators'][$uri_of_slice] = $dates;
       $this_json['labels'][$uri_of_slice] = $json['labels'][$uri_of_slice];
@@ -223,6 +252,7 @@ foreach($json['indicators'] as $uri_of_slice => $dates){
         foreach($places as $place => $no) $this_json['labels'][$place] =  $json['labels'][$place];
       }
       $StatsGraph->add_literal_triple($uri_of_slice, OV.'json', str_replace('\/','/',json_encode($this_json, JSON_HEX_QUOT)));
+       */
 }
 
 
@@ -237,4 +267,10 @@ foreach($json['indicators'] as $uri_of_slice => $dates){
 //$StatsGraph->add_literal_triple($datasetURI, SNS.'numberOfObservations', $observationCount,0, XSDT.'integer');
 //$StatsGraph->add_literal_triple($datasetURI, SNS.'numberOfIndicators', $indicatorCount,0, XSDT.'integer');
 echo $StatsGraph->to_ntriples();
+file_put_contents('output-data/dates.nt', $datesGraph->to_ntriples());
+file_put_contents('output-data/topics.nt', $TopicGraph->to_ntriples());
+} catch (Exception $e ){
+  $date = date('c');
+  error_log('errors.log', "{$date}\t{$doc_location}\t". $e->getMessage()."\n");
+}
 ?>

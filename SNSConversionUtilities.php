@@ -3,6 +3,7 @@
 define('SPATIAL', 'http://data.ordnancesurvey.co.uk/ontology/spatialrelations/');
 define('LINKED_SCOTLAND', 'http://linkedscotland.org/id/');
 define('LINKED_SCOTLAND_DEF', 'http://linkedscotland.org/def/');
+define('LS_GEO', 'http://linkedscotland.org/def/geography#');
 define('SNS', 'http://sns.linkedscotland.org/def/');
 define('BASE_URI', 'http://sns.linkedscotland.org/id/');
 define('SNS_DSD', BASE_URI.'dataset-structure-definition/sns');
@@ -31,7 +32,7 @@ class StatsGraph extends ConversionGraph {
   var $vocab_graph;
 
   function __construct(){
-    $this->set_dataset_description(SNS_DATASET_URI, file_get_contents('void.ttl'));
+    $this->set_dataset_description(SNS_DATASET_URI, file_get_contents('output-data/void.ttl'));
     $this->vocab_graph = new ConversionGraph();
     parent::__construct();
   }
@@ -73,7 +74,7 @@ class StatsGraph extends ConversionGraph {
   }
 
   function __destruct(){
-    $this->vocab_graph->merge_to_turtle_file('vocab.ttl');
+    $this->vocab_graph->merge_to_turtle_file('output-data/vocab.ttl');
   }
 
 
@@ -94,14 +95,19 @@ class SNSConversionUtilities {
   'CPP' => 'community-planning-partnership',
   'LA' => 'local-authority',
   'HB' => 'health-board',
-  'SP' => 'scottish-parliamentary-constituency',
+  'SP' => 'scottish-parliamentary-constituency-2007',
+  'P2' => 'scottish-parliamentary-constituency-2011',
   'W2' => 'ward',
   'RC' => 'community-regeneration-community-planning-partnership',
   'RL' => 'community-regeneration-local',
-  'MW' => 'multi-member-board',
+  'MW' => 'multi-member-ward',
   'CH' => 'community-health-partnership',
   'SC' => 'scotland',
   'COA' => '2001-census-output-areas',
+  'N2' => 'NUTS2',
+  'N3' => 'NUTS3',
+  'N4' => 'NUTS4',
+  'U6' => '6-fold-urban-rural-classification',
 );
 
 
@@ -228,6 +234,10 @@ class SNSConversionUtilities {
     if($geographyTypeCode=='SC' && $areaCode = '420'){
       return LINKED_SCOTLAND.'geography/country/scotland';
     }
+
+//    if(in_array($geographyTypeCode, array('U6', 'CHP', 'CH') ) ){
+//      return BASE_URI.''.$geographyCodeMappings[$geographyTypeCode].'/'.$areaCode;
+//    }
 
     return LINKED_SCOTLAND.'geography/'.$geographyCodeMappings[$geographyTypeCode].'/'.$areaCode;
   }
