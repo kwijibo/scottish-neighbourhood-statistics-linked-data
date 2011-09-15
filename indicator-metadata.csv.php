@@ -253,8 +253,16 @@ foreach($indicators as $indicatorKeyValues){
   if(!empty($disclosureNotes)) $graph->add_literal_triple($IndicatorDatasetUri, SNS.'disclosureControlNotes', $disclosureNotes, 'en-gb');
   if(!empty($format)) $graph->add_literal_triple($SourceURI, DC.'format', $format);
   if(!empty($Publisher)) $graph->add_literal_triple($SourceURI, DC.'publisher', $Publisher, 'en-gb');
-  if(!empty($dateAcquired)) $graph->add_literal_triple($SourceURI, SNS.'dateAcquired', date('c', strtotime($dateAcquired)), false, XSDT.'dateTime');
-  if(!empty($dateAvailable)) $graph->add_literal_triple($SourceURI, SNS.'dateAvailable', date('c', strtotime($dateAvailable)), false, XSDT.'dateTime');
+  if(!empty($dateAcquired)){
+    $dateUri = SNSConversionUtilities::dateToURI($dateAcquired);
+    $graph->add_resource_triple($SourceURI, SNS.'dateAcquired', $dateUri);
+    $graph->add_literal_triple($dateUri, RDFS_LABEL, $dateAcquired);
+  }
+  if(!empty($dateAvailable)){
+    $dateUri = SNSConversionUtilities::dateToURI($dateAvailable);
+    $graph->add_resource_triple($SourceURI, SNS.'dateAvailable', $dateUri);
+    $graph->add_literal_triple($dateUri, RDFS_LABEL, $dateAvailable);
+  }
 if(!empty($Publisher)){
   $PublisherURI = SNSConversionUtilities::publisherToUri($Publisher);
   $graph->add_resource_triple($SourceURI, DCT.'publisher', $PublisherURI);

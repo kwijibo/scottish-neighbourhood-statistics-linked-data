@@ -1,21 +1,15 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix ov: <http://open.vocab.org/terms/> .
 @prefix ns0: <http://purl.org/linked-data/cube#> .
 @prefix ns1: <http://sns.linkedscotland.org/def/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-<http://sns.linkedscotland.org/def/isTopicOf> rdf:type rdf:Property ;
-                                              rdfs:label "Is Topic Of"@en ;
-                                              rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> ;
-                                              rdfs:domain skos:Concept . 
+<http://sns.linkedscotland.org/def/UnitOfMeasurement> rdf:type rdfs:Class ;
+                                                      rdfs:label "Unit Of Measurement"@en-gb ;
+                                                      rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> . 
 
-<http://sns.linkedscotland.org/def/> ov:defines <http://sns.linkedscotland.org/def/isTopicOf> ,
-                                                <http://sns.linkedscotland.org/def/indicatorCode> ,
-                                                <http://sns.linkedscotland.org/def/sliceOf> ,
-                                                <http://sns.linkedscotland.org/def/areaType> ,
-                                                <http://sns.linkedscotland.org/def/localAuthority> ,
-                                                <http://sns.linkedscotland.org/def/UnitOfMeasurement> ,
+<http://sns.linkedscotland.org/def/> ov:defines <http://sns.linkedscotland.org/def/UnitOfMeasurement> ,
                                                 <http://sns.linkedscotland.org/def/factor> ,
                                                 <http://sns.linkedscotland.org/def/dataset> ,
                                                 <http://sns.linkedscotland.org/def/AgeRange> ,
@@ -23,8 +17,13 @@
                                                 <http://sns.linkedscotland.org/def/endAge> ,
                                                 <http://sns.linkedscotland.org/def/ageRange> ,
                                                 <http://sns.linkedscotland.org/def/aggregationCapability> ,
+                                                <http://sns.linkedscotland.org/def/isTopicOf> ,
                                                 <http://sns.linkedscotland.org/def/measure> ,
                                                 <http://sns.linkedscotland.org/def/dateAvailable> ,
+                                                <http://sns.linkedscotland.org/def/indicatorCode> ,
+                                                <http://sns.linkedscotland.org/def/sliceOf> ,
+                                                <http://sns.linkedscotland.org/def/areaType> ,
+                                                <http://sns.linkedscotland.org/def/localAuthority> ,
                                                 <http://sns.linkedscotland.org/def/dateAcquired> ,
                                                 <http://sns.linkedscotland.org/def/AreaType> ,
                                                 <http://sns.linkedscotland.org/def/datazone> ,
@@ -33,31 +32,6 @@
                                                 <http://sns.linkedscotland.org/def/numberOfObservations> ,
                                                 <http://sns.linkedscotland.org/def/areaWithHighestValue> ,
                                                 <http://sns.linkedscotland.org/def/areaWithLowestValue> . 
-
-<http://sns.linkedscotland.org/def/indicatorCode> rdf:type rdf:Property ;
-                                                  rdfs:label "indicator code"@en ;
-                                                  rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> ;
-                                                  rdfs:domain ns0:Slice . 
-
-<http://sns.linkedscotland.org/def/sliceOf> rdf:type rdf:Property ;
-                                            rdfs:label "Slice Of"@en ;
-                                            rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> ;
-                                            rdfs:domain ns0:Slice ;
-                                            rdfs:range ns0:DataSet . 
-
-<http://sns.linkedscotland.org/def/areaType> rdf:type rdf:Property ;
-                                             rdfs:label "Area Type"@en ;
-                                             rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> ;
-                                             rdfs:domain ns0:Slice . 
-
-<http://sns.linkedscotland.org/def/localAuthority> rdf:type rdf:Property ;
-                                                   rdfs:label "Local Authority"@en ;
-                                                   rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> ;
-                                                   rdfs:domain ns0:Slice . 
-
-<http://sns.linkedscotland.org/def/UnitOfMeasurement> rdf:type rdfs:Class ;
-                                                      rdfs:label "Unit Of Measurement"@en-gb ;
-                                                      rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> . 
 
 <http://sns.linkedscotland.org/def/factor> rdf:type rdf:Property ;
                                            rdfs:label "factor"@en ;
@@ -93,6 +67,11 @@
                                                           rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> ;
                                                           rdfs:domain ns0:MeasureProperty . 
 
+<http://sns.linkedscotland.org/def/isTopicOf> rdf:type rdf:Property ;
+                                              rdfs:label "Is Topic Of"@en ;
+                                              rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> ;
+                                              rdfs:domain skos:Concept . 
+
 <http://sns.linkedscotland.org/def/measure> rdf:type rdf:Property ;
                                             rdfs:label "Measure"@en ;
                                             rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> ;
@@ -100,8 +79,30 @@
                                             rdfs:range ns0:MeasureProperty . 
 
 <http://sns.linkedscotland.org/def/dateAvailable> rdf:type rdf:Property ;
-                                                  rdfs:label "date available"@en ;
+                                                  rdfs:label "Date Available"@en ,
+                                                             "date available"@en ;
                                                   rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> . 
+
+<http://sns.linkedscotland.org/def/indicatorCode> rdf:type rdf:Property ;
+                                                  rdfs:label "indicator code"@en ;
+                                                  rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> ;
+                                                  rdfs:domain ns0:Slice . 
+
+<http://sns.linkedscotland.org/def/sliceOf> rdf:type rdf:Property ;
+                                            rdfs:label "Slice Of"@en ;
+                                            rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> ;
+                                            rdfs:domain ns0:Slice ;
+                                            rdfs:range ns0:DataSet . 
+
+<http://sns.linkedscotland.org/def/areaType> rdf:type rdf:Property ;
+                                             rdfs:label "Area Type"@en ;
+                                             rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> ;
+                                             rdfs:domain ns0:Slice . 
+
+<http://sns.linkedscotland.org/def/localAuthority> rdf:type rdf:Property ;
+                                                   rdfs:label "Local Authority"@en ;
+                                                   rdfs:isDefinedBy <http://sns.linkedscotland.org/def/> ;
+                                                   rdfs:domain ns0:Slice . 
 
 <http://sns.linkedscotland.org/def/dateAcquired> rdf:type rdf:Property ;
                                                  rdfs:label "date acquired"@en ;

@@ -134,7 +134,8 @@ class SNSConversionUtilities {
     $governmentYearmentYear = '/^([0-9]{4})\/([0-9]{4})/';
     $yearStartingFirstApril = '/^([0-9]{4})\/([0-9]{2})-([0-9]{4})\/([0-9]{2})$/';
     $financialYearWithQuarter = "/^([0-9]{4})\/([0-9]{2})Q([0-9]{2})/";
-
+    $dateTimeDayMonthYearTime = '@^(\d\d)/(\d\d)/(\d\d\d\d) (\d\d:\d\d:\d\d)@';
+      
     if(preg_match($calendarYear, $date, $m)){
       return self::base.'id/year/'.$m[0];
     } else if(preg_match($calendarYearWithSpaces,$date, $m)){
@@ -160,6 +161,10 @@ class SNSConversionUtilities {
       //return self::base.'id/government-interval/'.$m[1].'_'.self::sortDate($m[2]).'-'.$m[3].'_'.self::sortDate($m[4]);
     } else if(preg_match($financialYearWithQuarter, $date, $m)){
       return self::base.'id/government-quarter/'.$m[1].'-'.self::sortDate($m[2]).'/Q'.ltrim($m[3], '0');
+    } else if(preg_match($dateTimeDayMonthYearTime, $date, $m)){
+
+      return self::base.'id/gregorian-instant/'.$m[3]."-$m[2]-$m[1]T{$m[4]}";
+
     } else {
       throw new Exception("$date not recognised as a date");
     }
