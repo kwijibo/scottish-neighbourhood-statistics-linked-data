@@ -3,7 +3,7 @@
 
 echo "Downloading csv files"
 echo "~~~~~~~~~~~~~~~~~~~~~~~~";
-curl -v http://www.sns.gov.uk/BulkDownloads/SNS_FullData_CSV.zip > input-data/FullCSV.zip
+curl -v http://www.sns.gov.uk/BulkDownloads/SNS_FullData_CSV_5_9_2011.zip > input-data/FullCSV.zip
 echo "unzipping folder..."
 unzip input-data/FullCSV.zip -d input-data/FullCSV
 rm input-data/FullCSV.zip
