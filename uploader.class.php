@@ -1,9 +1,9 @@
 <?php
 
 define('MORIARTY_ARC_DIR', 'arc/');
-require '../moriarty/credentials.class.php';
-require '../moriarty/graph.class.php';
-require '../moriarty-extensions/cohodo-bucket.class.php';
+require 'moriarty/credentials.class.php';
+require 'moriarty/graph.class.php';
+require 'moriarty-extensions/cohodo-bucket.class.php';
 
 function print_progress($r){
   if($r->is_success()){
