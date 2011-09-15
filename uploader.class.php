@@ -53,6 +53,7 @@ class FileWriter {
 
   function __construct($filename=null){
     if($filename) $this->file = $filename;
+    file_put_contents($this->file, '', FILE_APPEND);
   }
   function from_ntriples_file($file){
     shell_exec("cat {$this->file} {$file} > {$this->file}");
